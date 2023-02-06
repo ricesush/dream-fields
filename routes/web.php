@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+//normal user
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
+
+
+//admin auth
+Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
+    Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard');
+});
