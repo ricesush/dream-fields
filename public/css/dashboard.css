@@ -1,0 +1,36 @@
+.adminContainer{
+  min-height: 78vh;
+}
+
+.dashbody{
+  background-color: rgb(243 244 246);
+  height: auto;
+  width: auto;
+}
+
+.imgBx{
+  position: absolute;
+  left: 17%;
+  top: -25px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+}
+
+.sold{
+  background: #182825;
+}
+
+.house{
+  background: #5ab25e;
+}
+
+.listed{
+  background: #e63772;
+}
+
+.tabcard{
+  max-height: 38vh;
+  overflow-y: auto;
+}

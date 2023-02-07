@@ -1,0 +1,136 @@
+body {
+  background: url(../images/bg-image.webp);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+  transition: all 0.5s ease-in-out !important;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+
+.welcomePage{
+  overflow: hidden;
+}
+
+a{
+  text-decoration: none !important;
+  color: #F8F0FB;
+}
+
+.contH{
+  height: 82vh;
+  transition: all 0.5s ease-in-out !important;
+}
+
+.loginForm {
+  padding-top: 8vh;
+} 
+
+.textLight, .socmedicon{
+  color: #F8F0FB;
+  transition: all 0.35s ease-in-out;
+  border: none;
+}
+
+li .textLight:hover, .socmedicon:hover {
+  color: #D67732 ;
+  transition: all 0.35s ease-in-out;
+}
+
+li .active, .socmedicon:hover {
+  color: #D67732 ;
+  transition: all 0.35s ease-in-out;
+}
+
+.quickSearchBg {
+  background: rgba(24, 40, 37, 0.85);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.text-dark:focus{
+  background-color: none !important;
+}
+
+.welcomeBtn{
+  height: 10vh;
+}
+
+
+/* navbar */
+
+.dropdown-menu{
+ min-width: 8rem;
+ text-align: center;
+}
+
+.dropdown-item{
+  min-width: 8rem;
+  text-align: center;
+ }
+
+.dropdown-item:active{
+ background: none;
+}
+
+.btn-outline-success{
+  border-color: #D67732 ;
+  color: #ffffff;
+  font-weight: bold;
+  transition: all 0.35s ease-in-out;
+}
+
+.btn-outline-success:focus{
+  background-color: #ee8337 !important;
+  border-color: #D67732  !important;
+}
+
+.btn-outline-success:hover{
+  background-color: #D67732 ;
+  border-color: #D67732 ;
+  box-shadow: none;
+  transition: all 0.35s ease-in-out;
+}
+
+.greenBtn {
+  background: #D67732  !important;
+  border-color: #D67732 ;
+  transition: all 0.35s ease-in-out;
+}
+
+.orangeBg{
+  background: #D67732  !important;
+}
+
+
+.greenBtn:hover{
+  background: #cc5500 !important;
+  border-color: #D67732;
+  box-shadow: none;
+  transition: all 0.35s ease-in-out;
+}
+  
+.greenText{
+  color: #D67732  !important;
+  
+}
+
+.show{
+  color: #D67732  !important;
+  border: none !important;
+}
+
+/* footer */
+
+.bgColor{  
+  background: #00000080;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  height: 9vh;
+}

@@ -1,0 +1,95 @@
+/* Banner section */
+.Bsr-banner-buy{
+  background:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.5)),url(../images/BSRbanner/banner-buy.webp);
+}
+.Bsr-banner-sell{
+  background:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.5)),url(../images/BSRbanner/banner-sell.webp);
+}
+.Bsr-banner-rent{
+  background:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.5)),url(../images/BSRbanner/banner-rent.webp);
+}
+.Bsr-banner-rent , .Bsr-banner-sell, .Bsr-banner-buy{
+  background-repeat: no-repeat;
+  height: 35vh;
+  background-size: cover;
+  font-size: 5rem;
+  
+}
+.banner-title {
+  color: #D67732;
+  text-shadow: 4px 0px #dcdcdc;
+  letter-spacing: 5px;
+}
+/* End of Banner */
+
+.glass-morp{
+background: rgba( 255, 255, 255, 0.15 );
+backdrop-filter: blur( 5px );
+-webkit-backdrop-filter: blur( 5px );
+border-radius: 10px;
+border:none;
+color: white;
+}
+
+
+/* Card Section */
+.img-wrapper{
+overflow: hidden;
+position: relative;
+}
+.img-wrapper > img {
+transition: all .5s ease;
+}
+
+.img-wrapper:hover img {
+  transform: scale(1.1);
+}
+.img-wrapper > .content {
+position: absolute;
+inset: 0;
+display: flex;
+background:linear-gradient( rgba(0, 0, 0, 0.616),rgba(0, 0, 0, 0.685));
+justify-content: center;
+align-items: center;
+}  
+
+.img-wrapper > img , 
+.img-wrapper> .content{
+  transition: 200ms ease-in-out;
+  object-fit: cover;
+  height: 30vh;
+}
+
+.img-wrapper > .content.fade {
+  opacity:0;
+}
+.img-wrapper:hover > .content.fade {
+  opacity: 1;
+}
+.img-wrapper:hover > img.blur-img {
+  filter: blur(5px);
+}
+
+.logo-overlay {
+  height: 40px;
+ 
+}
+
+.price-amount{
+  background: rgba( 255, 255, 255, 0.1 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: 10px;
+}
+
+.bsr-body {
+  background: #1828251d;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+}
+
+.card-footer-bg {
+  background-color: #D67732;
+}
