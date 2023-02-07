@@ -93,3 +93,8 @@ align-items: center;
 .card-footer-bg {
   background-color: #D67732;
 }
+
+.form-control:focus {
+  
+  box-shadow: none;
+}
