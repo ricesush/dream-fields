@@ -7,6 +7,7 @@ body {
   height: 100vh;
   transition: all 0.5s ease-in-out !important;
   font-family: 'Josefin Sans', sans-serif;
+  color: #F8F0FB;
 }
 
 
@@ -132,5 +133,4 @@ li .active, .socmedicon:hover {
   background: #00000080;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  height: 9vh;
 }

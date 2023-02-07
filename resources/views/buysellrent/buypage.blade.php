@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.buysellrent')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href='css/buysellrent.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body>
-    {{-- this is navbar form components folder --}}
-    @include('components.navbar')
-
+@section('content')
     <div class="Bsr-banner-buy">
         <div class='banner-title position-absolute top-50 start-50 translate-middle fw-bolder'> BUY</div>
     </div>
@@ -26,7 +9,7 @@
             <div class="col-12">
                 <div class="input-group mb-3 p-2 mt-3">
                     <button class="btn btn-light px-3 dropdown-toggle border border-2" data-bs-toggle="dropdown"
-                        id="list" ">Select Status
+                        id="list">Select Status
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
                         <a href="{{ route('buypage') }}" class="dropdown-item" value="buy">BUY</a>
@@ -109,12 +92,4 @@
             </div>
         </div>
     </div>
-    
- {{-- this is footer form components folder--}}  
- @include('components.footer')
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
-</body>
-
-</html>
+@endsection
