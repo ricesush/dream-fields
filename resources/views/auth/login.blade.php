@@ -3,7 +3,6 @@
 @section('content')
 <div class="login-box">
     <p>Login</p>
-    <hr class="pb-2">
     <form method="POST" action="{{ route('login') }}">
         @csrf
       <div class="user-box">
@@ -24,7 +23,7 @@
             </span>
         @enderror
       </div>
-      <div class="col-md-6 pb-5">
+      <div class="col-md-6 pb-4">
         <div class="form-check">
             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -34,7 +33,7 @@
         </div>
     </div>
     
-      <button class="btn btn-primary float-end" type="submit">
+      <button class="btn btn-dark float-end" type="submit">
         Submit
       </button>
     </form>
