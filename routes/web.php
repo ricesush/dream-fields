@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PropertiesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,22 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/buypage', function () {
+    return view('buysellrent/buypage');
+})->name('buypage');
+
+Route::get('/rentpage', function () {
+    return view('buysellrent/rentpage');
+})->name('rentpage');
+
+Route::get('/sellpage', function () {
+    return view('buysellrent/sellpage');
+})->name('sellpage');
+
+Route::get('/', function () {
+    return view('welcome');
+})->name('welcome');
 
 Auth::routes();
 
