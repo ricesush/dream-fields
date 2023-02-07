@@ -41,7 +41,7 @@
                 <thead>
                 <tr>
                     <th>Unit Number</th>
-                    <th>User ID</th>
+                    <th>Unit Owner</th>
                     <th>Action</th>
                     {{-- <th scope="col">Handle</th> --}}
                 </tr>
@@ -49,8 +49,8 @@
                 <tbody>
                     @foreach($properties as $property)
                 <tr>
-                    <td>{{$property->unitNumber}}</td>
-                    <td>{{$property->user_id}}</td>
+                    <td>{{ $property->unitNumber }}</td>
+                    <td>{{ $property->user->name }}</td>
                     <td>
                         <a class="btn btn-sm btn-light" href="{{ route('editproperty', $property->id) }}">Edit</a>
                         <a class="btn btn-sm btn-danger" href="{{ route('destroy', $property->id) }}">Delete</a>
