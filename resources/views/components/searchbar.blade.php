@@ -10,7 +10,7 @@
             </ul>
             <button class="btn btn-light px-3 border border-2 dropdown-toggle" type="button" id="baths ">Baths</button>
             <button class="btn btn-light px-3 border border-2 dropdown-toggle" type="button" id="button-addon2 ">Beds</button>
-            <input type="text" class="form-control py-2 bg-light" placeholder="Search..." id="input-search" />
+            <input type="text" class="search-focus form-control py-2 bg-light" placeholder="Search..." id="input-search" />
             <button class="btn btn-light px-5" type="button" id="search">Search</button>
         </div>
     </div>
