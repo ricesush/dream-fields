@@ -15,6 +15,9 @@
 </head>
 
 <body>
+    {{-- this is navbar form components folder --}}
+    @include('components.navbar')
+
     <div class="Bsr-banner-sell">
         <div class='banner-title position-absolute top-50 start-50 translate-middle fw-bolder'> </div>
     </div>
@@ -24,7 +27,8 @@
                 <h1 class='fw-bolder'>Would you like to list a property <br />in our website?</h1>
                 <h5 class='mt-2'>Help us, help you! Kindly fill the form and get started.</h5>
             </div>
-        </div> <div class="row">
+        </div>
+        <div class="row">
             <div class="col mt-4">
                 <form class="row g-2 fw-bold mt-2" method="POST" action="#">
                     <h2 class='fw-bold'>Personal Details :<button class="btn btn-dark float-end me-1"> Edit <i
@@ -131,7 +135,12 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+     {{-- this is footer form components folder--}}  
+@include('components.footer')
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
