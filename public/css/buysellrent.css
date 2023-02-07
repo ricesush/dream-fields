@@ -94,7 +94,7 @@ align-items: center;
   background-color: #D67732;
 }
 
-.focus-control:focus{
-box-shadow: none;
-border-color:white;
+.form-control:focus {
+  
+  box-shadow: none;
 }
