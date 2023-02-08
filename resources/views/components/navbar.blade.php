@@ -37,18 +37,19 @@
                 </li>
             </ul>
             @if (Route::has('login'))
-            <div class="hidden btn-group">
                 @auth
-
-                    <a href="{{ url('/home') }}"><button type="button" class="btn btn-success greenBtn border-0" >Dashboard</button>
+                
+                    <a href="{{ url('/home') }}" class="btn btn-success greenBtn border-0">Dashboard</a>
+                
                 @else
-                    <a href="{{ route('login') }}"><button type="button" class="btn btn-outline-success rounded-0 rounded-start me-0" >login</button></a>
+                <div class="btn-group">
+                    <a href="{{ route('login') }}" class="btn btn-outline-success rounded-0 rounded-start me-0">login</a>
                     @if (Route::has('register'))
-                    <a href="{{ route('register') }}"><button type="button" class="btn btn-success greenBtn rounded-0 rounded-end fw-bold" >Register</button></a>
+                    <a href="{{ route('register') }}" class="btn btn-success greenBtn rounded-0 rounded-end fw-bold">Register</a>
                     @endif
-                @endauth
             </div>
             @endif
+            @endauth
         </div>
     </div>
     </nav>
