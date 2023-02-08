@@ -11,6 +11,9 @@ class PropertyController extends Controller
     public function create(Request $request){
         $property = new Property;
         $property->unitNumber = $request->unitNumber;
+        $property->unitType = $request->unitType;
+        $property->unitStatus = $request->unitStatus;
+        $property->unitPrice = $request->unitPrice;
         $property->user_id = $request->user_id;
 
         $property->save();

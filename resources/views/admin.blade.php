@@ -25,55 +25,19 @@
                               </tr>
                             </thead>
                             <tbody>
+                            @foreach( $properties as $property )                          
+                              @if($property->isApproved == 'Pending')
                               <tr>
-                                <td>1</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
+                                <td>{{ $property->unitNumber }}</td>
+                                <td>{{ $property->unitType }}</td>
+                                <td>{{ $property->user->name }}</td>
+                                <td>{{ $property->unitStatus }}</td>
+                                <td>{{ $property->unitPrice }}</td>
+                                <td>buttons here</td>
                               </tr>
-                              <tr>
-                                <td>2</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <td>3</td>
-                                <td>Larry the Bird</td>
-                                <td>Larry the Bird</td>
-                                <td>@twitter</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <td>4</td>
-                                <td>Larry the Bird</td>
-                                <td>Larry the Bird</td>
-                                <td>@twitter</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <td>5</td>
-                                <td>Larry the Bird</td>
-                                <td>Larry the Bird</td>
-                                <td>@twitter</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <td>5</td>
-                                <td>Larry the Bird</td>
-                                <td>Larry the Bird</td>
-                                <td>@twitter</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <td>5</td>
-                                <td>Larry the Bird</td>
-                                <td>Larry the Bird</td>
-                                <td>@twitter</td>
-                                <td>@mdo</td>
-                              </tr>
+                              @endif
+                            @endforeach
+                             
                             </tbody>
                           </table>
                         </div>
@@ -94,59 +58,24 @@
                                 <th>Unit Type</th>
                                 <th>Unit Owner</th>
                                 <th>Lsting Type</th>
+                                <th>Price</th>
                                 <th>Action</th>
                               </tr>
                             </thead>
                             <tbody>
+                              @foreach( $properties as $property )                          
+                              @if($property->isApproved == 'Approved')
                               <tr>
-                                <td>1</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
+                                <td>{{ $property->unitNumber }}</td>
+                                <td>{{ $property->unitType }}</td>
+                                <td>{{ $property->user->name }}</td>
+                                <td>{{ $property->unitStatus }}</td>
+                                <td>{{ $property->unitPrice }}</td>
+                                <td>buttons here</td>
                               </tr>
-                              <tr>
-                                <td>2</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <td>3</td>
-                                <td>Larry the Bird</td>
-                                <td>Larry the Bird</td>
-                                <td>@twitter</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <td>4</td>
-                                <td>Larry the Bird</td>
-                                <td>Larry the Bird</td>
-                                <td>@twitter</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <td>5</td>
-                                <td>Larry the Bird</td>
-                                <td>Larry the Bird</td>
-                                <td>@twitter</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <td>5</td>
-                                <td>Larry the Bird</td>
-                                <td>Larry the Bird</td>
-                                <td>@twitter</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <td>5</td>
-                                <td>Larry the Bird</td>
-                                <td>Larry the Bird</td>
-                                <td>@twitter</td>
-                                <td>@mdo</td>
-                              </tr>
+                              @endif
+                            @endforeach
+                              
                             </tbody>
                           </table>
                         </div>

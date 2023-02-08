@@ -14,6 +14,14 @@ class Property extends Model
     protected $fillable = [
         'unitNumber',
         'user_id',
+        'unitType',
+        'unitStatus',
+        'floorArea',
+        'unitPrice',
+        'numBed',
+        'numBaths',
+        'imagePath',
+        'hasParking'
     ];
 
     public function user(){
