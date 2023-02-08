@@ -24,6 +24,6 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin')->with('properties', Property::orderBy('created_at', 'desc')->paginate(6));
+        return view('admin')->with('properties', Property::orderBy('created_at', 'desc')->get());
     }
 }
