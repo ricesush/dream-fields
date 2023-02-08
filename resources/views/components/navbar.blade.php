@@ -43,6 +43,8 @@
                 @auth
                 
                     <a href="{{ url('/home') }}" class="btn btn-success greenBtn border-0">Dashboard</a>
+
+                    
                 
                 @else
                 <div class="btn-group">
