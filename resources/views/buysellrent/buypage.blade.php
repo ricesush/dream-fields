@@ -6,7 +6,7 @@
     </div>
     <div class="container-lg">
         <div class="row">
-            <div class="col-12">
+            <div class="col-md  d-flex justify-content-center">
                 <div class="input-group mb-3 p-2 mt-3">
                     <select class="btn btn-light bg-white focus-control" name="baths" id="baths">
                         <a href="{{ route('buypage') }}" class="dropdown-item" value="buy">

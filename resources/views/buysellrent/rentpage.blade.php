@@ -10,7 +10,7 @@
                 <div class="input-group mb-3 p-2 mt-3">
                     <select class="btn btn-light bg-white focus-control"  name="baths" id="baths">
                         <a href="{{ route('buypage') }}" class="dropdown-item" value="buy"> <option> BUY</option></a>
-                        <a href="{{ route('rentpage') }}" class="dropdown-item" value="rent"><option>RENT</option></a>
+                        <a href="{{ route('rentpage') }}" class="dropdown-item" value="rent"><option selected>RENT</option></a>
                         <a href="{{ route('sellpage') }}" class="dropdown-item" value="sell"><option>SELL</option></a>
                     </select>
                     <select class="btn btn-light bg-white focus-control" name="baths" id="baths">
