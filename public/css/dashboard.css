@@ -30,6 +30,9 @@
   background: #e63772;
 }
 
+.rented{
+  background: rgb(57, 54, 97)}
+
 .tabcard{
   max-height: 38vh;
   overflow-y: auto;
