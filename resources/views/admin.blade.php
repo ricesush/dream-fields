@@ -1,10 +1,12 @@
 @extends('layouts.adminLayout')
 
+
+@section('header')
+<h1 class="h2">Dashboard</h1>
+@endsection
+
 @section('content')
 <div class="container1">
-    <div class="h4 pt-3 ps-5 mb-5">
-        Welcome! <span class="fw-bold">{{Auth::user()->name}}</span>
-    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -133,3 +135,5 @@
     </div>
 </div>
 @endsection
+
+
