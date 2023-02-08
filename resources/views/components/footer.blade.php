@@ -14,6 +14,7 @@
             </div>
         </section>
         
+
     <div class="col-lg-6 mb-3">
       <a href="/" class="d-flex align-items-center mb-3 textLight text-decoration-none">
         <img src="{{URL::asset('images/DreamFields Logo(full)-01.png')}}" class="bi me-2" width="50%" alt="..."/>
