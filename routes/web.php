@@ -21,6 +21,9 @@ Auth::routes();
 
 //guest
 Route::get('/', function () {return view('welcome');})->name('welcome');
+Route::get('/amenities', function () {return view('amenities');})->name('amenities');
+Route::get('/inquire', function () {return view('inquire');})->name('inquire');
+Route::get('/aboutus', function () {return view('aboutus');})->name('aboutus');
 Route::get('/buy', function () {return view('buysellrent/buypage');})->name('buypage');
 Route::get('/rent', function () {return view('buysellrent/rentpage');})->name('rentpage');
 Route::get('/sell', function () {return view('buysellrent/sellpage');})->name('sellpage');
@@ -28,16 +31,10 @@ Route::get('/sell', function () {return view('buysellrent/sellpage');})->name('s
 //user auth
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Route::post('/createproperty', [App\Http\Controllers\PropertyController::class, 'create'])->name('createproperty');
-// Route::get('/editproperty/{id}', [App\Http\Controllers\PropertyController::class, 'edit'])->name('editproperty');
-// Route::post('/updateproperty', [App\Http\Controllers\PropertyController::class, 'update'])->name('updateproperty');
-// Route::get('/destroyproperty/{id}', [App\Http\Controllers\PropertyController::class, 'destroy'])->name('destroy');
-
 //admin auth
 Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
     Route::controller(AdminController::class)->group(function () {
         Route::get('/', 'index')->name('admin');
-
     });
 
     Route::controller(PropertyController::class)->group(function () {

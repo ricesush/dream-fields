@@ -31,13 +31,13 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link textLight" href="#">Amenities</a>
+                <a class="nav-link textLight" href="{{route('amenities')}}">Amenities</a>
                 </li>
                 <li class="nav-item mx-lg-4">
-                <a class="nav-link textLight" href="#">Inquire</a>
+                <a class="nav-link textLight" href="{{route('inquire')}}">Inquire</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link textLight" href="#">About Us</a>
+                <a class="nav-link textLight" href="{{route('aboutus')}}">About Us</a>
                 </li>
             </ul>
             @if (Route::has('login'))
