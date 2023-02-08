@@ -9,7 +9,9 @@ body {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-
+.mainHeight{
+  min-height: 82vh;
+}
 
 .welcomePage{
   overflow: hidden;
