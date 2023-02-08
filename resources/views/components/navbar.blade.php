@@ -30,6 +30,9 @@
                     </ul>
                 </li>
                 <li class="nav-item">
+                <a class="nav-link textLight" href="#">Amenities</a>
+                </li>
+                <li class="nav-item">
                 <a class="nav-link textLight" href="#">Inquire</a>
                 </li>
                 <li class="nav-item">
