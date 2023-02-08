@@ -8,16 +8,26 @@
     <div class="row">
         <div class="col-12">
             <div class="input-group mb-3 p-2 mt-3">
-                <button class="btn btn-light px-3 dropdown-toggle border border-2" data-bs-toggle="dropdown" id="list">Select Status
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <a href="{{ route('buypage') }}" class="dropdown-item" value="buy">BUY</a>
-                    <a href="{{ route('rentpage') }}" class="dropdown-item" value="rent">RENT</a>
-                    <a href="{{ route('sellpage') }}" class="dropdown-item" value="sell">SELL</a>
-                </ul>
-                <button class="btn btn-light px-3 border border-2 dropdown-toggle" type="button" id="baths ">Baths</button>
-                <button class="btn btn-light px-3 border border-2 dropdown-toggle" type="button" id="button-addon2 ">Beds</button>
-                <input type="text" class="form-control py-2 bg-light" placeholder="Search..." id="input-search" />
+                <select class="btn btn-light bg-white focus-control"  name="baths" id="baths">
+                    <a href="{{ route('buypage') }}" class="dropdown-item" value="buy"> <option> BUY</option></a>
+                    <a href="{{ route('rentpage') }}" class="dropdown-item" value="rent"><option>RENT</option></a>
+                    <a href="{{ route('sellpage') }}" class="dropdown-item" value="sell"><option>SELL</option></a>
+                </select>
+                <select class="btn btn-light bg-white focus-control" name="baths" id="baths">
+                    <option value="0">Baths</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+
+                <select class="btn btn-light bg-white focus-control" name="baths" id="beds">
+                    <option value="0">Beds</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+
+                <input type="text" class="focus-control form-control py-2 bg-light" placeholder="Search..." id="input-search" />
                 <button class="btn btn-light px-5" type="button" id="search">Search</button>
             </div>
         </div>
