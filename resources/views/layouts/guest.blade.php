@@ -11,6 +11,11 @@
     <link rel="stylesheet" type="text/css" href='css/app.css'>
     <link rel="stylesheet" type="text/css" href='css/welcome.css'>
     <link rel="stylesheet" type="text/css" href='css/inquire.css'>
+    <link rel="stylesheet" type="text/css" href='css/loginreg.css'>
+
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,7 +25,7 @@
     <div id="app">
         @include('components.navbar')
 
-        <main class="">
+        <main class="mainHeight">
             @yield('content')
         </main>
         
