@@ -132,5 +132,4 @@ li .active, .socmedicon:hover {
   background: #00000080;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  height: 9vh;
 }
