@@ -20,15 +20,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/buypage', function () {
+Route::get('/buy', function () {
     return view('buysellrent/buypage');
 })->name('buypage');
 
-Route::get('/rentpage', function () {
+Route::get('/rent', function () {
     return view('buysellrent/rentpage');
 })->name('rentpage');
 
-Route::get('/sellpage', function () {
+Route::get('/sell', function () {
     return view('buysellrent/sellpage');
 })->name('sellpage');
 

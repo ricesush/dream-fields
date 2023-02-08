@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse " id="navbarNavDropdown">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item ">
-                    <a class="nav-link textLight active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link textLight active" aria-current="page" href="{{route('welcome')}}">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle textLight" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
