@@ -21,9 +21,9 @@ Auth::routes();
 
 //guest
 Route::get('/', function () {return view('welcome');})->name('welcome');
-Route::get('/buy', function () {return view('buysellrent/buypage');})->name('buypage');
-Route::get('/rent', function () {return view('buysellrent/rentpage');})->name('rentpage');
-Route::get('/sell', function () {return view('buysellrent/sellpage');})->name('sellpage');
+Route::get('/buypage', function () {return view('buysellrent/buypage');})->name('buypage');
+Route::get('/rentpage', function () {return view('buysellrent/rentpage');})->name('rentpage');
+Route::get('/sellpage', function () {return view('buysellrent/sellpage');})->name('sellpage');
 
 //user auth
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

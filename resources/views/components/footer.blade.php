@@ -1,6 +1,6 @@
 <div class="bgColor textLight">
        
-  <footer class="container mx-auto row row-cols-1 row-cols-sm-2 row-cols-md-5 py-2 my-5 border-top">
+  <footer class="container mx-auto row row-cols-1 row-cols-sm-2 row-cols-md-5 py-2 mb-5 border-top">
         <section class='col-lg-12 d-flex align-items-center mb-5 '>
             <div class='container d-flex justify-content-between align-items-center textLight '>
                 <div >

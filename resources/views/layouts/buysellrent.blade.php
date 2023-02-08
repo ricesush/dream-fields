@@ -18,7 +18,7 @@
     <div id="app">
         @include('components.navbar')
 
-        <main class="glass-morp">
+        <main class="bg-light bg-opacity-75 pb-5">
             @yield('content')
         </main>
         
