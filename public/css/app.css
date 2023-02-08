@@ -1,5 +1,9 @@
 body {
-  background: url(../images/bg-image.webp);
+  background: linear-gradient(
+    to right,
+    #00000048 0%,
+    #00000048 100%
+    ), url(../images/bg-image.webp);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -9,7 +13,9 @@ body {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-
+.mainHeight{
+  min-height: 82vh;
+}
 
 .welcomePage{
   overflow: hidden;
@@ -124,6 +130,11 @@ li .active, .socmedicon:hover {
 .show{
   color: #D67732  !important;
   border: none !important;
+}
+
+.z-index{
+  z-index: 1;
+  position: relative;
 }
 
 /* footer */

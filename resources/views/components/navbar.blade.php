@@ -1,16 +1,17 @@
-<div class="bgColor">
+<div class="bgColor z-index">
     <nav class="navbar container-fluid navbar-expand-lg">
     <div class="container">
-        <a class="col-lg-2 navbar-brand" href="{{route('welcome')}}"><img src="{{URL::asset('images/DreamFields Logo(full)-01.png')}}" class="col-12"  alt="..."/></a>
+        <a class="col-lg-2 col-md-4 col-sm-6 navbar-brand" href="{{route('welcome')}}"><img src="{{URL::asset('images/DreamFields Logo(full)-01.png')}}" class="col-12"  alt="..."/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse " id="navbarNavDropdown">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mx-auto">
+
                 <li class="nav-item ">
-                    <a class="nav-link textLight active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link textLight active" aria-current="page" href="{{route('welcome')}}">Home</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown mx-lg-4">
                 <a class="nav-link dropdown-toggle textLight" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Condo Units
                 </a>
@@ -30,19 +31,21 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link textLight" href="#">Amenities</a>
+                <a class="nav-link textLight" href="{{route('amenities')}}">Amenities</a>
+                </li>
+                <li class="nav-item mx-lg-4">
+                <a class="nav-link textLight" href="{{route('inquire')}}">Inquire</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link textLight" href="#">Inquire</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link textLight" href="#">About Us</a>
+                <a class="nav-link textLight" href="{{route('aboutus')}}">About Us</a>
                 </li>
             </ul>
             @if (Route::has('login'))
                 @auth
                 
                     <a href="{{ url('/home') }}" class="btn btn-success greenBtn border-0">Dashboard</a>
+
+                    
                 
                 @else
                 <div class="btn-group">
