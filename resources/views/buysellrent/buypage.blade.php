@@ -33,15 +33,15 @@
         </div>
     </div>
     <div class="d-flex justify-content-end">
-        <button type="button" class="btn btn-light dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
-            Default Order
-        </button>
-        <ul class="shadow dropdown-menu dropdown-menu-end ">
-            <li><button class="dropdown-item" type="button">Price(Low to High)</button></li>
-            <li><button class="dropdown-item" type="button">Price(High to Low)</button></li>
-            <li><button class="dropdown-item" type="button">Date New to Old</button></li>
-            <li><button class="dropdown-item" type="button">Date Old to Knew</button></li>
-        </ul>
+        <div class="d-flex justify-content-end">
+            <select class="form-select focus-control" aria-label="Default select example">
+                <option selected>Default Order</option>
+                <option value="1">Price(Low to High)</option>
+                <option value="2">Price(High to Low)</option>
+                <option value="3">Date New to Old</option>
+                <option value="4">Date Old to Knew</option>
+            </select>
+        </div>
     </div>
     <div class="row row-cols-1 row-cols-md-3 g-3 mt-1">
         <div class="col-md-6 col-lg-4">
