@@ -126,6 +126,11 @@ li .active, .socmedicon:hover {
   border: none !important;
 }
 
+.z-index{
+  z-index: 1;
+  position: relative;
+}
+
 /* footer */
 
 .bgColor{  

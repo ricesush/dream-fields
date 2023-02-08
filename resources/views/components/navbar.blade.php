@@ -1,4 +1,4 @@
-<div class="bgColor">
+<div class="bgColor z-index">
     <nav class="navbar container-fluid navbar-expand-lg">
     <div class="container">
         <a class="col-lg-2 navbar-brand" href="{{route('welcome')}}"><img src="{{URL::asset('images/DreamFields Logo(full)-01.png')}}" class="col-12"  alt="..."/></a>

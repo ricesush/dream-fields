@@ -18,7 +18,7 @@
     <div id="app">
         @include('components.navbar')
 
-        <main class="">
+        <main class="glass-morp">
             @yield('content')
         </main>
         
