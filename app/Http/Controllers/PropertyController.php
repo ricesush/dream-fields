@@ -56,6 +56,7 @@ class PropertyController extends Controller
         $property->unitStatus = $request->unitStatus;
         $property->floorArea = $request->floorArea;
         $property->numBed = $request->numBed;
+        $property->unitPrice = $request->unitPrice;
         $property->numBaths = $request->numBaths;
         $property->hasParking = $request->hasParking;
         $property->user_id = $request->user_id;
