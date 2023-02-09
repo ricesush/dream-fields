@@ -8,12 +8,11 @@
         <div class="row">
             <div class="col-12">
                 <div class="input-group mb-3 p-2 mt-3">
-                    <select class="btn btn-light bg-white focus-control"  name="links" id="unitProperties" onchange="window.location.href=this.value.toLowerCase();">
-                        <a class="dropdown-item" value="{{ route('buypage') }}" > <option> BUY</option></a>
-                        <a  class="dropdown-item" value="{{ route('rentpage') }}"><option selected>RENT</option></a>
-                        <a  class="dropdown-item" value="{{ route('sellpage') }}"><option>SELL</option></a>
-                    </select>
-                    
+                    <select class="btn btn-light bg-white focus-control"  name="links" id="unitProperties" onchange="window.location.href=this.value;">
+                        <option  value="{{ route('buypage') }}">For BUY</option>
+                       <option value="{{ route('rentpage') }}" selected >For RENT</option></a>
+                       <option value="{{ route('sellpage') }}">List Your Unit</option></a>
+                   </select>
                     <select class="btn btn-light bg-white focus-control" name="baths" id="baths">
                         <option value="0">Baths</option>
                         <option value="1">1</option>

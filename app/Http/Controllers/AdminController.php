@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Property;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -24,6 +25,21 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin')->with('properties', Property::orderBy('created_at', 'desc')->paginate(6));
+        return view('admin')->with('properties', Property::orderBy('created_at', 'desc')->get());
+    }
+    
+    public function pending()
+    {
+        return view('adminPages/pendingunits')->with('properties', Property::orderBy('created_at', 'desc')->get());
+    }
+
+    public function approved()
+    {
+        return view('adminPages/condounits')->with('properties', Property::orderBy('created_at', 'desc')->get());
+    }
+
+    public function users()
+    {
+        return view('adminPages/users')->with('users', User::all());
     }
 }
