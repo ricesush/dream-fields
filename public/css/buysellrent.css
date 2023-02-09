@@ -110,3 +110,13 @@ align-items: center;
 .bg-card-body{
   overflow: hidden; 
 }
+
+.bg-height{
+  height: 35vh;
+}
+
+.bgColor2{
+  background: #ffffff71;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}

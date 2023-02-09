@@ -1,39 +1,38 @@
 @extends('layouts.buysellrent')
 
 @section('content')
-    <div class="Bsr-banner-buy position-relative">
-        <div class="row">
-            <div class=" position-absolute bottom-0 start-50 translate-middle-x d-flex justify-content-center">
-                <div class="col-6">
-                    <div class="input-group mb-3">
-                        <select class="btn btn-light bg-white focus-control" name="links" id="unitProperties"
-                            onchange="window.location.href=this.value;">
-                            <option selected value="{{ route('buypage') }}">For SALE</option>
-                            <option value="{{ route('rentpage') }}">For RENT</option>
-                            <option value="{{ route('sellpage') }}">List Your Unit</option>
+    <div class="Bsr-banner-buy container-fluid position-relative">
+        <div class="container d-grid align-items-end bg-height ">
+            <form class="bgColor2 py-3 rounded-1">
+                @csrf
+                <div class="row col-md-12 col-lg-12 d-flex justify-content-center m-0">
+                    <div class=" col-lg-4 col-md-12 d-flex me-0">
+                        <select class="form-select bg-transparent border-0 border-bottom rounded-0" name="links" id="unitProperties">
+                            <option selected hidden value="Listing" class="text-dark">Listing</option>
+                            <option value="for_sale">For Sale</option>
+                            <option value="for_rent">For Rent</option>
                         </select>
-                        <select class="btn btn-light bg-white focus-control" name="baths" id="baths">
-                            <option value="0">Baths</option>
+                        <select class="form-select bg-transparent border-0 border-bottom rounded-0 mx-3" name="baths" id="baths">
+                            <option selected hidden value="0">Baths</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
 
-                        <select class="btn btn-light bg-white focus-control" name="baths" id="beds">
-                            <option value="0">Beds</option>
+                        <select class="form-select bg-transparent border-0 border-bottom rounded-0 pt-2" name="baths" id="beds">
+                            <option Selected hidden value="0">Beds</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
-
-                        <input type="text" class="focus-control form-control py-2 bg-light" placeholder="Search..."
-                            id="input-search" />
-                        <button class="btn btn-light" type="button" id="search">Search</button>
+                    </div>
+                    <div class="col-lg-8 d-flex mt-3 text-light">
+                        <input type="text" class="input text-light form-control bg-transparent border-0 border-bottom rounded-0" placeholder="Search..." id="input-search" />
+                        <button class="btn bg-transparent border-0 border-bottom rounded-0" type="button" id="search"><i class="fa fa-solid fa-magnifying-glass"></i></button>
                     </div>
                 </div>
+            </form>
             </div>
-        </div>
-
     </div>
     <div class="container">
         <div class="row d-flex justify-content-center mt-5">
