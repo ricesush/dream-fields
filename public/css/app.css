@@ -1,5 +1,9 @@
 body {
-  background: url(../images/bg-image.webp);
+  background: linear-gradient(
+    to right,
+    #00000048 0%,
+    #00000048 100%
+    ), url(../images/bg-image.webp);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
