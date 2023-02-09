@@ -1,17 +1,17 @@
 @extends('layouts.buysellrent')
 
 @section('content')
-    <div class="Bsr-banner-buy">
+    <div class="Bsr-banner-buy hidden-sm">
 
     </div>
     <div class="container-lg">
         <div class="row">
             <div class="col-md  d-flex justify-content-center">
                 <div class="input-group mb-3 p-2 mt-3">
-                    <select class="btn btn-light bg-white focus-control"  name="links" id="unitProperties" onchange="window.location.href=this.value.toLowerCase();">
-                        <a class="dropdown-item" value="{{ route('buypage') }}" > <option selected> BUY</option></a>
-                        <a  class="dropdown-item" value="{{ route('rentpage') }}"><option >RENT</option></a>
-                        <a  class="dropdown-item" value="{{ route('sellpage') }}"><option>SELL</option></a>
+                    <select class="btn btn-light bg-white focus-control"  name="links" id="unitProperties" onchange="window.location.href=this.value;">
+                         <option selected  value="{{ route('buypage') }}">For BUY</option>
+                        <option value="{{ route('rentpage') }}" >For RENT</option></a>
+                        <option value="{{ route('sellpage') }}">List Your Unit</option></a>
                     </select>
                     <select class="btn btn-light bg-white focus-control" name="baths" id="baths">
                         <option value="0">Baths</option>
@@ -46,7 +46,7 @@
         </div>
         <div class="row row-cols-1 row-cols-md-3 g-3 mt-1">
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow border border-0">
+                <div class="card h-100 shadow border border-0 bg-card-body">
                     <div class="img-wrapper">
                         <img href="#" class="bsr-pict card-img-top"
                             src="https://www.vistaresidences.com.ph/img/containers/main/img/minimalist-condo-in-manila.png/15ed8280fc19482cae110268a2faebf0.png"
@@ -55,7 +55,7 @@
                             <img class='logo-overlay' src='https://i.ibb.co/H75pK9V/Dream-Fields-Logo-White-01.png'></img>
                             <span class='mt-3'> View Details</span></a>
                     </div>
-                    <div class="card-body bg-card-body">
+                    <div class="card-body">
                         <p class="card-title h4 fw-bold text-center">Condo Condo</p>
                         <hr>
                         </hr>
