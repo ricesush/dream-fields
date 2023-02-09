@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Dream Fields</title>
     <link rel="stylesheet" type="text/css" href='css/loginreg.css'>
     <link rel="stylesheet" type="text/css" href='css/app.css'>
     <link rel="stylesheet" type="text/css" href='css/dashboard.css'>

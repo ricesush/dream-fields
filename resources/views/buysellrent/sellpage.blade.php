@@ -43,7 +43,7 @@
                             <option value="For sale">For sale</option>
 
                           </select>
-                          <input type="hidden" name="user_id" value="{{ Auth::user()}}">
+                          <input type="hidden" name="user_id" value="{{ Auth::user()->id}}">
                       </div>
                       <button type="submit" class="btn btn-primary">Submit</button>                   
                 </form>
