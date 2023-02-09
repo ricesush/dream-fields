@@ -12,6 +12,10 @@
               <tr>
                 <th>Unit Number</th>
                 <th>Unit Type</th>
+                <th>Unit Status</th>
+                <th>Floor Area</th>
+                <th>Bedroom</th>
+                <th>Bathroom</th>
                 <th>Unit Owner</th>
                 <th>Lsting Type</th>
                 <th>Price</th>
@@ -24,12 +28,19 @@
               <tr>
                 <td>{{ $property->unitNumber }}</td>
                 <td>{{ $property->unitType }}</td>
+                <td>{{ $property->unitStatus }}</td>
+                <td>{{ $property->floorArea}}</td>
+                <td>{{ $property->numBed}}</td>
+                <td>{{ $property->numBaths}}</td>
                 <td>{{ $property->user->name }}</td>
                 <td>{{ $property->unitStatus }}</td>
                 <td>₱{{ $property->unitPrice }}</td>
-                <td>buttons here</td>
+                <td>
+                    <a href="{{route('editunit', $property->id )}}" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="{{ route('deleteunit', $property->id) }}" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></a>
+                </td>
               </tr>
-              @endif
+              @endif    
             @endforeach
               
             </tbody>

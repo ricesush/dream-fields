@@ -6,6 +6,7 @@ use App\Models\Property;
 use Illuminate\Http\Request;
 use App\Models\User;
 
+
 class AdminController extends Controller
 {
     /**
@@ -41,5 +42,20 @@ class AdminController extends Controller
     public function users()
     {
         return view('adminPages/users')->with('users', User::all());
+    }
+
+    public function edit($id)
+    {
+        $property = Property::find($id);
+
+        return view('adminPages/editunits')->with('property', $property);
+    }
+
+    public function destroy($id)
+    {
+        $property = Property::find($id);
+        $property->delete();
+
+        return redirect()->route('condounits')->with('success', 'Property deleted successfully!');
     }
 }

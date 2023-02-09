@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PropertyController;
+use App\Models\Property;
+
+use App\Models\Property;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,8 +27,8 @@ Route::get('/', function () {return view('welcome');})->name('welcome');
 Route::get('/amenities', function () {return view('amenities');})->name('amenities');
 Route::get('/inquire', function () {return view('inquire');})->name('inquire');
 Route::get('/aboutus', function () {return view('aboutus');})->name('aboutus');
-Route::get('/buypage', function () {return view('buysellrent/buypage');})->name('buypage');
-Route::get('/rentpage', function () {return view('buysellrent/rentpage');})->name('rentpage');
+Route::get('/buypage', function () {return view('buysellrent/buypage')->with('properties', Property::orderBy('created_at', 'desc')->get());})->name('buypage');
+Route::get('/rentpage', function () {return view('buysellrent/rentpage')->with('properties', Property::orderBy('created_at', 'desc')->get());})->name('rentpage');
 Route::get('/sellpage', function () {return view('buysellrent/sellpage');})->name('sellpage');
 
 
@@ -36,6 +39,7 @@ Route::get('/addtofav', [App\Http\Controllers\FavouriteController::class, 'addto
 Route::post('/createproperty', [PropertyController::class, 'create'])->name('createproperty');
 Route::post('/approveunit', [PropertyController::class, 'approve'])->name('approveunit');
 Route::post('/denyunit', [PropertyController::class, 'deny'])->name('denyunit');
+Route::post('/updateproperty', [PropertyController::class,'update'])->name('updateproperty');
 
 //admin auth
 Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
@@ -44,6 +48,8 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
         Route::get('/pendingunits', 'pending')->name('pendingunits');
         Route::get('/condounits', 'approved')->name('condounits');
         Route::get('/users', 'users')->name('userspage');
+        Route::get('/editunit/{id}', 'edit')->name('editunit');
+        Route::get('/deleteunit/{id}', 'destroy')->name('deleteunit');
     });
 
     // Route::controller(PropertyController::class)->group(function () {
@@ -53,6 +59,9 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
     //     Route::get('/destroyproperty/{id}', 'destroy')->name('admin.destroy');
     });
  
+
+
+
 
 
 
