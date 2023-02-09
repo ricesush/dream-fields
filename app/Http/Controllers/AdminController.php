@@ -24,6 +24,11 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin')->with('properties', Property::orderBy('created_at', 'desc')->get());
+        return view('admin')->with('properties', Property::orderBy('id', 'desc')->get());
+    }
+    
+    public function pending()
+    {
+        return view('adminPages/pendingunits')->with('properties', Property::orderBy('id', 'desc')->get());
     }
 }
