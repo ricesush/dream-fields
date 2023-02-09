@@ -26,7 +26,7 @@
                 <td>{{ $property->unitType }}</td>
                 <td>{{ $property->user->name }}</td>
                 <td>{{ $property->unitStatus }}</td>
-                <td>{{ $property->unitPrice }}</td>
+                <td>₱{{ $property->unitPrice }}</td>
                 <td>buttons here</td>
               </tr>
               @endif

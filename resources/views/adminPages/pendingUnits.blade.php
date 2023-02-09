@@ -27,8 +27,20 @@
                         <td>{{ $property->unitType }}</td>
                         <td>{{ $property->user->name }}</td>
                         <td>{{ $property->unitStatus }}</td>
-                        <td>{{ $property->unitPrice }}</td>
-                        <td>buttons here</td>
+                        <td>₱{{ $property->unitPrice }}</td>
+                        <td>
+                            <form method="POST" action={{ route('approveunit') }} style="display:inline-block">
+                            @csrf
+                                <input type="hidden" value="{{ $property->id }}" name="id">
+                                <button type="submit" class="btn btn-success btn-sm"><i class="fa-solid fa-check"></i></button>
+                            </form>
+                            <form method="POST" action={{ route('denyunit') }} style="display:inline-block">
+                            @csrf
+                                <input type="hidden" value="{{ $property->id }}" name="id">
+                                <button type="submit" class="btn btn-danger btn-sm"><i class="fa-solid fa-x"></i></button>
+                            </form>
+                        </td>
+                        
                     </tr>
                    @endif
                  @endforeach

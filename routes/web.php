@@ -32,8 +32,10 @@ Route::get('/sellpage', function () {return view('buysellrent/sellpage');})->nam
 //user auth
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
+Route::get('/addtofav', [App\Http\Controllers\FavouriteController::class, 'addtofav'])->name('addtofav');
 Route::post('/createproperty', [PropertyController::class, 'create'])->name('createproperty');
+Route::post('/approveunit', [PropertyController::class, 'approve'])->name('approveunit');
+Route::post('/denyunit', [PropertyController::class, 'deny'])->name('denyunit');
 
 //admin auth
 Route::prefix('admin')->middleware('auth', 'admin')->group(function() {

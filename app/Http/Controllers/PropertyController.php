@@ -17,7 +17,27 @@ class PropertyController extends Controller
         $property->user_id = $request->user_id;
 
         $property->save();
-        return redirect()->route('home')->with('success', "new unit added!");
+        return redirect()->route('sellpage')->with('success', "new unit added!");
+    }
+
+    public function approve(Request $request){
+        
+        $property = Property::find($request->id);
+        $property->isApproved = 'Approved';
+
+        $property->save();
+
+        return redirect('admin/pendingunits');
+    }
+
+    public function deny(Request $request){
+        
+        $property = Property::find($request->id);
+        $property->isApproved = 'Denied';
+
+        $property->save();
+
+        return redirect('admin/pendingunits');
     }
 
     public function edit($id)
