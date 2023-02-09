@@ -23,7 +23,7 @@
         <tbody>
           <tr>
             <th scope="row"><i class="fa-solid fa-location-dot"></i></th>
-            <td>United Street, Brgy Kapitolyo, Pasig City, Metro Manila 1603 Philippines</td>
+            <td>Tower 4, 5, 6 Dr Arcadio Santos Ave, Parañaque, 1700 Metro Manila</td>
           </tr>
           <tr>
             <th scope="row"><i class="fa-solid fa-envelope"></i></th>
@@ -31,7 +31,7 @@
           </tr>
           <tr>
             <th scope="row"><i class="fa-solid fa-square-phone"></i></th>
-            <td colspan="2">+63 999 9999 999</td>
+            <td colspan="2">+6399 999 9999</td>
           </tr>
         </tbody>
       </table>
