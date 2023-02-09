@@ -1,4 +1,4 @@
-<div class="bgColor textLight mt-5">
+<div class="bgColor textLight mt-5" data-aos="fade-up" data-aos-duration="500">
 
   <footer class="container mx-auto row row-cols-1 row-cols-sm-2 row-cols-md-5 py-2 py-5 border-top">
     <!-- <section class='col-lg-12 d-flex align-items-center mb-5 '>
@@ -68,8 +68,8 @@
         <small class="fw-bold fs-6 pt-3">Social Medias:</small>
       </div>
       <div class="pt-3">
-        <a href='' class='fs-5 socmedicon'><i class="fa-brands fa-facebook"></i></a>
-        <a href='' class='px-2 fs-5 socmedicon'><i class="fa-brands fa-twitter"></i></a>
+        <a href='https://www.facebook.com/profile.php?id=100089755791674&sk=grid' class='fs-5 socmedicon'><i class="fa-brands fa-facebook"></i></a>
+        <a href='https://twitter.com/Dre4mFields?fbclid=IwAR0f2CRM3Tagnu8jKtsVZi_gGFjE4EB9fsv5LdZz7V2y_HcHFKCh2CiPPnM' class='px-2 fs-5 socmedicon'><i class="fa-brands fa-twitter"></i></a>
         <a href='' class='fs-5 socmedicon'><i class="fa-brands fa-square-instagram"></i></a>
       </div>
       <div class=" mt-5">
