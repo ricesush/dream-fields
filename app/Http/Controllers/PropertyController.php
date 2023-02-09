@@ -44,7 +44,7 @@ class PropertyController extends Controller
     {
         $property = Property::find($id);
 
-        return view('editproperty')->with('property', $property);
+        return view('admin/editunits')->with('property', $property);
     }
 
     public function update(Request $request)
@@ -52,10 +52,17 @@ class PropertyController extends Controller
         $property = Property::find($request->id);
 
         $property->unitNumber = $request->unitNumber;
+        $property->unitType = $request->unitType;
+        $property->unitStatus = $request->unitStatus;
+        $property->floorArea = $request->floorArea;
+        $property->numBed = $request->numBed;
+        $property->unitPrice = $request->unitPrice;
+        $property->numBaths = $request->numBaths;
+        $property->hasParking = $request->hasParking;
         $property->user_id = $request->user_id;
         $property->save();
 
-        return redirect()->route('home')->with('success', 'Property updated successfully!');
+        return redirect()->route('condounits')->with('success', 'Property updated successfully!');
     }
 
     public function destroy($id)
