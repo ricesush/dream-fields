@@ -32,11 +32,17 @@
 }
 
 .glass-morp{
-  background: #00000055;
+  background: #ffffff71;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+}
+.fa{
+  color: #D67732;
+  font-size: 2rem;
+}
 
-  
+.fa:hover{
+  color: #ff8e3d;
 }
 
 
