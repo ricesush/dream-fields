@@ -44,7 +44,7 @@ class PropertyController extends Controller
     {
         $property = Property::find($id);
 
-        return view('editproperty')->with('property', $property);
+        return view('admin/editunits')->with('property', $property);
     }
 
     public function update(Request $request)

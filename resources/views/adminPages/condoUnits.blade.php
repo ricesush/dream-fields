@@ -27,9 +27,11 @@
                 <td>{{ $property->user->name }}</td>
                 <td>{{ $property->unitStatus }}</td>
                 <td>₱{{ $property->unitPrice }}</td>
-                <td>buttons here</td>
+                <td>
+                    <a href="{{route('editunits', $property->id )}}" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
               </tr>
-              @endif
+              @endif    
             @endforeach
               
             </tbody>
