@@ -203,7 +203,7 @@
 
 
 .bgColor2{
-  background: #ffffff49;
+  background: #ffffff71;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
@@ -225,4 +225,20 @@
 input::-webkit-input-placeholder {
   color: #000 !important;
   }
-   
+  
+
+.secHeight{
+   height: 50vh;
+   overflow: hidden;
+}
+
+
+/* pictures */
+
+.pic1{
+  background:  url('https://th.bing.com/th/id/R.f62cac4d438913a0673c820180fe267b?rik=%2b7E0V84xl%2fPirw&riu=http%3a%2f%2fwww.anilandnaresh.com%2fimages%2fxexperice.jpg&ehk=FxSpW1DgOuLMHIBPg99pdtHPuVQCbHKnF8%2bzugw9PQY%3d&risl=&pid=ImgRaw&r=0');
+  background-position-y: -10rem;
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+}
