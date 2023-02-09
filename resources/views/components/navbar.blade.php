@@ -1,4 +1,4 @@
-<div class="bgColor z-index">
+<div class="bgColor-Navbar sticky-top">
     <nav class="navbar container-fluid navbar-expand-lg">
     <div class="container">
         <a class="col-lg-2 col-md-4 col-sm-6 navbar-brand" href="{{route('welcome')}}"><img src="{{URL::asset('images/DreamFields Logo(full)-01.png')}}" class="col-12"  alt="..."/></a>
@@ -9,7 +9,7 @@
             <ul class="navbar-nav mx-auto">
 
                 <li class="nav-item ">
-                    <a class="nav-link textLight active" aria-current="page" href="{{route('welcome')}}">Home</a>
+                    <a class="nav-link textLight" aria-current="page" href="{{route('welcome')}}">Home</a>
                 </li>
                 <li class="nav-item dropdown mx-lg-4">
                 <a class="nav-link dropdown-toggle textLight" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

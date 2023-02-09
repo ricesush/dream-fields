@@ -132,15 +132,27 @@ li .active, .socmedicon:hover {
   border: none !important;
 }
 
-.z-index{
-  z-index: 1;
-  position: relative;
-}
+
 
 /* footer */
 
 .bgColor{  
   background: #00000080;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.bgColor-Navbar{  
+  background: #00000080;
+  background: linear-gradient(
+    to right,
+    #000000a2 0%,
+    #000000a2 100%
+    ), url(../images/bg-image.webp);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
