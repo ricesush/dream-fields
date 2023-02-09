@@ -61,7 +61,7 @@ class PropertyController extends Controller
         $property->user_id = $request->user_id;
         $property->save();
 
-        return redirect()->route('home')->with('success', 'Property updated successfully!');
+        return redirect()->route('condounits')->with('success', 'Property updated successfully!');
     }
 
     public function destroy($id)

@@ -50,4 +50,12 @@ class AdminController extends Controller
 
         return view('adminPages/editunits')->with('property', $property);
     }
+
+    public function destroy($id)
+    {
+        $property = Property::find($id);
+        $property->delete();
+
+        return redirect()->route('condounits')->with('success', 'Property deleted successfully!');
+    }
 }
