@@ -14,7 +14,7 @@
         </div>
         <div class="row">
             <div class="col mt-4">
-                <form class="row g-2 fw-bold mt-2" method="POST" action="{{route('admin.createproperty')}}">
+                <form class="row g-2 fw-bold mt-2" method="POST" action="{{route('createproperty')}}">
                     @csrf
                     <div class="mb-3 col-md-6">
                         <label for="unitNumber" class="form-label">Unit Number</label>

@@ -32,18 +32,24 @@ Route::get('/sellpage', function () {return view('buysellrent/sellpage');})->nam
 //user auth
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
+Route::post('/createproperty', [PropertyController::class, 'create'])->name('createproperty');
+
 //admin auth
 Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
     Route::controller(AdminController::class)->group(function () {
         Route::get('/', 'index')->name('admin');
     });
 
-    Route::controller(PropertyController::class)->group(function () {
-        Route::post('/createproperty', 'create')->name('admin.createproperty');
-        Route::get('/editproperty/{id}', 'edit')->name('admin.editproperty');
-        Route::post('/updateproperty', 'update')->name('admin.updateproperty');
-        Route::get('/destroyproperty/{id}', 'destroy')->name('admin.destroy');
+    // Route::controller(PropertyController::class)->group(function () {
+    //     Route::post('/createproperty', 'create')->name('admin.createproperty');
+    //     Route::get('/editproperty/{id}', 'edit')->name('admin.editproperty');
+    //     Route::post('/updateproperty', 'update')->name('admin.updateproperty');
+    //     Route::get('/destroyproperty/{id}', 'destroy')->name('admin.destroy');
     });
 
-    Route::get('/condounits', function () { return view('adminPages/condoUnits'); })->name('admin.condounits');
-});
+    Route::get('/condounits', function () { return view('adminPages/condoUnits'); })->name('admin.condounits');   
+
+
+Route::get('/pendingunits', [AdminController::class, 'pending'])->name('pendingunits');
+
