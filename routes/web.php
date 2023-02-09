@@ -39,6 +39,9 @@ Route::post('/createproperty', [PropertyController::class, 'create'])->name('cre
 Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
     Route::controller(AdminController::class)->group(function () {
         Route::get('/', 'index')->name('admin');
+        Route::get('/pendingunits', 'pending')->name('pendingunits');
+        Route::get('/condounits', 'approved')->name('condounits');
+        Route::get('/users', 'users')->name('userspage');
     });
 
     // Route::controller(PropertyController::class)->group(function () {
@@ -47,9 +50,8 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
     //     Route::post('/updateproperty', 'update')->name('admin.updateproperty');
     //     Route::get('/destroyproperty/{id}', 'destroy')->name('admin.destroy');
     });
+ 
 
-    Route::get('/condounits', function () { return view('adminPages/condoUnits'); })->name('admin.condounits');   
 
 
-Route::get('/pendingunits', [AdminController::class, 'pending'])->name('pendingunits');
 
