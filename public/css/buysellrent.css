@@ -22,7 +22,33 @@
   letter-spacing: 5px;
 }
 
+.bg-height{
+  height: 35vh;
+}
+
+.bgColor2{
+  background: #ffffff71;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
 /* End of Banner */
+
+select option {
+  background: #626262a7;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+select option:hover {
+  background: #626262a7;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px)
+}
+
+*:focus{
+  outline: none !important;
+  box-shadow: none !important;
+}
 
 .bg-buysellrent {
   background-color: #D67732;
@@ -32,11 +58,17 @@
 }
 
 .glass-morp{
-  background: #00000055;
+  background: #ffffff71;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+}
+.fa{
+  color: #D67732;
+  font-size: 2rem;
+}
 
-  
+.fa:hover{
+  color: #ff8e3d;
 }
 
 
