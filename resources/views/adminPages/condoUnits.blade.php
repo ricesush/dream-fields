@@ -12,6 +12,10 @@
               <tr>
                 <th>Unit Number</th>
                 <th>Unit Type</th>
+                <th>Unit Status</th>
+                <th>Floor Area</th>
+                <th>Bedroom</th>
+                <th>Bathroom</th>
                 <th>Unit Owner</th>
                 <th>Lsting Type</th>
                 <th>Price</th>
@@ -24,6 +28,10 @@
               <tr>
                 <td>{{ $property->unitNumber }}</td>
                 <td>{{ $property->unitType }}</td>
+                <td>{{ $property->unitStatus }}</td>
+                <td>{{ $property->floorArea}}</td>
+                <td>{{ $property->numBed}}</td>
+                <td>{{ $property->numBaths}}</td>
                 <td>{{ $property->user->name }}</td>
                 <td>{{ $property->unitStatus }}</td>
                 <td>₱{{ $property->unitPrice }}</td>

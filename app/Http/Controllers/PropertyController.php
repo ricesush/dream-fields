@@ -52,6 +52,12 @@ class PropertyController extends Controller
         $property = Property::find($request->id);
 
         $property->unitNumber = $request->unitNumber;
+        $property->unitType = $request->unitType;
+        $property->unitStatus = $request->unitStatus;
+        $property->floorArea = $request->floorArea;
+        $property->numBed = $request->numBed;
+        $property->numBaths = $request->numBaths;
+        $property->hasParking = $request->hasParking;
         $property->user_id = $request->user_id;
         $property->save();
 
