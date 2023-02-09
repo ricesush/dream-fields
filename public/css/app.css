@@ -156,3 +156,8 @@ li .active, .socmedicon:hover {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
+
+.bgFooter2{
+  background-color: black;
+}
+
