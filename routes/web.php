@@ -46,7 +46,8 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
         Route::get('/pendingunits', 'pending')->name('pendingunits');
         Route::get('/condounits', 'approved')->name('condounits');
         Route::get('/users', 'users')->name('userspage');
-        Route::get('/editunits/{id}', 'edit')->name('editunits');
+        Route::get('/editunit/{id}', 'edit')->name('editunit');
+        Route::get('/deleteunit/{id}', 'destroy')->name('deleteunit');
     });
 
     // Route::controller(PropertyController::class)->group(function () {
