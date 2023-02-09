@@ -1,4 +1,4 @@
-<div class="bgColor textLight">
+<div class="bgColor textLight mt-5">
 
   <footer class="container mx-auto row row-cols-1 row-cols-sm-2 row-cols-md-5 py-2 py-5 border-top">
     <!-- <section class='col-lg-12 d-flex align-items-center mb-5 '>
@@ -35,15 +35,6 @@
           </tr>
         </tbody>
       </table>
-
-      <div class="pt-5">
-        <small class="fw-bold fs-6">Social Medias</small>
-      </div>
-      <div>
-        <a href='' class='fs-5 socmedicon'><i class="fa-brands fa-facebook"></i></a>
-        <a href='' class='px-2 fs-5 socmedicon'><i class="fa-brands fa-twitter"></i></a>
-        <a href='' class='fs-5 socmedicon'><i class="fa-brands fa-square-instagram"></i></a>
-      </div>
     </div>
 
     <div class="col-lg-2 mb-3">
