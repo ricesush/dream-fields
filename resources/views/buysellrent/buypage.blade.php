@@ -1,102 +1,517 @@
 @extends('layouts.buysellrent')
 
 @section('content')
-    <div class="Bsr-banner-buy hidden-sm">
-
-    </div>
-    <div class="container-lg">
+    <div class="Bsr-banner-buy position-relative">
         <div class="row">
-            <div class="col-md  d-flex justify-content-center">
-                <div class="input-group mb-3 p-2 mt-3">
-                    <select class="btn btn-light bg-white focus-control"  name="links" id="unitProperties" onchange="window.location.href=this.value;">
-                         <option selected  value="{{ route('buypage') }}">For BUY</option>
-                        <option value="{{ route('rentpage') }}" >For RENT</option></a>
-                        <option value="{{ route('sellpage') }}">List Your Unit</option></a>
-                    </select>
-                    <select class="btn btn-light bg-white focus-control" name="baths" id="baths">
-                        <option value="0">Baths</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
+            <div class=" position-absolute bottom-0 start-50 translate-middle-x d-flex justify-content-center">
+                <div class="col-6">
+                    <div class="input-group mb-3">
+                        <select class="btn btn-light bg-white focus-control" name="links" id="unitProperties"
+                            onchange="window.location.href=this.value;">
+                            <option selected value="{{ route('buypage') }}">For SALE</option>
+                            <option value="{{ route('rentpage') }}">For RENT</option>
+                            <option value="{{ route('sellpage') }}">List Your Unit</option>
+                        </select>
+                        <select class="btn btn-light bg-white focus-control" name="baths" id="baths">
+                            <option value="0">Baths</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
 
-                    <select class="btn btn-light bg-white focus-control" name="baths" id="beds">
-                        <option value="0">Beds</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
+                        <select class="btn btn-light bg-white focus-control" name="baths" id="beds">
+                            <option value="0">Beds</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
 
-                    <input type="text" class="focus-control form-control py-2 bg-light" placeholder="Search..."
-                        id="input-search" />
-                    <button class="btn btn-light px-5" type="button" id="search">Search</button>
-                </div>
-            </div>
-        </div>
-        <div class="d-flex justify-content-end">
-            <div class="d-flex justify-content-end">
-                <select class="form-select focus-control" aria-label="Default select example">
-                    <option selected>Default Order</option>
-                    <option value="1">Price(Low to High)</option>
-                    <option value="2">Price(High to Low)</option>
-                    <option value="3">Date New to Old</option>
-                    <option value="4">Date Old to Knew</option>
-                </select>
-            </div>
-        </div>
-        <div class="row row-cols-1 row-cols-md-3 g-3 mt-1">
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow border border-0 bg-card-body">
-                    <div class="img-wrapper">
-                        <img href="#" class="bsr-pict card-img-top"
-                            src="https://www.vistaresidences.com.ph/img/containers/main/img/minimalist-condo-in-manila.png/15ed8280fc19482cae110268a2faebf0.png"
-                            alt="..."></img>
-                        <a href="#" class='fade content stretched-link text-white'>
-                            <img class='logo-overlay' src='https://i.ibb.co/H75pK9V/Dream-Fields-Logo-White-01.png'></img>
-                            <span class='mt-3'> View Details</span></a>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-title h4 fw-bold text-center">Condo Condo</p>
-                        <hr>
-                        </hr>
-                        <div class="row text-center g-1 mt-2">
-                            <div class="col-md-3 col-2">
-                                <i class="fa-solid fa-bed"></i>
-                                <br />
-                                <a class='btn btn-sm'>2 Beds</a>
-                            </div>
-                            <div class="col-md-3 col-3">
-                                <i class="fa-solid fa-bath"></i>
-                                <br />
-                                <a class='btn btn-sm'>1 Baths</a>
-                            </div>
-                            <div class="col-md-3 col-3">
-                                <i class="fa-solid fa-car"></i>
-                                <br />
-                                <a class='btn btn-sm'>1 Garage</a>
-                                <i class="fa-duotone fa-bed-front"></i>
-                            </div>
-                            <div class="col-md-3 col-3">
-                                <i class="fa-solid fa-ruler"></i>
-                                <br />
-                                <a class='btn btn-sm'>150 Sq m</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer p-0 text-center">
-                        <div class="d-flex align-items-center ">
-                            <div class="col-md-3 pt-3 pb-3 card-footer-bg textLight">
-                                <strong>For Sale</strong>
-                            </div>
-                            <div class="col-md-9 pt-3 pb-3">
-                                <small>P 1,000,000</small>
-                            </div>
-                        </div>
+                        <input type="text" class="focus-control form-control py-2 bg-light" placeholder="Search..."
+                            id="input-search" />
+                        <button class="btn btn-light" type="button" id="search">Search</button>
                     </div>
                 </div>
             </div>
-
-
         </div>
+
     </div>
-@endsection
+    <div class="container">
+        <div class="row d-flex justify-content-center mt-5">
+            <div class="d-flex justify-content-end">
+                <div class="d-flex justify-content-start">
+                    <select class="form-select focus-control" aria-label="Default select example">
+                        <option selected>Default Order</option>
+                        <option value="1">Price(Low to High)</option>
+                        <option value="2">Price(High to Low)</option>
+                        <option value="3">Date New to Old</option>
+                        <option value="4">Date Old to Knew</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 g-3 mt-1">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow border border-0 bg-card-body">
+                        <div class="img-wrapper">
+                            <img href="#" class="bsr-pict card-img-top"
+                                src="https://www.vistaresidences.com.ph/img/containers/main/img/minimalist-condo-in-manila.png/15ed8280fc19482cae110268a2faebf0.png"
+                                alt="..."></img>
+                            <a href="#" class='fade content stretched-link text-white'>
+                                <img class='logo-overlay'
+                                    src='https://i.ibb.co/H75pK9V/Dream-Fields-Logo-White-01.png'></img>
+                                <span class='mt-3'> View Details</span></a>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title h4 fw-bold text-center">Condo Condo</p>
+                            <hr>
+                            </hr>
+                            <div class="row text-center g-1 mt-2">
+                                <div class="col-md-3 col-2">
+                                    <i class="fa-solid fa-bed"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>2 Beds</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-bath"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Baths</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-car"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Garage</a>
+                                    <i class="fa-duotone fa-bed-front"></i>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-ruler"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>150 Sq m</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer p-0 text-center">
+                            <div class="d-flex align-items-center ">
+                                <div class="col-md-3 pt-3 pb-3 card-footer-bg textLight">
+                                    <strong>For Sale</strong>
+                                </div>
+                                <div class="col-md-9 pt-3 pb-3">
+                                    <small>P 1,000,000</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow border border-0 bg-card-body">
+                        <div class="img-wrapper">
+                            <img href="#" class="bsr-pict card-img-top"
+                                src="https://www.vistaresidences.com.ph/img/containers/main/img/minimalist-condo-in-manila.png/15ed8280fc19482cae110268a2faebf0.png"
+                                alt="..."></img>
+                            <a href="#" class='fade content stretched-link text-white'>
+                                <img class='logo-overlay'
+                                    src='https://i.ibb.co/H75pK9V/Dream-Fields-Logo-White-01.png'></img>
+                                <span class='mt-3'> View Details</span></a>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title h4 fw-bold text-center">Condo Condo</p>
+                            <hr>
+                            </hr>
+                            <div class="row text-center g-1 mt-2">
+                                <div class="col-md-3 col-2">
+                                    <i class="fa-solid fa-bed"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>2 Beds</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-bath"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Baths</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-car"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Garage</a>
+                                    <i class="fa-duotone fa-bed-front"></i>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-ruler"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>150 Sq m</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer p-0 text-center">
+                            <div class="d-flex align-items-center ">
+                                <div class="col-md-3 pt-3 pb-3 card-footer-bg textLight">
+                                    <strong>For Sale</strong>
+                                </div>
+                                <div class="col-md-9 pt-3 pb-3">
+                                    <small>P 1,000,000</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow border border-0 bg-card-body">
+                        <div class="img-wrapper">
+                            <img href="#" class="bsr-pict card-img-top"
+                                src="https://www.vistaresidences.com.ph/img/containers/main/img/minimalist-condo-in-manila.png/15ed8280fc19482cae110268a2faebf0.png"
+                                alt="..."></img>
+                            <a href="#" class='fade content stretched-link text-white'>
+                                <img class='logo-overlay'
+                                    src='https://i.ibb.co/H75pK9V/Dream-Fields-Logo-White-01.png'></img>
+                                <span class='mt-3'> View Details</span></a>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title h4 fw-bold text-center">Condo Condo</p>
+                            <hr>
+                            </hr>
+                            <div class="row text-center g-1 mt-2">
+                                <div class="col-md-3 col-2">
+                                    <i class="fa-solid fa-bed"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>2 Beds</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-bath"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Baths</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-car"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Garage</a>
+                                    <i class="fa-duotone fa-bed-front"></i>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-ruler"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>150 Sq m</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer p-0 text-center">
+                            <div class="d-flex align-items-center ">
+                                <div class="col-md-3 pt-3 pb-3 card-footer-bg textLight">
+                                    <strong>For Sale</strong>
+                                </div>
+                                <div class="col-md-9 pt-3 pb-3">
+                                    <small>P 1,000,000</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow border border-0 bg-card-body">
+                        <div class="img-wrapper">
+                            <img href="#" class="bsr-pict card-img-top"
+                                src="https://www.vistaresidences.com.ph/img/containers/main/img/minimalist-condo-in-manila.png/15ed8280fc19482cae110268a2faebf0.png"
+                                alt="..."></img>
+                            <a href="#" class='fade content stretched-link text-white'>
+                                <img class='logo-overlay'
+                                    src='https://i.ibb.co/H75pK9V/Dream-Fields-Logo-White-01.png'></img>
+                                <span class='mt-3'> View Details</span></a>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title h4 fw-bold text-center">Condo Condo</p>
+                            <hr>
+                            </hr>
+                            <div class="row text-center g-1 mt-2">
+                                <div class="col-md-3 col-2">
+                                    <i class="fa-solid fa-bed"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>2 Beds</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-bath"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Baths</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-car"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Garage</a>
+                                    <i class="fa-duotone fa-bed-front"></i>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-ruler"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>150 Sq m</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer p-0 text-center">
+                            <div class="d-flex align-items-center ">
+                                <div class="col-md-3 pt-3 pb-3 card-footer-bg textLight">
+                                    <strong>For Sale</strong>
+                                </div>
+                                <div class="col-md-9 pt-3 pb-3">
+                                    <small>P 1,000,000</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow border border-0 bg-card-body">
+                        <div class="img-wrapper">
+                            <img href="#" class="bsr-pict card-img-top"
+                                src="https://www.vistaresidences.com.ph/img/containers/main/img/minimalist-condo-in-manila.png/15ed8280fc19482cae110268a2faebf0.png"
+                                alt="..."></img>
+                            <a href="#" class='fade content stretched-link text-white'>
+                                <img class='logo-overlay'
+                                    src='https://i.ibb.co/H75pK9V/Dream-Fields-Logo-White-01.png'></img>
+                                <span class='mt-3'> View Details</span></a>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title h4 fw-bold text-center">Condo Condo</p>
+                            <hr>
+                            </hr>
+                            <div class="row text-center g-1 mt-2">
+                                <div class="col-md-3 col-2">
+                                    <i class="fa-solid fa-bed"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>2 Beds</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-bath"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Baths</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-car"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Garage</a>
+                                    <i class="fa-duotone fa-bed-front"></i>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-ruler"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>150 Sq m</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer p-0 text-center">
+                            <div class="d-flex align-items-center ">
+                                <div class="col-md-3 pt-3 pb-3 card-footer-bg textLight">
+                                    <strong>For Sale</strong>
+                                </div>
+                                <div class="col-md-9 pt-3 pb-3">
+                                    <small>P 1,000,000</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow border border-0 bg-card-body">
+                        <div class="img-wrapper">
+                            <img href="#" class="bsr-pict card-img-top"
+                                src="https://www.vistaresidences.com.ph/img/containers/main/img/minimalist-condo-in-manila.png/15ed8280fc19482cae110268a2faebf0.png"
+                                alt="..."></img>
+                            <a href="#" class='fade content stretched-link text-white'>
+                                <img class='logo-overlay'
+                                    src='https://i.ibb.co/H75pK9V/Dream-Fields-Logo-White-01.png'></img>
+                                <span class='mt-3'> View Details</span></a>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title h4 fw-bold text-center">Condo Condo</p>
+                            <hr>
+                            </hr>
+                            <div class="row text-center g-1 mt-2">
+                                <div class="col-md-3 col-2">
+                                    <i class="fa-solid fa-bed"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>2 Beds</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-bath"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Baths</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-car"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Garage</a>
+                                    <i class="fa-duotone fa-bed-front"></i>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-ruler"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>150 Sq m</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer p-0 text-center">
+                            <div class="d-flex align-items-center ">
+                                <div class="col-md-3 pt-3 pb-3 card-footer-bg textLight">
+                                    <strong>For Sale</strong>
+                                </div>
+                                <div class="col-md-9 pt-3 pb-3">
+                                    <small>P 1,000,000</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow border border-0 bg-card-body">
+                        <div class="img-wrapper">
+                            <img href="#" class="bsr-pict card-img-top"
+                                src="https://www.vistaresidences.com.ph/img/containers/main/img/minimalist-condo-in-manila.png/15ed8280fc19482cae110268a2faebf0.png"
+                                alt="..."></img>
+                            <a href="#" class='fade content stretched-link text-white'>
+                                <img class='logo-overlay'
+                                    src='https://i.ibb.co/H75pK9V/Dream-Fields-Logo-White-01.png'></img>
+                                <span class='mt-3'> View Details</span></a>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title h4 fw-bold text-center">Condo Condo</p>
+                            <hr>
+                            </hr>
+                            <div class="row text-center g-1 mt-2">
+                                <div class="col-md-3 col-2">
+                                    <i class="fa-solid fa-bed"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>2 Beds</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-bath"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Baths</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-car"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Garage</a>
+                                    <i class="fa-duotone fa-bed-front"></i>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-ruler"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>150 Sq m</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer p-0 text-center">
+                            <div class="d-flex align-items-center ">
+                                <div class="col-md-3 pt-3 pb-3 card-footer-bg textLight">
+                                    <strong>For Sale</strong>
+                                </div>
+                                <div class="col-md-9 pt-3 pb-3">
+                                    <small>P 1,000,000</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow border border-0 bg-card-body">
+                        <div class="img-wrapper">
+                            <img href="#" class="bsr-pict card-img-top"
+                                src="https://www.vistaresidences.com.ph/img/containers/main/img/minimalist-condo-in-manila.png/15ed8280fc19482cae110268a2faebf0.png"
+                                alt="..."></img>
+                            <a href="#" class='fade content stretched-link text-white'>
+                                <img class='logo-overlay'
+                                    src='https://i.ibb.co/H75pK9V/Dream-Fields-Logo-White-01.png'></img>
+                                <span class='mt-3'> View Details</span></a>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title h4 fw-bold text-center">Condo Condo</p>
+                            <hr>
+                            </hr>
+                            <div class="row text-center g-1 mt-2">
+                                <div class="col-md-3 col-2">
+                                    <i class="fa-solid fa-bed"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>2 Beds</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-bath"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Baths</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-car"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Garage</a>
+                                    <i class="fa-duotone fa-bed-front"></i>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-ruler"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>150 Sq m</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer p-0 text-center">
+                            <div class="d-flex align-items-center ">
+                                <div class="col-md-3 pt-3 pb-3 card-footer-bg textLight">
+                                    <strong>For Sale</strong>
+                                </div>
+                                <div class="col-md-9 pt-3 pb-3">
+                                    <small>P 1,000,000</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow border border-0 bg-card-body">
+                        <div class="img-wrapper">
+                            <img href="#" class="bsr-pict card-img-top"
+                                src="https://www.vistaresidences.com.ph/img/containers/main/img/minimalist-condo-in-manila.png/15ed8280fc19482cae110268a2faebf0.png"
+                                alt="..."></img>
+                            <a href="#" class='fade content stretched-link text-white'>
+                                <img class='logo-overlay'
+                                    src='https://i.ibb.co/H75pK9V/Dream-Fields-Logo-White-01.png'></img>
+                                <span class='mt-3'> View Details</span></a>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title h4 fw-bold text-center">Condo Condo</p>
+                            
+                            <hr/>
+                         
+                            <div class="row text-center g-1 mt-2">
+                                <div class="col-md-3 col-2">
+                                    <i class="fa-solid fa-bed"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>2 Beds</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-bath"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Baths</a>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-car"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>1 Garage</a>
+                                    <i class="fa-duotone fa-bed-front"></i>
+                                </div>
+                                <div class="col-md-3 col-3">
+                                    <i class="fa-solid fa-ruler"></i>
+                                    <br />
+                                    <a class='btn btn-sm'>150 Sq m</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer p-0 text-center">
+                            <div class="d-flex align-items-center ">
+                                <div class="col-md-3 pt-3 pb-3 card-footer-bg textLight">
+                                    <strong>For Sale</strong>
+                                </div>
+                                <div class="col-md-9 pt-3 pb-3">
+                                    <small>P 1,000,000</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    @endsection
