@@ -35,6 +35,7 @@
   background: rgb(57, 54, 97)}
 
 .tabcard{
+  height: 30vh;
   max-height: 30vh;
   overflow-y: auto;
 }
