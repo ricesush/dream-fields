@@ -27,7 +27,7 @@ Route::get('/amenities', function () {return view('amenities');})->name('ameniti
 Route::get('/inquire', function () {return view('inquire');})->name('inquire');
 Route::get('/aboutus', function () {return view('aboutus');})->name('aboutus');
 Route::get('/buypage', function () {return view('buysellrent/buypage')->with('properties', Property::orderBy('created_at', 'desc')->get());})->name('buypage');
-Route::get('/rentpage', function () {return view('buysellrent/rentpage');})->name('rentpage');
+Route::get('/rentpage', function () {return view('buysellrent/rentpage')->with('properties', Property::orderBy('created_at', 'desc')->get());})->name('rentpage');
 Route::get('/sellpage', function () {return view('buysellrent/sellpage');})->name('sellpage');
 
 
