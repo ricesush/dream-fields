@@ -6,9 +6,9 @@
 @endsection
 
 @section('content')
-
+    <div class="container">
         <div class="tabcard">
-            <table class="table table-hover text-center">
+            <table class="table table-hover text-center table-sm">
                 <thead>
                     <tr>
                         <th>Unit Number</th>
@@ -48,6 +48,7 @@
                 </tbody>
             </table>
         </div>
+    </div>
 
 @endsection
 

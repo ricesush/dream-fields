@@ -6,8 +6,10 @@
 @endsection
 
 @section('content')
-        <div class="tabcard">
-        <table class="table table-hover text-center">
+
+    <div class="container">
+      <div class="tabcard">
+        <table class="table table-hover text-center table-sm">
             <thead>
               <tr>
                 <th>ID</th>
@@ -26,14 +28,18 @@
                 <td>{{$user->email}}</td>
                 <td>phone here</td>
                 <td>{{$user->role}}</td>
-                <td>buttons here</td>
+                <td>
+                  <a href="{{route('edituser', $user->id )}}" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                  <a href="{{ route('deleteuser', $user->id) }}" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></a>
+                </td>
               </tr>
               @endforeach
 
               
             </tbody>
           </table>
-        </div>               
+        </div>
+      </div>            
 
 @endsection
 
