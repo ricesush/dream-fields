@@ -26,7 +26,10 @@
                 <td>{{$user->email}}</td>
                 <td>phone here</td>
                 <td>{{$user->role}}</td>
-                <td>buttons here</td>
+                <td>
+                  <a href="{{route('edituser', $user->id )}}" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                  <a href="{{ route('deleteuser', $user->id) }}" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></a>
+                </td>
               </tr>
               @endforeach
 

@@ -58,4 +58,33 @@ class AdminController extends Controller
 
         return redirect()->route('condounits')->with('success', 'Property deleted successfully!');
     }
+
+    public function edituser($id)
+    {
+        $user = User::find($id);
+
+        return view('adminPages/editusers')->with('user', $user);
+    }
+
+    public function update(Request $request)
+    {
+        $user = User::find($request->id);
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user->role = $request->role;
+        $user->save();
+       
+
+        return redirect()->route('userspage')->with('success', 'User updated successfully!');
+    }
+
+    public function destroyuser($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+
+        return redirect()->route('userspage')->with('success', 'Property deleted successfully!');
+    }
 }
