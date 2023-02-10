@@ -1,21 +1,7 @@
 <div class="bgColor textLight mt-5" data-aos="fade-up" data-aos-duration="500">
 
-  <footer class="container mx-auto row row-cols-1 row-cols-sm-2 row-cols-md-5 py-2 py-5 border-top">
-    <!-- <section class='col-lg-12 d-flex align-items-center mb-5 '>
-            <div class='container d-flex justify-content-between align-items-center textLight '>
-                <div >
-                    <i class="fa-solid fa-location-dot"></i> United Street, Brgy Kapitolyo, Pasig City, Metro Manila 1603 Philippines
-                </div>
-                <div>
-                    <a href='' class='me-3 fs-4 socmedicon'><i class="fa-brands fa-facebook"></i></a>
-                    <a href='' class='ms-3 me-3 fs-4 socmedicon'><i class="fa-brands fa-twitter"></i></a>
-                    <a href='' class='ms-3 fs-4 socmedicon'><i class="fa-brands fa-square-instagram"></i></a>
-                </div>
-            </div>
-        </section> -->
-
-
-    <div class="col-lg-6">
+  <footer class="container row mx-auto row row-cols-1 row-cols-sm-2 row-cols-md-5 py-2 py-5 border-top">
+    <div class="col-lg-6 col-md-12 col-12">
       <a href="/" class="d-flex align-items-center mb-3 textLight text-decoration-none">
         <img src="{{URL::asset('images/DreamFields Logo(full)-01.png')}}" class="bi me-2" width="35%" alt="..." />
       </a>
@@ -70,7 +56,7 @@
       <div class="pt-3">
         <a href='https://www.facebook.com/profile.php?id=100089755791674&sk=grid' class='fs-5 socmedicon'><i class="fa-brands fa-facebook"></i></a>
         <a href='https://twitter.com/Dre4mFields?fbclid=IwAR0f2CRM3Tagnu8jKtsVZi_gGFjE4EB9fsv5LdZz7V2y_HcHFKCh2CiPPnM' class='px-2 fs-5 socmedicon'><i class="fa-brands fa-twitter"></i></a>
-        <a href='' class='fs-5 socmedicon'><i class="fa-brands fa-square-instagram"></i></a>
+        <a href='https://www.instagram.com/dre4mfields/?fbclid=IwAR2azJpRSlhbeJ4TjcHgGGqaw24O6vjQhICXKgCNTM22j4P19-ViTzxkYdA' class='fs-5 socmedicon'><i class="fa-brands fa-square-instagram"></i></a>
       </div>
       <div class=" mt-5">
         <small class="fw-bold fs-6 ">Vicinity:</small>
