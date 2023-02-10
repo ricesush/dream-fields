@@ -31,8 +31,8 @@
                     <input type="text" class="input text-light form-control bg-transparent border-0 border-bottom rounded-0" placeholder="Search..." id="input-search" />
                     <button class="btn bg-transparent border-0 border-bottom rounded-0" type="button" id="search"><i class="fa fa-solid fa-magnifying-glass"></i></button>
                 </div>
-            </div>
-        </form>
+              </div>
+         </form>
     </div>
 </div>
 

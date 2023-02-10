@@ -6,7 +6,6 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PropertyController;
 use App\Models\Property;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
