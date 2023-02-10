@@ -38,6 +38,7 @@ Route::post('/createproperty', [PropertyController::class, 'create'])->name('cre
 Route::post('/approveunit', [PropertyController::class, 'approve'])->name('approveunit');
 Route::post('/denyunit', [PropertyController::class, 'deny'])->name('denyunit');
 Route::post('/updateproperty', [PropertyController::class,'update'])->name('updateproperty');
+Route::post('/updateuser', [AdminController::Class, 'update'])->name('updateuser');
 
 //admin auth
 Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
@@ -48,6 +49,8 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
         Route::get('/users', 'users')->name('userspage');
         Route::get('/editunit/{id}', 'edit')->name('editunit');
         Route::get('/deleteunit/{id}', 'destroy')->name('deleteunit');
+        Route::get('/edituser/{id}', 'edituser')->name('edituser');
+        Route::get('/deleteuser/{id}', 'destroyuser')->name('deleteuser');
     });
 
     // Route::controller(PropertyController::class)->group(function () {
