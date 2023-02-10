@@ -7,8 +7,7 @@
 
 @section('content')
 
-    <div class="container">
-      <div class="tabcard">
+    <div class="container" style="height: 600px; overflow-y: scroll;">
         <table class="table table-hover text-center table-sm">
             <thead>
               <tr>
@@ -60,7 +59,6 @@
               
             </tbody>
           </table>
-        </div>
       </div>            
 
 @endsection
