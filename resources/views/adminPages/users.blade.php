@@ -6,8 +6,10 @@
 @endsection
 
 @section('content')
-        <div class="tabcard">
-        <table class="table table-hover text-center">
+
+    <div class="container">
+      <div class="tabcard">
+        <table class="table table-hover text-center table-sm">
             <thead>
               <tr>
                 <th>ID</th>
@@ -36,7 +38,8 @@
               
             </tbody>
           </table>
-        </div>               
+        </div>
+      </div>            
 
 @endsection
 

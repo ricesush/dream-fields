@@ -14,8 +14,8 @@
                     <strong><i class="fa-sharp fa-dollar-sign"></i></strong>
                 </div>
                 <div class="text-end pb-4">
-                    <h4 class="mb-3">Total Sales</h4>
-                    <div class="text-muted"><strong>$200.00</strong></div>
+                    <h4 class="mb-3">Users Count:</h4>
+                    <div class="text-muted"><strong>{{ count($users) }}</strong></div>
                 </div>
             </div>
         </div>
