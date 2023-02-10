@@ -26,7 +26,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin')->with('users', User::all())->with('totalunits', Property::count());
+        return view('admin')->with('properties', Property::orderBy('created_at', 'desc')->get())
+        ->with('users', User::all());
     }
     
     public function pending()

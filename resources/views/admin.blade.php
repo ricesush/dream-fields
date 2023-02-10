@@ -41,8 +41,22 @@
                     <strong><i class="fa-solid fa-dollar-sign"></i></strong>
                 </div>
                 <div class="text-end pb-4">
-                    <h4 class="mb-3">Units Sold</h4>
-                    <div class="text-muted pe-3"><strong>9</strong></div>
+                    <h4 class="mb-3">Total Sales</h4>
+                    <div class="text-muted pe-3">
+                        <strong>
+                          @php
+                            $total = 0;
+                          @endphp
+                          @foreach($properties as $property)
+                            @if($property->unitStatus == 'Sold')
+                              @php
+                                $total += $property->unitPrice;
+                              @endphp
+                            @endif
+                          @endforeach
+                          ₱{{ $total }}
+                        </strong>
+                      </div>
                 </div>
             </div>
         </div>
