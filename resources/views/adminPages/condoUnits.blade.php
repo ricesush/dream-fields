@@ -13,7 +13,6 @@
               <tr>
                 <th>Unit Number</th>
                 <th>Unit Type</th>
-                <th>Unit Status</th>
                 <th>Floor Area</th>
                 <th>Bedroom</th>
                 <th>Bathroom</th>
@@ -29,8 +28,7 @@
               <tr>
                 <td>{{ $property->unitNumber }}</td>
                 <td>{{ $property->unitType }}</td>
-                <td>{{ $property->unitStatus }}</td>
-                <td>{{ $property->floorArea}}</td>
+                <td>{{ $property->floorArea}} sq m</td>
                 <td>{{ $property->numBed}}</td>
                 <td>{{ $property->numBaths}}</td>
                 <td>{{ $property->user->name }}</td>
@@ -50,7 +48,7 @@
                           <div class="modal-header">
                             <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Warning!</h1>
                           </div>
-                          <div class="modal-body p-5 fw-bold">
+                          <div class="modal-body p-5 fw-bold h3">
                             Are you sure you want to delete this unit?
                           </div>
                           <div class="modal-footer">

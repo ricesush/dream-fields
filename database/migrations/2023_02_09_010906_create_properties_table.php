@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('imagePath')->nullable()->default(null);
             $table->enum('hasParking' , ['none', '1', '2']);
             $table->enum('isApproved', ['Approved','Denied','Pending'])->default('pending');
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->cascadeOnDelete();
             $table->timestamps();
         });
     }
