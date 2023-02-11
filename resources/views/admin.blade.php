@@ -28,8 +28,32 @@
                 </div>
                 <div class="text-end">
                     <h4 class="mb-3">Units Listed</h4>
-                    <div class="text-muted">For sale: 7</div>
-                    <div class="text-muted">For rent: 4</div>
+                    <div class="text-muted">For sale: 
+                        @php
+                        $forsale = 0;
+                      @endphp
+                      @foreach($properties as $property)
+                        @if($property->unitStatus == 'For Sale')
+                          @php
+                            $forsale += 1;
+                          @endphp
+                        @endif
+                      @endforeach
+                    {{ $forsale }} 
+                    </div>
+                    <div class="text-muted">For rent: 
+                        @php
+                            $forrent = 0;
+                        @endphp
+                        @foreach($properties as $property)
+                            @if($property->unitStatus == 'For Rent')
+                                @php
+                                    $forrent += 1;
+                                @endphp
+                            @endif
+                        @endforeach
+                    {{ $forrent }} 
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,7 +93,19 @@
                 </div>
                 <div class="text-end pb-4">
                     <h4 class="mb-3">Units Rented</h4>
-                    <div class="text-muted">7</div>
+                    <div class="text-muted">
+                        @php
+                            $sold = 0;
+                        @endphp
+                        @foreach($properties as $property)
+                            @if($property->unitStatus == 'Rented')
+                                @php
+                                    $sold += 1;
+                                @endphp
+                            @endif
+                        @endforeach
+                    {{ $sold }} 
+                    </div>
                 </div>
             </div>
         </div>

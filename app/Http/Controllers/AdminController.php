@@ -40,6 +40,11 @@ class AdminController extends Controller
         return view('adminPages/condounits')->with('properties', Property::orderBy('created_at', 'desc')->get());
     }
 
+    public function backlogs()
+    {
+        return view('adminPages/backlogs')->with('properties', Property::orderBy('created_at', 'desc')->get());
+    }
+
     public function users()
     {
         return view('adminPages/users')->with('users', User::all());
