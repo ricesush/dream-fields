@@ -43,11 +43,11 @@
         <div class="d-flex justify-content-end my-2">
             <div class="d-flex justify-content-start">
                 <select class="form-select focus-control" aria-label="Default select example">
-                    <option selected>Default Order</option>
+                    <option  onchange="window.location.href=this.value;">Default Order</option>
                     <option value="1">Price(Low to High)</option>
                     <option value="2">Price(High to Low)</option>
-                    <option value="3">Date New to Old</option>
-                    <option value="4">Date Old to Knew</option>
+                    <option value="{{route('buypage')}}">Date New to Old</option>
+                    <option value="3">Date Old to Knew</option>
                 </select>
             </div>
         </div>
@@ -69,7 +69,7 @@
 
                             </div>
                             <div class="card-body">
-                                <p class="card-title h4 fw-bold text-center">{{ $property->unitNumber }}</p>
+                                <p class="card-title h4 fw-bold text-center">{{ $property->unitType }}</p>
                                 <hr>
                                 </hr>
                                 <div class="row text-center g-1 mt-2">

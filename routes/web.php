@@ -7,6 +7,8 @@ use App\Http\Controllers\PropertyController;
 use App\Models\Property;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ListingController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -68,8 +70,22 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
 
 
     });
- 
 
+
+    //admin auth
+Route::prefix('user')->middleware('auth')->group(function() {
+    Route::controller(ListingController::class)->group(function () {
+        // Route::get('/', 'index')->name('admin');
+        Route::get('/listing','index')->name('listing');
+    });
+
+    // Route::controller(PropertyController::class)->group(function () {
+    //     Route::post('/createproperty', 'create')->name('admin.createproperty');
+    //     Route::get('/editproperty/{id}', 'edit')->name('admin.editproperty');
+    //     Route::post('/updateproperty', 'update')->name('admin.updateproperty');
+    //     Route::get('/destroyproperty/{id}', 'destroy')->name('admin.destroy');
+    });
+   
 
 
 
