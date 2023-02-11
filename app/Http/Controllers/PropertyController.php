@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Property;
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class PropertyController extends Controller
 {
@@ -71,5 +74,57 @@ class PropertyController extends Controller
         $property->delete();
 
         return redirect()->route('home')->with('success', 'Property deleted successfully!');
+    }
+
+    public function search(){
+        $data = $_GET['search_input'];
+        $search_input = Str::of($data)->explode(' ');
+
+        if( !isset($data[0]) ){   
+            $text = [];
+            return view('search', ['text_input' => $text]);
+        }else{
+            foreach($search_input as $inputs){
+                global $input;
+                $input = $inputs;
+                $text = Property::where(function ($query) {
+                    $query->where('unitNumber', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('unitType', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('unitStatus', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('numBed', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('numBaths', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('numBaths', 'LIKE', '%'.$GLOBALS['input'].'%');
+                })
+                ->where('isApproved', 'Pending')
+                ->get();
+                return view('search', ['text_input' => $text]);
+            }
+        }
+    }
+
+    public function searchTab(){
+        $data = $_GET['search_input'];
+        $search_input = Str::of($data)->explode(' ');
+
+        if( !isset($data[0]) ){   
+            $text = [];
+            return view('search', ['text_input' => $text]);
+        }else{
+            foreach($search_input as $inputs){
+                global $input;
+                $input = $inputs;
+                $text = Property::where(function ($query) {
+                    $query->where('unitNumber', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('unitType', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('unitStatus', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('numBed', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('numBaths', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('numBaths', 'LIKE', '%'.$GLOBALS['input'].'%');
+                })
+                ->where('isApproved', 'Pending')
+                ->get();
+                return view('search', ['text_input' => $text]);
+            }
+        }
     }
 }
