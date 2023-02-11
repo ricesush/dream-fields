@@ -24,10 +24,19 @@
                                     <span></span>
                                     <p data-start="good luck!" data-text="View Units" data-title="For Rent"></p>
                                 </a>
+                                @guest
+                                @if (Route::has('login'))
                                 <a href="{{route('sellpage')}}" class='col-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center shadow'>
                                     <span></span>
                                     <p data-start="good luck!" data-text="Go >>" data-title="List Your Unit"></p>
                                 </a>
+                                @endif
+                            @else
+                            <a href="{{route('listing')}}" class='col-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center shadow'>
+                                <span></span>
+                                <p data-start="good luck!" data-text="Go >>" data-title="List Your Unit"></p>
+                            </a>
+                            @endguest
                             </div>
                         </section>
                         <form class="bgColor2 py-3 rounded-1 shadow">
