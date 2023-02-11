@@ -152,3 +152,7 @@ align-items: center;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
+
+.note-login{
+  height: 20vh;
+}
