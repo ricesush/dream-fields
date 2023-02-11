@@ -11,7 +11,7 @@
         <div class="col-12 col-md-3 mt-5">
             <div class="card p-3 shadow-lg">
                 <div class="imgBx sold text-center h4 pt-3 text-white shadow-lg">
-                    <strong><i class="fa-sharp fa-dollar-sign"></i></strong>
+                    <strong><i class="fa-solid fa-user"></i></strong>
                 </div>
                 <div class="text-end pb-4">
                     <h4 class="mb-3">Users Count:</h4>
