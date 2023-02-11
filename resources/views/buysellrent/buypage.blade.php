@@ -1,6 +1,7 @@
 @extends('layouts.buysellrent')
 
 @section('content')
+
 <div class="Bsr-banner-buy container-fluid position-relative">
     <div class="container d-grid align-items-end bg-height ">
         <form class="bgColor2 py-2 rounded-1 mb-3" method="GET" action="{{ route('search') }}">
@@ -65,6 +66,7 @@
                                     <img class='logo-overlay'
                                         src='https://i.ibb.co/H75pK9V/Dream-Fields-Logo-White-01.png'></img>
                                     <span class='mt-3'> View Details</span></a>
+
                             </div>
                             <div class="card-body">
                                 <p class="card-title h4 fw-bold text-center">{{ $property->unitNumber }}</p>
