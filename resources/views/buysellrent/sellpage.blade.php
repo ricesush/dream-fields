@@ -14,107 +14,38 @@
         </div>
         <div class="row">
             <div class="col mt-4">
-                <form class="row g-2 fw-bold mt-2" method="POST" action="#">
-                    <h2 class='fw-bold'>Personal Details :<button class="btn btn-dark float-end me-1"> Edit <i
-                                class="fa-solid fa-pen-to-square"></i></button></h2>
-                    <div class="col-md-4">
-                        <label for="firstName" class="form-label"><span class='fs-5'>Fist Name</span></label>
-                        <input type="text" class="form-control" id="fistName" placeholder='Ex. Juan' disabled />
-                    </div>
-                    <div class="col-md-4">
-                        <label for="middleName" class="form-label"><span class='fs-5'>Middle Name</span></label>
-                        <input type="text" class="form-control" id="middleName" placeholder="Optional" disabled />
-                    </div>
-                    <div class="col-md-4">
-                        <label for="lastName" class="form-label"><span class='fs-5'>Last Name</span></label>
-                        <input type="text" class="form-control" id="lastName" placeholder='Ex. Dela Cruz'
-                            disabled />
-                    </div>
-                    <div class="col-12">
-                        <label for="address" class="form-label"><span class='fs-5'>Complete Address</span></label>
-                        <input type="address" class="form-control" id="address"
-                            placeholder="House No./Street/Barangay/Municipality/Province" disabled />
-                    </div>
-                    <div class="col-md-8">
-                        <label for="email" class="form-label"><span class='fs-5'>Email</span></label>
-                        <input type="email" class="form-control" id="email" placeholder="Insert your Email here."
-                            disabled />
-                    </div>
-                    <div class="col-md-4">
-                        <label for="phone" class="form-label"><span class='fs-5'>Phone Number</span></label>
-                        <input type="text" class="form-control" id="phone" placeholder="Ex. 0919*******"
-                            disabled />
-                    </div>
-                    <hr />
-                    <h2 class='fw-bold'>Property Details :</h2>
-                    <div class="col-md-6">
+                <form class="row g-2 fw-bold mt-2" method="POST" action="{{route('createproperty')}}">
+                    @csrf
+                    <div class="mb-3 col-md-6">
+                        <label for="unitNumber" class="form-label">Unit Number</label>
+                        <input type="number" class="form-control" id="unitNumber" name="unitNumber">
+                      </div>
+                      <div class="mb-3 col-md-6">
+                        <label for="unitPrice" class="form-label">Unit Price</label>
+                        <input type="number" class="form-control" id="unitPrice" name="unitPrice">
+                      </div>
+                      <div class="mb-3 col-md-6">
                         <label for="unitType" class="form-label">Unit Type</label>
-                        <input type="text" class="form-control" id="unitType" placeholder='Condo' disabled />
-                    </div>
+                        <select class="form-select" id="unitType" name="unitType">
+                            <option>Choose</option>
+                            <option value="Studio">Studio</option>
+                            <option value="Loft">Loft</option>
+                            <option value="Bedroom Unit">Bedroom Unit</option>
+                            <option value="Penthouse Unit">Penthouse Unit</option>
+                            <option value="Bi-level Unit">Bi-level Unit</option>
+                          </select>
+                      </div>
+                      <div class="mb-3 col-md-6">
+                        <label for="unitStatus" class="form-label">List unit as</label>
+                        <select class="form-select" id="unitStatus" name="unitStatus">
+                            <option>Choose</option>
+                            <option value="For rent">For rent</option>
+                            <option value="For sale">For sale</option>
 
-                    <div class="col-md-6 col-6">
-                        <label for="inputState" class="form-label">List Unit as</label>
-                        <select id="inputState" class="form-select">
-                            <option selected>Choose...</option>
-                            <option>For Sale</option>
-                            <option>For Rent</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2 col-6">
-                        <label for="beds" class="form-label">Beds </label>
-                        <input type="number" class="form-control" id="beds" placeholder="Ex. 1" />
-                    </div>
-                    <div class="col-md-2 col-6">
-                        <label for="baths" class="form-label">Baths </label>
-                        <input type="number" class="form-control" id="baths" placeholder="Ex. 1" />
-                    </div>
-                    <div class="col-md-2 col-6">
-                        <label for="garage" class="form-label">Parking </label>
-                        <input type="number" class="form-control" id="garage" placeholder="Ex. 1" />
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <label for="propertySize" class="form-label">Unit Size</label>
-                        <input type="text" class="form-control" id="unittySize"
-                            placeholder="Ex. 120 sqt. or 120 sqm." />
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <label for="popertyPrice" class="form-label">Proposed Price </label>
-                        <input type="number" class="form-control" id="proposedPrice"
-                            placeholder="Ex. PHP 500,000" />
-                    </div>
-                    <div class="container p-0 m-0">
-                        <div class="row g-2">
-                            <label for="popertyPrice" class="form-label">Unit Address</label>
-                            <div class="col-md-4">
-                                <div class="form-floating mb-2">
-                                    <input type="address" class="form-control" id="barangay"
-                                        placeholder="House No./Street/Barangay" />
-                                    <label for="floatingInput">House No./Street/Barangay</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-floating mb-2">
-                                    <input type="address" class="form-control" id="municipality"
-                                        placeholder="Municipality" />
-                                    <label for="floatingInput">Municipality</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-floating mb-2">
-                                    <input type="address" class="form-control" id="province"
-                                        placeholder="Province" />
-                                    <label for="floatingInput">Province</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 mb-3">
-                        <label for="textArea" class="form-label">Brief Description of the Property</label>
-                        <textarea class="form-control" id="textArea" rows="6"></textarea>
-                    </div>
-                    <div class="col-12 text-center">
-                        <button type="submit" class="btn btn-primary p-3">Submit Listing</button>
-                    </div>
+                          </select>
+                          <input type="hidden" name="user_id" value="{{ Auth::user()->id}}">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>                   
                 </form>
             </div>
         </div>

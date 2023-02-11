@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.guest')
 
 @section('content')
 <div class="login-box">
@@ -17,6 +17,11 @@
       <div class="user-box">
         <input id="email" type="email" class="fw-bold form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
         <label class="fw-bold" for="email">Email</label>
+        @error('email')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+         @enderror
       </div>
         @error('email')
             <span class="invalid-feedback" role="alert">

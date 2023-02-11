@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #ddd;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    th, td {
+      display: block;
+      border: none;
+    }
+    td {
+      text-align: right;
+    }
+  }
+  

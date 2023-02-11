@@ -1,65 +1,63 @@
 @extends('layouts.adminLayout')
 
+@section('header')
+<h1 class="h2">Dashboard</h1>
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-
-                    <div>
-                        <form action="{{ route('createproperty') }}" method="POST">
-                            @csrf
-                            <div class="row">
-                                <div class="col-10">
-                                    <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-                                    <input class="form-control" type="number" name="unitNumber">
-
-                                </div>
-                                <div class="col-2">
-                                    <button type="submit" class="btn btn-primary">
-                                        ➡
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+        <!-- Sales -->
+        <div class="col-12 col-md-3 mt-5">
+            <div class="card p-3 shadow-lg">
+                <div class="imgBx sold text-center h4 pt-3 text-white shadow-lg">
+                    <strong><i class="fa-sharp fa-dollar-sign"></i></strong>
+                </div>
+                <div class="text-end pb-4">
+                    <h4 class="mb-3">Users Count:</h4>
+                    <div class="text-muted"><strong>{{ count($users) }}</strong></div>
                 </div>
             </div>
         </div>
-        <div className="col-md-4">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Unit Number</th>
-                    <th>Unit Owner</th>
-                    <th>Action</th>
-                    {{-- <th scope="col">Handle</th> --}}
-                </tr>
-                </thead>
-                <tbody>
-                    @foreach($properties as $property)
-                <tr>
-                    <td>{{ $property->unitNumber }}</td>
-                    <td>{{ $property->user->name }}</td>
-                    <td>
-                        <a class="btn btn-sm btn-light" href="{{ route('editproperty', $property->id) }}">Edit</a>
-                        <a class="btn btn-sm btn-danger" href="{{ route('destroy', $property->id) }}">Delete</a>
-                    </td>
 
-                </tr>
-            
-                    @endforeach
-            </table>
+        <!-- Listed -->
+        <div class="col-12 col-md-3 mt-5">
+            <div class="card p-3 shadow-lg">
+                <div class="imgBx listed text-center h4 pt-3 text-white shadow-lg">
+                    <strong><i class="fa-regular fa-list-ul"></i></strong>
+                </div>
+                <div class="text-end">
+                    <h4 class="mb-3">Units Listed</h4>
+                    <div class="text-muted">For sale: 7</div>
+                    <div class="text-muted">For rent: 4</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sold -->
+        <div class="col-12 col-md-3 mt-5">
+            <div class="card p-3 shadow-lg">
+                <div class="imgBx house text-center h4 pt-3 text-white shadow-lg">
+                    <strong><i class="fa-solid fa-dollar-sign"></i></strong>
+                </div>
+                <div class="text-end pb-4">
+                    <h4 class="mb-3">Units Sold</h4>
+                    <div class="text-muted pe-3"><strong>9</strong></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rented -->
+        <div class="col-12 col-md-3 mt-5">
+            <div class="card p-3 shadow-lg">
+                <div class="imgBx rented text-center h4 pt-3 text-white shadow-lg">
+                    <strong><i class="fa-solid fa-home"></i></strong>
+                </div>
+                <div class="text-end pb-4">
+                    <h4 class="mb-3">Units Rented</h4>
+                    <div class="text-muted">7</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
