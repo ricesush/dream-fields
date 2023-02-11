@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PropertyController;
 use App\Models\Property;
+use App\Http\Controllers\ListingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,7 @@ Route::get('/buypage', function () {return view('buysellrent/buypage')->with('pr
 Route::get('/rentpage', function () {return view('buysellrent/rentpage')->with('properties', Property::orderBy('created_at', 'desc')->get());})->name('rentpage');
 Route::get('/sellpage', function () {return view('buysellrent/sellpage');})->name('sellpage');
 
+
 //user auth
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -37,7 +39,7 @@ Route::post('/createproperty', [PropertyController::class, 'create'])->name('cre
 Route::post('/approveunit', [PropertyController::class, 'approve'])->name('approveunit');
 Route::post('/denyunit', [PropertyController::class, 'deny'])->name('denyunit');
 Route::post('/updateproperty', [PropertyController::class,'update'])->name('updateproperty');
-Route::post('/updateuser', [AdminController::Class, 'update'])->name('updateuser');
+Route::post('/updateuser', [AdminController::class, 'update'])->name('updateuser');
 
 //admin auth
 Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
@@ -58,8 +60,22 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
     //     Route::post('/updateproperty', 'update')->name('admin.updateproperty');
     //     Route::get('/destroyproperty/{id}', 'destroy')->name('admin.destroy');
     });
- 
 
+
+    //admin auth
+Route::prefix('user')->middleware('auth')->group(function() {
+    Route::controller(ListingController::class)->group(function () {
+        // Route::get('/', 'index')->name('admin');
+        Route::get('/listing','index')->name('listing');
+    });
+
+    // Route::controller(PropertyController::class)->group(function () {
+    //     Route::post('/createproperty', 'create')->name('admin.createproperty');
+    //     Route::get('/editproperty/{id}', 'edit')->name('admin.editproperty');
+    //     Route::post('/updateproperty', 'update')->name('admin.updateproperty');
+    //     Route::get('/destroyproperty/{id}', 'destroy')->name('admin.destroy');
+    });
+   
 
 
 

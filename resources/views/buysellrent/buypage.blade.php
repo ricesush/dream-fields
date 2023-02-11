@@ -67,7 +67,7 @@
                                     <span class='mt-3'> View Details</span></a>
                             </div>
                             <div class="card-body">
-                                <p class="card-title h4 fw-bold text-center">{{ $property->unitNumber }}</p>
+                                <p class="card-title h4 fw-bold text-center">{{ $property->unitType }}</p>
                                 <hr>
                                 </hr>
                                 <div class="row text-center g-1 mt-2">
