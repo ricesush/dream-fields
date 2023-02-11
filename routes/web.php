@@ -29,7 +29,6 @@ Route::get('/buypage', function () {return view('buysellrent/buypage')->with('pr
 Route::get('/rentpage', function () {return view('buysellrent/rentpage')->with('properties', Property::orderBy('created_at', 'desc')->get());})->name('rentpage');
 Route::get('/sellpage', function () {return view('buysellrent/sellpage');})->name('sellpage');
 
-
 //user auth
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
