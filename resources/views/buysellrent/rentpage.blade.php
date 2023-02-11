@@ -3,7 +3,7 @@
 @section('content')
 <div class="Bsr-banner-buy container-fluid position-relative">
     <div class="container d-grid align-items-end bg-height ">
-        <form class="bgColor2 py-2 rounded-1 mb-3">
+        <form class="bgColor2 py-2 rounded-1 mb-3" method="GET" action="{{ route('search') }}">
             @csrf
             <div class="row col-md-12 col-lg-12 d-flex justify-content-center m-0">
                 <div class=" col-lg-4 col-md-12 d-flex me-0">
@@ -28,8 +28,8 @@
                     </select>
                 </div>
                 <div class="col-lg-8 d-flex mt-3 text-light">
-                    <input type="text" class="input text-light form-control bg-transparent border-0 border-bottom rounded-0" placeholder="Search..." id="input-search" />
-                    <button class="btn bg-transparent border-0 border-bottom rounded-0" type="button" id="search"><i class="fa fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" class="input text-light form-control bg-transparent border-0 border-bottom rounded-0" placeholder="Search..." id="input-search" name="search_input"/>
+                    <button class="btn bg-transparent border-0 border-bottom rounded-0" type="submit" id="search"><i class="fa fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </div>
         </form>
