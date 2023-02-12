@@ -29,12 +29,6 @@ object-fit: cover;
   height: 35vh;
 }
 
-.bgColor2{
-  background: #ffffff71;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-}
-
 /* End of Banner */
 
 select option {
