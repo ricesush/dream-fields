@@ -65,6 +65,7 @@
                                         <option value="3">3</option>
                                     </select>
 
+
                                     <select class="form-select bg-transparent border-0 border-bottom rounded-0 pt-2" name="baths" id="beds">
                                         <option Selected hidden value="0">Beds</option>
                                         <option value="1">1</option>
@@ -168,6 +169,7 @@
                                         <p class="card-text">Studio Type / Standard</p>
                                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -199,6 +201,13 @@
                                         <h5 class="card-title">2-Bedroom Unit</h5>
                                         <p class="card-text">Deluxe</p>
                                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                         <div class="col-lg-8 d-flex mt-3 text-light">
+                                        <input type="text"
+                                            class="input text-light form-control bg-transparent border-0 border-bottom rounded-0"
+                                            placeholder="Search..." id="input-search"  name="search_input"/>
+                                        <button class="btn bg-transparent border-0 border-bottom rounded-0" type="submit"
+                                            id="search"><i class="fa fa-solid fa-magnifying-glass"></i></button>
+
                                     </div>
                                 </div>
                             </div>

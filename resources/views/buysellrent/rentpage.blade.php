@@ -4,6 +4,7 @@
 
 <div class="Bsr-banner-rent container-fluid position-relative">
     <div class="container d-grid align-items-end bg-height ">
+        <h1 class="text-center fw-bold bg-transparent">Rent</h1>
         <form class="bgColor2 py-2 rounded-1 mb-3" method="GET" action="{{ route('search') }}">
             @csrf
             <div class="row col-md-12 col-lg-12 d-flex justify-content-center m-0">
@@ -57,7 +58,7 @@
             @foreach ($properties as $property)
                 @if ($property->isApproved == 'Approved' && $property->unitStatus == 'For Rent')
                     <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 shadow border border-0 bg-card-body">
+                        <div class="card h-100 shadow border border-0 bg-card-body cards-bground">
                             <div class="img-wrapper">
                                 <img href="#" class="bsr-pict card-img-top"
                                     src="https://www.vistaresidences.com.ph/img/containers/main/img/minimalist-condo-in-manila.png/15ed8280fc19482cae110268a2faebf0.png"
