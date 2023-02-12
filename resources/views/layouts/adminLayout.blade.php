@@ -74,8 +74,9 @@
         document.getElementById('logout-form').submit();">
         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
           @csrf
-      </form>
+        </form>
          <i class='bx bx-log-out' id="log_out" ></i>
+         <span class="links_name">&nbsp &nbsp &nbsp Logout</span>
       </a>
      </li>
     </ul>
