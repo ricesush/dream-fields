@@ -418,6 +418,10 @@ input::-webkit-input-placeholder {
 /* carousel */
 
 .c-item{
-    max-height: 40vh;
-    
+    height: 50vh;
 }
+
+.c-item2{
+  height: 40vh;
+}
+
