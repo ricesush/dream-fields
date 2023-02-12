@@ -72,7 +72,6 @@
 
       <a href="{{ route('logout') }}"  onclick="event.preventDefault();
         document.getElementById('logout-form').submit();">
-     </a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
           @csrf
       </form>
@@ -82,7 +81,7 @@
     </ul>
   </div>
   <section class="home-section">
-      <div class="text">Dashboard</div>
+      <div class="text">@yield('header')</div>
       <main class="container">
         @yield('content')
       </main>
