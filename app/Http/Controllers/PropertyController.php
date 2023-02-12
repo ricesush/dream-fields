@@ -12,6 +12,16 @@ use Illuminate\Support\Str;
 class PropertyController extends Controller
 {
     public function create(Request $request){
+
+        $request->validate([
+            'unitNumber' => 'required|unique:properties|max:1000',
+            'unitType' => 'required',
+            'unitStatus' => 'required',
+            'unitPrice' => 'required|integer',
+            'user_id' => 'required',
+        ]);
+
+
         $property = new Property;
         $property->unitNumber = $request->unitNumber;
         $property->unitType = $request->unitType;
@@ -52,6 +62,19 @@ class PropertyController extends Controller
 
     public function update(Request $request)
     {
+
+        $request->validate([
+            'unitNumber' => 'required|max:1000',
+            'unitType' => 'required|string',
+            'floorArea' => 'required|integer',
+            'numBed' => 'required|integer|max:3',
+            'numBaths' => 'required|integer|max:3',
+            'hasParking' => 'required|max:4',
+            'unitStatus' => 'required|string',
+            'unitPrice' => 'required|integer',
+            'user_id' => 'required|exists:users,id',
+        ]);
+
         $property = Property::find($request->id);
 
         $property->unitNumber = $request->unitNumber;

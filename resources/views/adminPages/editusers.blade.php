@@ -10,6 +10,13 @@
   <p>Edit Unit info.</p>
   <a href="{{ route('admin') }}" class="btn btn-light btn-sm">← Go back</a>
   <div class="card py-5 px-4 mt-3 col-md-8 shadow-lg">
+    @if($errors->any())
+    <div class="mb-3">
+        @foreach($errors->all() as $error)
+            <span class="text-danger fw-bold">{{$error}}</span><br>
+        @endforeach
+    </div>        
+    @endif
       <form method="POST" action="{{ route('updateuser') }}">
           @csrf
           <div class="container">
