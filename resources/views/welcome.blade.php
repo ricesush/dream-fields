@@ -214,23 +214,15 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </secntion>
         <section class="pb-5">
             <div class="card-group shadow ">
-                <div class="card position-relative rounded-0">
+                <div class="card position-relative rounded-0 ">
                     <div class="card-body">
                         <h5 class="card-title text-green d-lg-flex align-items-end col-lg-8 text-center"><span class="col-2"><img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" alt="..." style="max-width: 35px;" /></span> Features and Amenities</h5>
                         <p>Taste life’s simple pleasures with quality living at Chateau Elysée. Your charmed lifestyle unfolds in a secure community that allows you to play, bond, mingle, share and belong.</p>
-                        <div class='row col-lg-6 d-flex homeBtn position-absolute top-100 start-50 translate-middle text-center'>
+                        <div class='row col-lg-6 d-flex homeBtn2 position-absolute top-100 start-50 translate-middle text-center'>
                             <a href="{{ route('buypage') }}" class='col-lg-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center shadow'>
                                 <span></span>
                                 <p data-start="good luck!" data-text="Go >>" data-title="Learn More"></p>
@@ -238,8 +230,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card position-relative rounded-0">
-                    <div class="card-body">
+                <div class="card position-relative rounded-0 mt-sm-5 mt-md-0 mt-lg-0">
+                    <div class="card-body ">
                         <h5 class="card-title text-green d-lg-flex align-items-end col-lg-9 text-center"><span class="col-2"><img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" alt="..." style="max-width: 35px;" /></span> Ground Floor</h5>
                         <ul>
                             <li>
@@ -249,7 +241,7 @@
                             <li>
                                 Two (2) Passenger Elevators</li>
                         </ul>
-                        <div class='row col-lg-6 d-flex homeBtn position-absolute top-100 start-50 translate-middle text-center'>
+                        <div class='row col-lg-6 d-flex homeBtn2 position-absolute top-100 start-50 translate-middle text-center'>
                             <a href="{{ route('buypage') }}" class='col-lg-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center shadow'>
                                 <span></span>
                                 <p data-start="good luck!" data-text="Go >>" data-title="Learn More"></p>
@@ -271,7 +263,7 @@
                                 and more...</li>
                         </ul>
                     </div>
-                    <div class='row col-lg-6 d-flex homeBtn position-absolute top-100 start-50 translate-middle text-center '>
+                    <div class='row col-lg-6 d-flex homeBtn2 position-absolute top-100 start-50 translate-middle text-center '>
                         <a href="{{ route('buypage') }}" class='col-lg-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center shadow'>
                             <span></span>
                             <p data-start="good luck!" data-text="Go >>" data-title="Learn More"></p>
