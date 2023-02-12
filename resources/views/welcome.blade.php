@@ -85,12 +85,18 @@
         </div>
     </div>
 </div>
-<div class="bg-light mt-5 ">
+<div class="bg-light my-5">
     <div class="container">
-        <section class="py-3 text-center">
-            <img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" class="col-1" alt="..." />
+        <section class="pt-4 text-center col-1 mx-auto">
+            <img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" class="col-4" alt="..." />
         </section>
-        <secntion>
+        <section class="text-center fs-2 fw-bold">
+            Dream Fields
+        </section>
+        <p class="text-center fst-italic pb-4 fw-bold">
+            "Turning your dream realty into reality"
+        </p>
+        <section data-aos="flip-up">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -117,8 +123,8 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-        </secntion>
-        <section class="shadow ">
+        </section>
+        <section class="shadow">
             <div class="card mb-3 border-0 border-bottom">
                 <div class="row g-0">
                     <div class="col-lg-6 col-md-12">
@@ -149,7 +155,7 @@
                 </div>
             </div>
         </section>
-        <secntion>
+        <section data-aos="flip-up">
             <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators col-lg-4">
                     <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -201,13 +207,8 @@
                                         <h5 class="card-title">2-Bedroom Unit</h5>
                                         <p class="card-text">Deluxe</p>
                                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                         <div class="col-lg-8 d-flex mt-3 text-light">
-                                        <input type="text"
-                                            class="input text-light form-control bg-transparent border-0 border-bottom rounded-0"
-                                            placeholder="Search..." id="input-search"  name="search_input"/>
-                                        <button class="btn bg-transparent border-0 border-bottom rounded-0" type="submit"
-                                            id="search"><i class="fa fa-solid fa-magnifying-glass"></i></button>
-
+                                        <div class="col-lg-8 d-flex mt-3 text-light">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -215,7 +216,7 @@
                     </div>
                 </div>
             </div>
-        </secntion>
+        </section>
         <section class="pb-5">
             <div class="card-group shadow ">
                 <div class="card position-relative rounded-0 ">
@@ -249,7 +250,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card position-relative  rounded-0">
+                <div class="card position-relative rounded-0">
                     <div class="card-body">
                         <h5 class="card-title text-green d-lg-flex align-items-end col-lg-9 text-center"><span class="col-2"><img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" alt="..." style="max-width: 35px;" /></span> Building Facilities & Services</h5>
                         <ul>
@@ -270,8 +271,25 @@
                         </a>
                     </div>
                 </div>
+
             </div>
         </section>
     </div>
 </div>
+</div>
+<div class="container py-5">
+    <section class='d-flex justify-content-around my-5'>
+        <iframe class="bg-white rounded-3" data-aos="fade-right" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02T3N9qDkFn9kVFLDbHLAKWcyMF54iSa62ZFpN8uPZHBno67MCRACLf9WALAY92u2Ul%26id%3D100089755791674&show_text=true&width=500" width="500" height="543" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <iframe class="bg-white rounded-3" data-aos="fade-left" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02Fa4HnZuE9nuBjiNZN6eHKxY3icVYqdEodaP88J9brYZtTREmMVSp7pCNqqiLK4mrl%26id%3D100089755791674&show_text=true&width=500" width="500" height="543" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </section>
+    <section class='d-flex justify-content-center'>
+        <div class="col-6 d-flex justify-content-center" data-aos="fade-right"><blockquote class="twitter-tweet" ><p lang="en" dir="ltr" >✅ Balcony<br>✅ Good price for Studio<a  href="https://t.co/Ygp90m76da">pic.twitter.com/Ygp90m76da</a></p>&mdash; Dream Fields (@Dre4mFields) <a  href="https://twitter.com/Dre4mFields/status/1623708681350291457?ref_src=twsrc%5Etfw">February 9, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        <div class="col-6 d-flex justify-content-center" data-aos="fade-left"><blockquote class="twitter-tweet" ><p lang="en" dir="ltr">Nice place to stay. Clean and complete with what you need. 🥰🥰🥰 <a href="https://t.co/Kqg7y61nFL">pic.twitter.com/Kqg7y61nFL</a></p>&mdash; Dream Fields (@Dre4mFields) <a href="https://twitter.com/Dre4mFields/status/1623707994092605446?ref_src=twsrc%5Etfw">February 9, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+    </section>
+        
+        
+    
+</div>
+
+
 @endsection
