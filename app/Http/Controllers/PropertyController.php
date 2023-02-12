@@ -30,7 +30,7 @@ class PropertyController extends Controller
         $property->user_id = $request->user_id;
 
         $property->save();
-        return redirect()->route('sellpage')->with('success', "new unit added!");
+        return redirect()->route('listing')->with('success', "new unit added!");
     }
 
     public function approve(Request $request){
