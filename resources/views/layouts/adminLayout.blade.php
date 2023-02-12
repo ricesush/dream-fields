@@ -21,7 +21,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-        <div class="logo_name">Dream Fields</div>
+        <div class="logo_name"><a href={{route('welcome')}}>Dream Fields</a></div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
     <ul class="nav-list">
