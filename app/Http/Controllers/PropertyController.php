@@ -18,7 +18,7 @@ class PropertyController extends Controller
             'unitType' => 'required',
             'unitStatus' => 'required',
             'unitPrice' => 'required|integer',
-            'user_id' => 'required',
+            'user_id' => 'required|exists:users,id',
         ]);
 
 
@@ -64,14 +64,14 @@ class PropertyController extends Controller
     {
 
         $request->validate([
-            'unitNumber' => 'required|max:1000',
+            'unitNumber' => 'required|max:4',
             'unitType' => 'required|string',
             'floorArea' => 'required|integer',
             'numBed' => 'required|integer|max:3',
             'numBaths' => 'required|integer|max:3',
             'hasParking' => 'required|max:4',
             'unitStatus' => 'required|string',
-            'unitPrice' => 'required|integer',
+            'unitPrice' => 'required|integer|max:40',
             'user_id' => 'required|exists:users,id',
         ]);
 
