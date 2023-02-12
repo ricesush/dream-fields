@@ -2,8 +2,11 @@
 
 @section('content')
     <div class="Bsr-banner-buy container-fluid position-relative">
+       
         <div class="container d-grid align-items-end bg-height ">
-            <h1 class="text-center fw-bold">Buy</h1>
+            <div class="col">
+                <h1 class="text-center fw-bold"><span class=""><span class="text-dark bg-light rounded-start-2 ps-2 shadow">BUY </span><span class=" badge-color text-light rounded-end-2  px-2  shadow"> UNITS</span></span></h1>
+            </div>
             <form class="bgColor2 py-2 rounded-1 mb-3" method="GET" action="{{ route('search') }}">
                 @csrf
                 <div class="row col-md-12 col-lg-12 d-flex justify-content-center m-0">

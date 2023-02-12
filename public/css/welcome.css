@@ -385,7 +385,7 @@
 
 
 .bgColor2{
-  background: #ffffff71;
+  background: #ffffffd5;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
@@ -418,6 +418,18 @@ input::-webkit-input-placeholder {
 /* carousel */
 
 .c-item{
-    max-height: 40vh;
-    
+    height: 50vh;
+}
+
+.c-item2{
+  height: 40vh;
+}
+
+.wHeight{
+  height: 75vh;
+}
+
+.border-b{
+  border-color: #D67732 !important;
+  border-width: 2px !important;
 }
