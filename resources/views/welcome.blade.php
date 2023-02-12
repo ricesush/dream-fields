@@ -156,7 +156,7 @@
                     <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-inner c-item">
+                <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="3000">
                         <div class="card mb-3">
                             <div class="row g-0">
