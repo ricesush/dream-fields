@@ -1,3 +1,4 @@
+
 body {
   background: linear-gradient(
     to right,
@@ -10,7 +11,7 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   transition: all 0.5s ease-in-out !important;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .mainHeight{
@@ -167,6 +168,3 @@ li .active, .socmedicon:hover {
   color: #182825;
 }
 
-.c-item{
-  height: 40vh;
-}
