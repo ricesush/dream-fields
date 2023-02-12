@@ -6,8 +6,8 @@
 @endsection
 
 @section('content')
-    <div class="container" style="height: 600px; overflow-y: scroll;">
-            <table class="table table-hover text-center table-sm">
+    <div class="tab" style="height: 600px; overflow-y: scroll;">
+            <table class="styled-table">
                 <thead>
                     <tr>
                         <th>Unit Number</th>

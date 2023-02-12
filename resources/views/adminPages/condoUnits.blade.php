@@ -6,8 +6,8 @@
 @endsection
 
 @section('content')
-    <div class="container" style="height: 600px; overflow-y: scroll;">
-        <table class="table table-hover text-center table-sm">
+    <div class="tab" style="height: 600px; overflow-y: scroll;">
+        <table class="styled-table">
             <thead>
               <tr>
                 <th>Unit Number</th>
@@ -24,7 +24,7 @@
             <tbody>
               @foreach( $properties as $property )                          
               @if($property->isApproved == 'Approved')
-              <tr>
+              <tr class="active-row">
                 <td>{{ $property->unitNumber }}</td>
                 <td>{{ $property->unitType }}</td>
                 <td>{{ $property->floorArea}} sq m</td>
@@ -34,10 +34,8 @@
                 <td>{{ $property->unitStatus }}</td>
                 <td>₱{{ $property->unitPrice }}</td>
                 <td>
-                    <a href="{{route('editunit', $property->id )}}" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a class="btn btn-sm btn-danger" href="{{ route('deleteunit', $property->id) }}" >
-                      <i class="fa-solid fa-trash"></i>
-                    </a>
+                    <a href="{{route('editunit', $property->id )}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="{{ route('deleteunit', $property->id) }}"><i class="fa-solid fa-trash"></i></a>
 
                     
                     {{-- <a href="{{ route('deleteunit', $property->id) }}" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></a> --}}
