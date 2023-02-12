@@ -29,7 +29,7 @@
         @include('components.navbar')
     </div>
     
-    <main class="mainHeight mainOverlay">
+    <main class="mainHeight">
             @yield('content')
     </main>
         
