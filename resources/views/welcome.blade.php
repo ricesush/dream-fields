@@ -90,23 +90,28 @@
             <img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" class="col-1" alt="..." />
         </section>
         <secntion>
-            <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
                 <div class="carousel-inner c-item">
-                    <div class="carousel-item active">
-                        <img src="https://pinoydeal.ph/oc-content/uploads/937/176006_original.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://1.bp.blogspot.com/-03PwXiDUiA8/U7eWdwjg5KI/AAAAAAAADUQ/O1GhCbSMxoo/s1600/Field+Residences+Sucat+Paranaque+(38).jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item active" data-bs-interval="3000">
                         <img src="https://i1.wp.com/manilacondosbysmdc.com/wp-content/uploads/2019/03/field.jpg?fit=825%2C300&ssl=1" class="d-block w-100" alt="...">
                     </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="https://pinoydeal.ph/oc-content/uploads/937/176006_original.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="https://1.bp.blogspot.com/-03PwXiDUiA8/U7eWdwjg5KI/AAAAAAAADUQ/O1GhCbSMxoo/s1600/Field+Residences+Sucat+Paranaque+(38).jpg" class="d-block w-100" alt="...">
+                    </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -120,11 +125,11 @@
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="card-body">
-                            <h5 class="card-title text-green d-flex align-items-end"><span class="col1" ><img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" alt="..."  style="max-width: 35px;"/></span> How we see it.</h5>
+                            <h5 class="card-title text-green d-flex align-items-end"><span class="col-1"><img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" alt="..." style="max-width: 35px;" /></span> How we see it.</h5>
                             <p>Life flourishes when space is abundance. Space. A vast haven. An expanse that lets people find themselves, unleash creativity, rear a family, play and live.
                                 Now you can find this kind of space directly behind SM City Sucat in the progressive city of Parañaque, amidst the plains of Field Residences.
                                 Every second becomes more vivid with the sorroundings. Imagine near 8 hectares of fields embracing 10 mid-rise buildings, each showcasing a modern tropical design. All this in a meticulously designed environment that encompasses an entire residential condominium village. Plus, lavish conviniences and amenities for a complete and well-balanced lifestyle.</p>
-                            <h5 class="card-title text-green d-flex align-items-end"><span class="col-1" ><img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" alt="..."  style="max-width: 35px;"/></span> At A Glance.</h5>
+                            <h5 class="card-title text-green d-flex align-items-end"><span class="col-1"><img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" alt="..." style="max-width: 35px;" /></span> At A Glance.</h5>
                             <ul>
                                 <li>
                                     Land Area: 78,000 sqm</li>
@@ -143,12 +148,78 @@
                 </div>
             </div>
         </section>
-        
-        <section class="py-5">
-            <div class="card-group shadow">
-                <div class="card position-relative">
+        <secntion>
+            <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators col-lg-4">
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner c-item">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-8">
+                                    <img src="https://www.filbuild.com/philippines/real_estate/condominium/paranaque_city/smdc/field_residences/assets/Field_Residences_1BR_Living_Dining_Kitchen.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">1-Bedroom Unit</h5>
+                                        <p class="card-text">Studio Type / Standard</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-8">
+                                    <img src="https://www.filbuild.com/philippines/real_estate/condominium/paranaque_city/smdc/field_residences/assets/Field_Residences_2BR_Living_Bedroom.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">1-Bedroom Unit</h5>
+                                        <p class="card-text">Deluxe</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-8">
+                                    <img src="https://www.filbuild.com/philippines/real_estate/condominium/paranaque_city/smdc/field_residences/assets/Field_Residences_2BR_Kitchen2_Bath.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">2-Bedroom Unit</h5>
+                                        <p class="card-text">Deluxe</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </secntion>
+        <section class="pb-5">
+            <div class="card-group shadow ">
+                <div class="card position-relative rounded-0">
                     <div class="card-body">
-                        <h5 class="card-title text-green d-lg-flex align-items-end justify-content-between col-lg-8"><span class="col-1"><img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" alt="..."  style="max-width: 35px;"/></span> Features and Amenities</h5>
+                        <h5 class="card-title text-green d-lg-flex align-items-end col-lg-8 text-center"><span class="col-2"><img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" alt="..." style="max-width: 35px;" /></span> Features and Amenities</h5>
                         <p>Taste life’s simple pleasures with quality living at Chateau Elysée. Your charmed lifestyle unfolds in a secure community that allows you to play, bond, mingle, share and belong.</p>
                         <div class='row col-lg-6 d-flex homeBtn position-absolute top-100 start-50 translate-middle text-center'>
                             <a href="{{ route('buypage') }}" class='col-lg-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center shadow'>
@@ -158,9 +229,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="card position-relative">
+                <div class="card position-relative rounded-0">
                     <div class="card-body">
-                        <h5 class="card-title text-green d-lg-flex align-items-end justify-content-between col-lg-5"><span class="col-1" ><img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" alt="..."  style="max-width: 35px;"/></span> Ground Floor</h5>
+                        <h5 class="card-title text-green d-lg-flex align-items-end col-lg-9 text-center"><span class="col-2"><img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" alt="..." style="max-width: 35px;" /></span> Ground Floor</h5>
                         <ul>
                             <li>
                                 Grand Entrance Lobby with Lounge Area</li>
@@ -177,9 +248,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="card position-relative">
+                <div class="card position-relative  rounded-0">
                     <div class="card-body">
-                        <h5 class="card-title text-green d-lg-flex align-items-end justify-content-between col-lg-9"><span class="col-1"><img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}"  alt="..."  style="max-width: 35px;"/></span> Building Facilities & Services</h5>
+                        <h5 class="card-title text-green d-lg-flex align-items-end col-lg-9 text-center"><span class="col-2"><img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" alt="..." style="max-width: 35px;" /></span> Building Facilities & Services</h5>
                         <ul>
                             <li>
                                 Chambermaid Services (Maintenance and Housekeeping)</li>
@@ -191,7 +262,7 @@
                                 and more...</li>
                         </ul>
                     </div>
-                    <div class='row col-lg-6 d-flex homeBtn position-absolute top-100 start-50 translate-middle text-center'>
+                    <div class='row col-lg-6 d-flex homeBtn position-absolute top-100 start-50 translate-middle text-center '>
                         <a href="{{ route('buypage') }}" class='col-lg-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center shadow'>
                             <span></span>
                             <p data-start="good luck!" data-text="Go >>" data-title="Learn More"></p>
