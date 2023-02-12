@@ -161,3 +161,12 @@ li .active, .socmedicon:hover {
   background-color: black;
 }
 
+/* */
+
+.text-green{
+  color: #182825;
+}
+
+.c-item{
+  height: 40vh;
+}
