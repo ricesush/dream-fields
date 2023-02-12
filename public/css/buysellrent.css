@@ -65,6 +65,14 @@ select option:hover {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
+
+.badge-color{
+  background: #D67732;
+}
+.badge-text{
+  color:  #D67732;
+}
+
 .fa{
   color: #D67732;
   font-size: 2rem;
@@ -159,3 +167,13 @@ align-items: center;
 .note-login{
   height: 20vh;
 }
+
+
+/* about section */
+@media (max-width:770px){
+  .swap-column {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
