@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href='css/welcome.css'>
     <link rel="stylesheet" type="text/css" href='css/inquire.css'>
     <link rel="stylesheet" type="text/css" href='css/loginreg.css'>
+    <link rel="stylesheet" type="text/css" href='css/buysellrent.css'>
 
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">

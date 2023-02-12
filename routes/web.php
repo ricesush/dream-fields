@@ -7,6 +7,8 @@ use App\Http\Controllers\PropertyController;
 use App\Models\Property;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ListingController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -41,10 +43,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/addtofav', [App\Http\Controllers\FavouriteController::class, 'addtofav'])->name('addtofav');
 Route::post('/createproperty', [PropertyController::class, 'create'])->name('createproperty');
-Route::post('/approveunit', [PropertyController::class, 'approve'])->name('approveunit');
-Route::post('/denyunit', [PropertyController::class, 'deny'])->name('denyunit');
-Route::post('/updateproperty', [PropertyController::class,'update'])->name('updateproperty');
-Route::post('/updateuser', [AdminController::class, 'update'])->name('updateuser');
 
 //admin auth
 Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
@@ -52,11 +50,16 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
         Route::get('/', 'index')->name('admin');
         Route::get('/pendingunits', 'pending')->name('pendingunits');
         Route::get('/condounits', 'approved')->name('condounits');
+        Route::get('/backlogs', 'backlogs')->name('backlogs');
         Route::get('/users', 'users')->name('userspage');
         Route::get('/editunit/{id}', 'edit')->name('editunit');
         Route::get('/deleteunit/{id}', 'destroy')->name('deleteunit');
         Route::get('/edituser/{id}', 'edituser')->name('edituser');
         Route::get('/deleteuser/{id}', 'destroyuser')->name('deleteuser');
+        Route::post('/updateuser', 'update')->name('updateuser');
+        Route::post('/approveunit', [PropertyController::class, 'approve'])->name('approveunit');
+        Route::post('/denyunit', [PropertyController::class, 'deny'])->name('denyunit');
+        Route::post('/updateproperty', [PropertyController::class,'update'])->name('updateproperty');
     });
     
     Route::controller(PropertyController::class)->group(function () {
@@ -68,8 +71,22 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
 
 
     });
- 
 
+
+    //admin auth
+Route::prefix('user')->middleware('auth')->group(function() {
+    Route::controller(ListingController::class)->group(function () {
+        // Route::get('/', 'index')->name('admin');
+        Route::get('/listing','index')->name('listing');
+    });
+
+    // Route::controller(PropertyController::class)->group(function () {
+    //     Route::post('/createproperty', 'create')->name('admin.createproperty');
+    //     Route::get('/editproperty/{id}', 'edit')->name('admin.editproperty');
+    //     Route::post('/updateproperty', 'update')->name('admin.updateproperty');
+    //     Route::get('/destroyproperty/{id}', 'destroy')->name('admin.destroy');
+    });
+   
 
 
 

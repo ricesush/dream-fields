@@ -26,7 +26,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin')->with('users', User::all())->with('totalunits', Property::count());
+        return view('admin')->with('properties', Property::orderBy('created_at', 'desc')->get())
+        ->with('users', User::all());
     }
     
     public function pending()
@@ -37,6 +38,11 @@ class AdminController extends Controller
     public function approved()
     {
         return view('adminPages/condounits')->with('properties', Property::orderBy('created_at', 'desc')->get());
+    }
+
+    public function backlogs()
+    {
+        return view('adminPages/backlogs')->with('properties', Property::orderBy('created_at', 'desc')->get());
     }
 
     public function users()
@@ -68,6 +74,13 @@ class AdminController extends Controller
 
     public function update(Request $request)
     {
+
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|min:8'
+        ]);
+
         $user = User::find($request->id);
 
         $user->name = $request->name;

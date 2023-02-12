@@ -1,4 +1,4 @@
-<div class="bgColor textLight mt-5" data-aos="fade-up" data-aos-duration="500">
+<div class="bgColor textLight" data-aos="fade-up" data-aos-duration="500">
 
   <footer class="container row mx-auto row row-cols-1 row-cols-sm-2 row-cols-md-5 py-2 py-5 border-top">
     <div class="col-lg-6 col-md-12 col-12">

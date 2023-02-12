@@ -111,7 +111,7 @@ align-items: center;
 }
 
 .logo-overlay {
-  height: 40px;
+  height: 35px;
  
 }
 
@@ -151,4 +151,8 @@ align-items: center;
   background: #ffffff71;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+}
+
+.note-login{
+  height: 20vh;
 }

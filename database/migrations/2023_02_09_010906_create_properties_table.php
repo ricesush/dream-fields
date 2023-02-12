@@ -20,13 +20,13 @@ return new class extends Migration
             $table->enum('unitType', ['Studio','Loft', 'Bedroom Unit', 'Penthouse Unit', 'Bi-Level Unit']);
             $table->enum('unitStatus', ['Sold','Rented', 'For Sale', 'For Rent']);
             $table->float('floorArea')->nullable();
-            $table->float('unitPrice');
+            $table->double('unitPrice');
             $table->integer('numBed')->nullable();
             $table->integer('numBaths')->nullable();
             $table->string('imagePath')->nullable()->default(null);
             $table->enum('hasParking' , ['none', '1', '2']);
             $table->enum('isApproved', ['Approved','Denied','Pending'])->default('pending');
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->cascadeOnDelete();
             $table->timestamps();
         });
     }

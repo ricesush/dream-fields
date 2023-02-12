@@ -12,6 +12,16 @@ use Illuminate\Support\Str;
 class PropertyController extends Controller
 {
     public function create(Request $request){
+
+        $request->validate([
+            'unitNumber' => 'required|unique:properties|max:1000',
+            'unitType' => 'required',
+            'unitStatus' => 'required',
+            'unitPrice' => 'required|integer',
+            'user_id' => 'required|exists:users,id',
+        ]);
+
+
         $property = new Property;
         $property->unitNumber = $request->unitNumber;
         $property->unitType = $request->unitType;
@@ -52,6 +62,19 @@ class PropertyController extends Controller
 
     public function update(Request $request)
     {
+
+        $request->validate([
+            'unitNumber' => 'required|max:4',
+            'unitType' => 'required|string',
+            'floorArea' => 'required|integer',
+            'numBed' => 'required|integer|max:3',
+            'numBaths' => 'required|integer|max:3',
+            'hasParking' => 'required|max:4',
+            'unitStatus' => 'required|string',
+            'unitPrice' => 'required|integer|max:40',
+            'user_id' => 'required|exists:users,id',
+        ]);
+
         $property = Property::find($request->id);
 
         $property->unitNumber = $request->unitNumber;
@@ -95,36 +118,13 @@ class PropertyController extends Controller
                     ->orwhere('numBaths', 'LIKE', '%'.$GLOBALS['input'].'%')
                     ->orwhere('numBaths', 'LIKE', '%'.$GLOBALS['input'].'%');
                 })
-                ->where('isApproved', 'Pending')
+                ->where('isApproved', 'Approved')
                 ->get();
                 return view('search', ['text_input' => $text]);
             }
         }
     }
 
-    public function searchTab(){
-        $data = $_GET['search_input'];
-        $search_input = Str::of($data)->explode(' ');
+   
 
-        if( !isset($data[0]) ){   
-            $text = [];
-            return view('search', ['text_input' => $text]);
-        }else{
-            foreach($search_input as $inputs){
-                global $input;
-                $input = $inputs;
-                $text = Property::where(function ($query) {
-                    $query->where('unitNumber', 'LIKE', '%'.$GLOBALS['input'].'%')
-                    ->orwhere('unitType', 'LIKE', '%'.$GLOBALS['input'].'%')
-                    ->orwhere('unitStatus', 'LIKE', '%'.$GLOBALS['input'].'%')
-                    ->orwhere('numBed', 'LIKE', '%'.$GLOBALS['input'].'%')
-                    ->orwhere('numBaths', 'LIKE', '%'.$GLOBALS['input'].'%')
-                    ->orwhere('numBaths', 'LIKE', '%'.$GLOBALS['input'].'%');
-                })
-                ->where('isApproved', 'Pending')
-                ->get();
-                return view('search', ['text_input' => $text]);
-            }
-        }
-    }
 }
