@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class="sticky-top position-absolute">
         @include('components.navbar')
     </div>
     
