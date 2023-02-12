@@ -1,16 +1,17 @@
 @extends('layouts.buysellrent')
 
 @section('content')
-<div class="Bsr-banner-buy container-fluid position-relative">
+
+<div class="Bsr-banner-rent container-fluid position-relative">
     <div class="container d-grid align-items-end bg-height ">
-        <form class="bgColor2 py-2 rounded-1 mb-3">
+        <form class="bgColor2 py-2 rounded-1 mb-3" method="GET" action="{{ route('search') }}">
             @csrf
             <div class="row col-md-12 col-lg-12 d-flex justify-content-center m-0">
                 <div class=" col-lg-4 col-md-12 d-flex me-0">
                     <select class="form-select bg-transparent border-0 border-bottom rounded-0" name="links" id="unitProperties"  onchange="window.location.href=this.value;">
                         <option selected hidden value="Listing" class="text-dark">Listing</option>
                         <option value="{{ route('buypage') }}" >For Sale</option>
-                        <option value="{{ route('rentpage') }}" selected>For Rent</option>
+                        <option value="{{ route('rentpage') }}"selected>For Rent</option>
                     </select>
                     <select class="form-select bg-transparent border-0 border-bottom rounded-0 mx-3" name="baths" id="baths">
                     
@@ -28,11 +29,11 @@
                     </select>
                 </div>
                 <div class="col-lg-8 d-flex mt-3 text-light">
-                    <input type="text" class="input text-light form-control bg-transparent border-0 border-bottom rounded-0" placeholder="Search..." id="input-search" />
-                    <button class="btn bg-transparent border-0 border-bottom rounded-0" type="button" id="search"><i class="fa fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" class="input text-light form-control bg-transparent border-0 border-bottom rounded-0" placeholder="Search..." id="input-search" name="search_input"/>
+                    <button class="btn bg-transparent border-0 border-bottom rounded-0" type="submit" id="search"><i class="fa fa-solid fa-magnifying-glass"></i></button>
                 </div>
-            </div>
-        </form>
+              </div>
+         </form>
     </div>
 </div>
 
@@ -42,11 +43,11 @@
         <div class="d-flex justify-content-end my-2">
             <div class="d-flex justify-content-start">
                 <select class="form-select focus-control" aria-label="Default select example">
-                    <option selected>Default Order</option>
+                    <option  onchange="window.location.href=this.value;">Default Order</option>
                     <option value="1">Price(Low to High)</option>
                     <option value="2">Price(High to Low)</option>
-                    <option value="3">Date New to Old</option>
-                    <option value="4">Date Old to Knew</option>
+                    <option value="{{route('buypage')}}">Date New to Old</option>
+                    <option value="3">Date Old to Knew</option>
                 </select>
             </div>
         </div>
@@ -67,7 +68,7 @@
                                     <span class='mt-3'> View Details</span></a>
                             </div>
                             <div class="card-body">
-                                <p class="card-title h4 fw-bold text-center">{{ $property->unitNumber }}</p>
+                                <p class="card-title h4 fw-bold text-center">{{ $property->title }}</p>
                                 <hr>
                                 </hr>
                                 <div class="row text-center g-1 mt-2">

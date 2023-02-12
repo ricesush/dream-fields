@@ -9,28 +9,37 @@
                 <div class="container welcomePag">
                     <div class="row text-center d-flex align-items-end justify-content-center contH ">
                         <section class='col-lg-12 row d-flex align-items-center justify-content-center'>
-                            <div class="col-lg-12 textLight fs fw-bolder ">
+                            <p class="col-lg-12 textLight fs fw-bolder ">
                                 Find Your <span class="greenText">Dream Unit</span>
-                            </div>
-                            <div class='col-lg-12 textLight fs-5 '>
+                            </p>
+                            <p class='col-lg-12 textLight fs-5 '>
                                 Turning Your Dream Realty To Reality
-                            </div>
+                            </p>
                             <div class='row col-lg-6 d-flex mt-3 homeBtn'>
-                                <a href="{{route('buypage')}}" class='col-lg-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center'>
+                                <a href="{{route('buypage')}}" class='col-lg-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center shadow'>
                                     <span></span>
                                     <p data-start="good luck!" data-text="View Units" data-title="For Sale"></p>
                                 </a>
-                                <a href="{{route('rentpage')}}" class='col-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center'>
+                                <a href="{{route('rentpage')}}" class='col-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center shadow'>
                                     <span></span>
                                     <p data-start="good luck!" data-text="View Units" data-title="For Rent"></p>
                                 </a>
-                                <a href="{{route('sellpage')}}" class='col-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center'>
+                                @guest
+                                @if (Route::has('login'))
+                                <a href="{{route('sellpage')}}" class='col-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center shadow'>
                                     <span></span>
                                     <p data-start="good luck!" data-text="Go >>" data-title="List Your Unit"></p>
                                 </a>
+                                @endif
+                            @else
+                            <a href="{{route('listing')}}" class='col-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center shadow'>
+                                <span></span>
+                                <p data-start="good luck!" data-text="Go >>" data-title="List Your Unit"></p>
+                            </a>
+                            @endguest
                             </div>
                         </section>
-                        <form class="bgColor2 py-3 rounded-1">
+                        <form class="bgColor2 py-3 rounded-1 shadow">
                             @csrf
                             <div class="row col-md-12 col-lg-12 d-flex justify-content-center m-0">
                                 <div class=" col-lg-4 col-md-12 d-flex me-0">
