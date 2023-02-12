@@ -71,7 +71,7 @@ class PropertyController extends Controller
             'numBaths' => 'required|integer|max:3',
             'hasParking' => 'required|max:4',
             'unitStatus' => 'required|string',
-            'unitPrice' => 'required|integer|max:40',
+            'unitPrice' => 'required|integer|max:1000000000',
             'user_id' => 'required|exists:users,id',
         ]);
 
