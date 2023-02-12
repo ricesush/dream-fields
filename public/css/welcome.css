@@ -1,4 +1,4 @@
-/* .homeBtn{
+/* .homeBtn2{
     color: #D67732;
     border-color: #D67732 !important;
     background: #d6763252;
@@ -7,7 +7,7 @@
     height: 9vh;
     transition: all 0.5s ease-in-out !important
 }
-.homeBtn:hover{
+.homeBtn2:hover{
     background: #D67732 100%;
     transition: all 0.5s ease-in-out !important
 } */
@@ -197,6 +197,188 @@
   outline: 0;
 }
 
+.homeBtn2 {
+  display: flex;
+  justify-content: space-around;
+  top: 20px;
+  left: 20px;
+}
+
+.homeBtn2 a {
+  width: 150px;
+  height: 50px;
+  /* background-color: white; */
+  background: #00000000;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  margin: 20px;
+  color: #D67732;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.homeBtn2 a:before, .homeBtn2 a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #D67732;
+  transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.homeBtn2 a:before {
+  right: 0;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.homeBtn2 a:after {
+  left: 0;
+  bottom: 0;
+}
+
+.homeBtn2 a span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.homeBtn2 a span:before, .homeBtn2 a span:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: #D67732;
+  transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.homeBtn2 a span:before {
+  right: 0;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.homeBtn2 a span:after {
+  left: 0;
+  bottom: 0;
+}
+
+.homeBtn2 a p {
+  padding: 0;
+  margin: 0;
+  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.homeBtn2 a p:before, .homeBtn2 a p:after {
+  position: absolute;
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+  z-index: 1;
+  left: 0;
+}
+
+.homeBtn2 a p:before {
+  content: attr(data-title);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.homeBtn2 a p:after {
+  content: attr(data-text);
+  top: 150%;
+  color: #D67732;
+  
+}
+
+.homeBtn2 a:hover:before, .homeBtn2 a:hover:after {
+  width: 100%;
+  
+}
+
+.homeBtn2 a:hover span {
+  z-index: 1;
+}
+
+.homeBtn2 a:hover span:before, .homeBtn2 a:hover span:after {
+  height: 100%;
+  
+}
+
+.homeBtn2 a:hover p:before {
+  top: -50%;
+  transform: rotate(5deg);
+}
+
+.homeBtn2 a:hover p:after {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.homeBtn2 a.start {
+  background-color: #D67732;
+  box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  
+}
+
+.homeBtn2 a.start p:before {
+  top: -50%;
+  transform: rotate(5deg);
+}
+
+.homeBtn2 a.start p:after {
+  color: white;
+  transition: all 0s ease;
+  content: attr(data-start);
+  top: 50%;
+  transform: translateY(-50%);
+  animation: start 0.3s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes start {
+  from {
+    top: -50%;
+  }
+}
+
+.homeBtn2 a.start:hover:before, .homeBtn2 a.start:hover:after {
+  display: none;
+}
+
+.homeBtn2 a.start:hover span {
+  display: none;
+  
+}
+
+.homeBtn2 a:active {
+  outline: none;
+  border: none;
+}
+
+.homeBtn2 a:focus {
+  outline: 0;
+}
+
 .fs{
   font-size: 4rem;
 }
@@ -233,7 +415,9 @@ input::-webkit-input-placeholder {
 }
 
 
-/* pictures */
-/* .border-bottom{
-  border-color: #D67732 !important;
-} */
+/* carousel */
+
+.c-item{
+ 
+    
+}
