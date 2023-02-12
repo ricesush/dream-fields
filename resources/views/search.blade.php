@@ -6,20 +6,19 @@
             @csrf
             <div class="row col-md-12 col-lg-12 d-flex justify-content-center m-0">
                 <div class=" col-lg-4 col-md-12 d-flex me-0">
-                    <select class="form-select bg-transparent border-0 border-bottom rounded-0" name="links" id="unitProperties" onchange="window.location.href=this.value;">
+                    <select class="form-select bg-transparent border-0 border-bottom rounded-0" name="prop_status" id="unitProperties" onchange="window.location.href=this.value;">
                         <option selected hidden value="Listing" class="text-dark">Listing</option>
                         <option value="{{ route('buypage') }}">For Sale</option>
                         <option value="{{ route('rentpage') }}">For Rent</option>
                     </select>
                     <select class="form-select bg-transparent border-0 border-bottom rounded-0 mx-3" name="baths" id="baths">
-                    
                         <option selected hidden value="0">Baths</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                     </select>
 
-                    <select class="form-select bg-transparent border-0 border-bottom rounded-0 pt-2" name="baths" id="beds">
+                    <select class="form-select bg-transparent border-0 border-bottom rounded-0 pt-2" name="beds" id="beds">
                         <option Selected hidden value="0">Beds</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
