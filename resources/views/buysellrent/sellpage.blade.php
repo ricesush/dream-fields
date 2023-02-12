@@ -1,4 +1,4 @@
-@extends('layouts.guest')
+@extends('layouts.buysellrent')
 @section('content')
 <div class="Bsr-banner-sell">
 
