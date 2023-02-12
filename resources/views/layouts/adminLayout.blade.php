@@ -81,7 +81,7 @@
     </ul>
   </div>
   <section class="home-section">
-      <div class="text">Dashboard</div>
+      <div class="text">@yield('header')</div>
       <main class="container">
         @yield('content')
       </main>
