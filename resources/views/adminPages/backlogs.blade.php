@@ -2,7 +2,7 @@
 
 
 @section('header')
-<h1 class="h2">Pending Units</h1>
+<h1 class="h2">Backlogs</h1>
 @endsection
 
 @section('content')
@@ -20,7 +20,7 @@
                 </thead>
                 <tbody>
                  @foreach( $properties as $property )                          
-                  @if($property->isApproved == 'Pending')
+                  @if($property->isApproved == 'Denied')
                     <tr>
                         <td>{{ $property->unitNumber }}</td>
                         <td>{{ $property->unitType }}</td>
