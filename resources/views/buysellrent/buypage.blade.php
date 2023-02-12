@@ -3,6 +3,7 @@
 @section('content')
     <div class="Bsr-banner-buy container-fluid position-relative">
         <div class="container d-grid align-items-end bg-height ">
+            <h1 class="text-center fw-bold">Buy</h1>
             <form class="bgColor2 py-2 rounded-1 mb-3" method="GET" action="{{ route('search') }}">
                 @csrf
                 <div class="row col-md-12 col-lg-12 d-flex justify-content-center m-0">
@@ -47,22 +48,22 @@
 
         <div class="d-flex justify-content-end my-2">
             <div class="d-flex justify-content-start">
-                <select class="form-select focus-control" aria-label="Default select example">
-                    <option onchange="window.location.href=this.value;">Default Order</option>
-                    <option value="1">Price(Low to High)</option>
-                    <option value="2">Price(High to Low)</option>
-                    <option value="{{ route('buypage') }}">Date New to Old</option>
-                    <option value="3">Date Old to Knew</option>
+                <select class="form-select focus-control border border-0" aria-label="Default select example">
+                        <option onchange="window.location.href=this.value;">Default Order</option>
+                        <option value="1">Price(Low to High)</option>
+                        <option value="2">Price(High to Low)</option>
+                        <option value="{{ route('buypage') }}">Date New to Old</option>
+                        <option value="3">Date Old to Knew</option>
                 </select>
             </div>
         </div>
 
-        <div class="row row-cols-1 row-cols-md-3 g-3">
+        <div class="row row-cols-1 row-cols-md-3 g-3 ">
 
             @foreach ($properties as $property)
                 @if ($property->isApproved == 'Approved' && $property->unitStatus == 'For Sale')
                     <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 shadow border border-0 bg-card-body">
+                        <div class="card h-100 shadow border border-0 bg-card-body cards-bground">
                             <div class="img-wrapper">
                                 <img href="#" class="bsr-pict card-img-top"
                                     src="https://www.vistaresidences.com.ph/img/containers/main/img/minimalist-condo-in-manila.png/15ed8280fc19482cae110268a2faebf0.png"

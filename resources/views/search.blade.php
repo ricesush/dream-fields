@@ -1,4 +1,4 @@
-@extends('layouts.guest')
+@extends('layouts.buysellrent')
 @section('content')
 <div class="Bsr-banner-buy container-fluid position-relative">
     <div class="container d-grid align-items-end bg-height ">
