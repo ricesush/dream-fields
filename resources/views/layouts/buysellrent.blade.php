@@ -28,7 +28,7 @@
 
         @include('components.navbar')
 
-        <main class="bg-buysellrent bg-opacity-75 pb-5">
+        <main class="bg-white bg-opacity-75 pb-5">
             @yield('content')
         </main>
 
