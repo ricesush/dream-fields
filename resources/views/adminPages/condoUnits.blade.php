@@ -10,7 +10,7 @@
         <table class="styled-table">
             <thead>
               <tr>
-                <th>Unit Number</th>
+                <th><a href="{{route('condounits1')}}">Unit Number</a></th>
                 <th>Title</th>
                 <th>Unit Type</th>
                 <th>Floor Area</th>

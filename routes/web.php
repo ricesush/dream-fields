@@ -50,6 +50,7 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
         Route::get('/', 'index')->name('admin');
         Route::get('/pendingunits', 'pending')->name('pendingunits');
         Route::get('/condounits', 'approved')->name('condounits');
+        Route::get('/condounitss', 'approved1')->name('condounits1');
         Route::get('/backlogs', 'backlogs')->name('backlogs');
         Route::get('/users', 'users')->name('userspage');
         Route::get('/editunit/{id}', 'edit')->name('editunit');
