@@ -1,7 +1,7 @@
-<div class="bgColor-Navbar sticky-top">
+<div class="bgColor-Navbar sticky-top pt-3">
     <nav class="navbar container-fluid navbar-expand-lg">
     <div class="container">
-        <a class="col-lg-2 col-md-4 col-6 navbar-brand" href="{{route('welcome')}}"><img src="{{URL::asset('images/DreamFields Logo(full)-02.png')}}" class="col-12"  alt="..."/></a>
+        <a class="col-lg-2 col-md-4 col-6 navbar-brand" href="{{route('welcome')}}"><img src="{{URL::asset('images/DreamFields Logo(full)-01.png')}}" class="col-12"  alt="..."/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
