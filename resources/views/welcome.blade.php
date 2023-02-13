@@ -54,9 +54,9 @@
 
                             <div class="row col-md-12 col-lg-12 d-flex justify-content-center align-items-end m-0">
                                 <div class=" col-lg-4 col-md-12 d-flex me-0">
-                                    <select class="form-select bg-transparent border-0 border-bottom rounded-0 border-b" name="links" id="unitProperties">
-                                        <option selected hidden value="Listing" class="text-dark">Listing</option>
-                                        <option value="for_sale">For Sale</option>
+                                    <select class="option-deco form-select bg-transparent border-0 border-bottom rounded-0 border-b" name="links" id="unitProperties">
+                                        <option selected hidden value="Listing" class="text-dark bg-primary">Listing</option>
+                                        <option value="for_sale" class="">For Sale</option>
                                         <option value="for_rent">For Rent</option>
                                     </select>
                                     <select class="form-select bg-transparent border-0 border-bottom rounded-0 mx-3 border-b" name="baths" id="baths">
@@ -92,7 +92,7 @@
             <img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" class="col-4" alt="..." />
         </section>
         <section class="text-center fs-2 fw-bold">
-            Dream <span class="orangeText">Fields.</span>
+            DREAM <span class="orangeText">FIELDS</span>
         </section>
         <p class="text-center fst-italic pb-4 fw-bold">
             "Turning your dream realty into reality"
