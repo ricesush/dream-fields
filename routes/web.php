@@ -62,7 +62,7 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
         Route::post('/updateproperty', [PropertyController::class,'update'])->name('updateproperty');
     });
     
-    Route::controller(PropertyController::class)->group(function () {
+    // Route::controller(PropertyController::class)->group(function () {
         // Route::post('/createproperty', 'create')->name('admin.createproperty');
         // Route::get('/editproperty/{id}', 'edit')->name('admin.editproperty');
         // Route::post('/updateproperty', 'update')->name('admin.updateproperty');
@@ -70,7 +70,7 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
     });
 
 
-    });
+    // });
 
 
     //admin auth

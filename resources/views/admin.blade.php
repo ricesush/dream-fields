@@ -22,11 +22,13 @@
             $forsale = 0;
           @endphp
           @foreach($properties as $property)
+          @if($property->isApproved == 'Approved')
             @if($property->unitStatus == 'For Sale')
               @php
                 $forsale += 1;
               @endphp
             @endif
+          @endif  
           @endforeach
           {{ $forsale }} 
         </div>
@@ -36,11 +38,13 @@
             $forrent = 0;
           @endphp
           @foreach($properties as $property)
+          @if($property->isApproved == 'Approved')
             @if($property->unitStatus == 'For Rent')
               @php
                 $forrent += 1;
               @endphp
             @endif
+          @endif  
           @endforeach
           {{ $forrent }} 
         </div>
@@ -54,11 +58,13 @@
               $total = 0;
             @endphp
             @foreach($properties as $property)
+            @if($property->isApproved == 'Approved')
               @if($property->unitStatus == 'Sold')
                 @php
                   $total += $property->unitPrice;
                 @endphp
               @endif
+            @endif
             @endforeach
             ₱{{ $total }}
           </strong>
@@ -72,11 +78,14 @@
             $sold = 0;
           @endphp
           @foreach($properties as $property)
+          @if($property->isApproved == 'Approved')
             @if($property->unitStatus == 'Rented')
               @php
                 $sold += 1;
               @endphp
+
             @endif
+          @endif  
           @endforeach
           {{ $sold }} 
         </div>
