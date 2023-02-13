@@ -7,7 +7,7 @@
 
 @section('content')
 
-    <div class="tab" style="height: 600px; overflow-y: scroll;">
+    <div class="tab">
         <table class="styled-table">
             <thead>
               <tr>
@@ -21,23 +21,22 @@
             </thead>
             <tbody>   
             @foreach($users as $user)                      
-              <tr>
+              <tr class="active-row">
                 <td>{{$user->id}}</td>
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
                 <td>phone here</td>
                 <td>{{$user->role}}</td>
                 <td>
-                  <a href="{{route('edituser', $user->id )}}" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                  <a href="{{route('edituser', $user->id )}}" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
                   <a class="btn btn-sm btn-danger" href="{{ route('deleteuser', $user->id) }}">
                     <i class="fa-solid fa-trash"></i>
                   </a>
-
                 </td>
               </tr>
-              @endforeach
-
-              
+              @endforeach 
             </tbody>
           </table>
       </div>            

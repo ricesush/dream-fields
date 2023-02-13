@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <div class="tab" style="height: 600px; overflow-y: scroll;">
+    <div class="tab">
             <table class="styled-table">
                 <thead>
                     <tr>
@@ -21,14 +21,14 @@
                 <tbody>
                  @foreach( $properties as $property )                          
                   @if($property->isApproved == 'Pending')
-                    <tr>
+                    <tr class="active-row">
                         <td>{{ $property->unitNumber }}</td>
                         <td>{{ $property->unitType }}</td>
                         <td>{{ $property->user->name }}</td>
                         <td>{{ $property->unitStatus }}</td>
                         <td>₱{{ $property->unitPrice }}</td>
                         <td>
-                            <form method="POST" action={{ route('approveunit') }} style="display:inline-block">
+                            {{-- <form method="POST" action={{ route('approveunit') }} style="display:inline-block">
                             @csrf
                                 <input type="hidden" value="{{ $property->id }}" name="id">
                                 <button type="submit" class="btn btn-success btn-sm"><i class="fa-solid fa-check"></i></button>
@@ -37,9 +37,8 @@
                             @csrf
                                 <input type="hidden" value="{{ $property->id }}" name="id">
                                 <button type="submit" class="btn btn-danger btn-sm"><i class="fa-solid fa-x"></i></button>
-                            </form>
-                        </td>
-                        
+                            </form> --}}
+                        </td>         
                     </tr>
                    @endif
                  @endforeach

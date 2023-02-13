@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <div class="tab" style="height: 600px; overflow-y: scroll;">
+    <div class="tab">
         <table class="styled-table">
             <thead>
               <tr>
