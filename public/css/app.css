@@ -2,8 +2,8 @@
 body {
   background: linear-gradient(
     to right,
-    #00000048 0%,
-    #00000048 100%
+    #0018335b 0%,
+    #0018335b 100%
     ), url(../images/bg-image.webp);
   background-position: center;
   background-size: cover;
@@ -138,17 +138,24 @@ li .active, .socmedicon:hover {
 /* footer */
 
 .bgColor{  
-  background: #00000080;
+  background: linear-gradient(
+    to right,
+    #222222ee 0%,
+    #222222ee 100%
+    ), url(../images/bg-image.webp);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
 
 .bgColor-Navbar{  
-  background: #00000080;
   background: linear-gradient(
     to right,
-    #000000a2 0%,
-    #000000a2 100%
+    #0018335b 0%,
+    #0018335b 100%
     ), url(../images/bg-image.webp);
   background-position: center;
   background-size: cover;
@@ -174,5 +181,7 @@ div.sticky-top {
   top: 0;
 }
 
-
+.orangeText{
+  color: #D67732;
+}
 
