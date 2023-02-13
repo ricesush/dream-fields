@@ -64,7 +64,7 @@
                                 class="btn btn-outline-success rounded-0 rounded-start-1 me-0"><i class="fa-solid fa-right-to-bracket"></i> Login </a>
                             @if (Route::has('register'))
                                 <a href="{{ route('register') }}"
-                                    class="btn btn-outline-success rounded-0 rounded-end-1 fw-bold">Sign Up</a>
+                                    class="btn btn-outline-success rounded-0 rounded-end-1">Sign Up</a>
                             @endif
                         </div>
                         @endif
