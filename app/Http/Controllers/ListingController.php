@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Property;
+use App\Models\User;
 
 class ListingController extends Controller
 {
@@ -14,6 +16,17 @@ class ListingController extends Controller
     public function index()
     {
         return view('userPages/user');
+    }
+
+    public function owned()
+    {
+        return view('userPages/userOwned')->with('properties', Property::orderBy('created_at', 'desc')->get());
+    }
+
+    public function dashboard()
+    {
+        return view('userPages/userdashboard')->with('properties', Property::orderBy('created_at', 'desc')->get())
+        ->with('users', User::all());
     }
 
     /**

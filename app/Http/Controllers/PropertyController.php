@@ -77,6 +77,7 @@ class PropertyController extends Controller
 
         $property = Property::find($request->id);
 
+        $property->title = $request->title;
         $property->unitNumber = $request->unitNumber;
         $property->unitType = $request->unitType;
         $property->unitStatus = $request->unitStatus;
