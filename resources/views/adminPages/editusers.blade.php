@@ -44,7 +44,7 @@
         </div>
         <div class="form-group">
           <input type="hidden" name="id" value="{{ $user->id }}">
-          <button type="submit" class="btn btn-primary">Update</button>
+          <button type="submit" class="btn btn-primary button1">Update</button>
         </div>
       </div>
     </form>

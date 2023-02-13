@@ -33,7 +33,7 @@ label {
   margin-bottom: 10px;
 }
 
-button[type="submit"] {
+.button1 {
   width: 50%;
   padding: 10px;
   font-size: 18px;
@@ -45,11 +45,68 @@ button[type="submit"] {
   .form-container {
     width: 80%;
   }
-  button[type="submit"] {
+  .button1 {
     width: 80%;
   }
 }
 
+.pending-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pending-item {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pending-unit-number,
+.pending-unit-type,
+.pending-unit-owner,
+.pending-listing-type,
+.pending-price,
+.pending-actions {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.pending-unit-number,
+.pending-unit-type,
+.pending-unit-owner,
+.pending-listing-type,
+.pending-price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.pending-actions {
+  justify-content: flex-end;
+}
+
+.btn1 {
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  margin-left: 5px;
+}
+
+.btn1:hover{
+  cursor: pointer;
+  opacity: 50%;
+}
 
 .editunitsbtn{
   padding-bottom:50px;
