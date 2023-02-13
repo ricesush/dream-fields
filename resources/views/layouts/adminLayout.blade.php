@@ -16,6 +16,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 <body>
@@ -62,10 +63,10 @@
      </li>
      <li>
        <a href="#">
-         <i class='bx bx-cart-alt' ></i>
-         <span class="links_name">Order</span>
+         <i class='bx bx-message'></i>
+         <span class="links_name">TBD</span>
        </a>
-       <span class="tooltip">Order</span>
+       <span class="tooltip">TBD</span>
      </li>
      
      <li class="profile">

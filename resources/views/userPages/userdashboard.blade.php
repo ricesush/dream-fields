@@ -1,11 +1,12 @@
-@extends('layouts.adminLayout')
+@extends('layouts.app')
 
 @section('header')
   <h1 class="h2">Dashboard</h1>
 @endsection
 
 @section('content')
-  <div class="main-container">
+
+<div class="main-container">
     <div class="cards" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); grid-gap: 20px;">
 
       <div class="card card-1">
@@ -24,9 +25,11 @@
           @foreach($properties as $property)
           @if($property->isApproved == 'Approved')
             @if($property->unitStatus == 'For Sale')
-              @php
-                $forsale += 1;
-              @endphp
+              @if($property->user_id == Auth::user()->id)
+                @php
+                    $forsale += 1;
+                @endphp
+              @endif
             @endif
           @endif  
           @endforeach
@@ -40,9 +43,11 @@
           @foreach($properties as $property)
           @if($property->isApproved == 'Approved')
             @if($property->unitStatus == 'For Rent')
-              @php
-                $forrent += 1;
-              @endphp
+              @if($property->user_id == Auth::user()->id)
+                @php
+                    $forrent += 1;
+                @endphp
+              @endif
             @endif
           @endif  
           @endforeach
@@ -60,9 +65,11 @@
             @foreach($properties as $property)
             @if($property->isApproved == 'Approved')
               @if($property->unitStatus == 'Sold')
-                @php
-                  $total += $property->unitPrice;
-                @endphp
+                @if($property->user_id == Auth::user()->id)
+                    @php
+                    $total += $property->unitPrice;
+                    @endphp
+                @endif
               @endif
             @endif
             @endforeach
@@ -80,10 +87,11 @@
           @foreach($properties as $property)
           @if($property->isApproved == 'Approved')
             @if($property->unitStatus == 'Rented')
+                @if($property->user_id == Auth::user()->id)
               @php
                 $sold += 1;
               @endphp
-
+                @endif
             @endif
           @endif  
           @endforeach
