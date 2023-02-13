@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mx-auto">
 
-                    <li class="nav-item ">
+                    <li class="nav-item {{ request()->is('/') ? 'active' : ''}}">
                         <a class="nav-link textLight" aria-current="page" href="{{ route('welcome') }}">Home</a>
                     </li>
                     <li class="nav-item dropdown mx-lg-4">
@@ -44,13 +44,13 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ request()->is('amenities') ? 'active' : ''}}">
                         <a class="nav-link textLight" href="{{ route('amenities') }}">Amenities</a>
                     </li>
-                    <li class="nav-item mx-lg-4">
+                    <li class="nav-item mx-lg-4 {{ request()->is('inquire') ? 'active' : ''}}">
                         <a class="nav-link textLight" href="{{ route('inquire') }}">Inquire</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ request()->is('aboutus') ? 'active' : ''}}">
                         <a class="nav-link textLight" href="{{ route('aboutus') }}">About Us</a>
                     </li>
                 </ul>

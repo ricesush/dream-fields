@@ -185,3 +185,8 @@ div.sticky-top {
   color: #D67732;
 }
 
+.active a{
+  color: #D67732;
+  border: #D67732;
+  border-bottom: #D67732 !important;
+}
