@@ -433,3 +433,17 @@ input::-webkit-input-placeholder {
   border-color: #D67732 !important;
   border-width: 2px !important;
 }
+
+.option-deco option{
+  color: #000;
+  background-color:  white;
+  border: none !important;
+  border-color: none !important;
+}
+
+.option-deco option:hover{
+  color: #D67732 !important;
+  background-color:  red;
+  border: none;
+  border-color: transparent;
+}
