@@ -21,7 +21,7 @@
         @endforeach
     </div>        
     @endif
-    <div class="form3" method="POST" action="{{ route('updateproperty') }}">
+    <form class="form3" method="POST" action="{{ route('updateproperty') }}">
       @csrf
           <div class="form-container">
               <div class="form-group">
@@ -54,41 +54,51 @@
                 <input type="number" class="form-control input" id="user_id" name="user_id" value="{{ $property->user_id }}" required>
               </div>
 
-    <div class="form-group">
-      <label for="unitStatus">Unit Status</label>
-      <select class="form-control" name="unitStatus" id="unitStatus">
-        <option value="For Sale" {{ $property->unitStatus == 'For Sale' ? 'selected' : '' }}>For Sale</option>
-        <option value="For Rent" {{ $property->unitStatus == 'For Rent' ? 'selected' : '' }}>For Rent</option>
-        <option value="Sold" {{ $property->unitStatus == 'Sold' ? 'selected' : '' }}>Sold</option>
-        <option value="Rented" {{ $property->unitStatus == 'Rented' ? 'selected' : '' }}>Rented</option>
-      </select> 
-    </div>
+              <div class="form-group">
+                <label for="title">Title</label>
+                <select class="form-control" name="title" id="title">
+                  <option value="1 Bedroom Standard" {{ $property->unitStatus == '1 Bedroom Standard' ? 'selected' : '' }}>1 Bedroom Standard</option>
+                  <option value="1 Bedroom Deluxe" {{ $property->unitStatus == '1 Bedroom Deluxe' ? 'selected' : '' }}>1 Bedroom Deluxe</option>
+                  <option value="2 Bedrooms Standard" {{ $property->unitStatus == '2 Bedrooms Standard' ? 'selected' : '' }}>2 Bedrooms Standard</option>
+                  <option value="2 Bedrooms Deluxe" {{ $property->unitStatus == '2 Bedrooms Deluxe' ? 'selected' : '' }}>2 Bedrooms Deluxe</option>
+                </select> 
+              </div>        
 
-    <div class="form-group">
-      <label for="unitType">Unit Type</label>
-      <select class="form-control" name="unitType" id="unitType">
-        <option value="Studio" {{ $property->unitType == 'Studio' ? 'selected' : '' }}>Studio</option>
-        <option value="Loft" {{ $property->unitType == 'Loft' ? 'selected' : '' }}>Loft</option>
-        <option value="Bedroom Unit" {{ $property->unitType == 'Bedroom Unit' ? 'selected' : '' }}>Bedroom Unit</option>
-        <option value="Penthouse Unit" {{ $property->unitType == 'Penthouse Unit' ? 'selected' : '' }}>Penthouse Unit</option>
-        <option value="Bi-Level Unit" {{ $property->unitType == 'Bi-Level Unit' ? 'selected' : '' }}>Bi-Level Unit</option>
-      </select>
-    </div>
+      <div class="form-group">
+        <label for="unitStatus">Unit Status</label>
+        <select class="form-control" name="unitStatus" id="unitStatus">
+          <option value="For Sale" {{ $property->unitStatus == 'For Sale' ? 'selected' : '' }}>For Sale</option>
+          <option value="For Rent" {{ $property->unitStatus == 'For Rent' ? 'selected' : '' }}>For Rent</option>
+          <option value="Sold" {{ $property->unitStatus == 'Sold' ? 'selected' : '' }}>Sold</option>
+          <option value="Rented" {{ $property->unitStatus == 'Rented' ? 'selected' : '' }}>Rented</option>
+        </select> 
+      </div>
 
-    <div class="form-group">
-      <label for="hasParking">Parking Lot</label>                
-      <select class="form-control" name="hasParking" id="hasParking">
-        <option value="none" {{ $property->hasParking == 'none' ? 'selected' : '' }}>none</option>
-        <option value="1" {{ $property->hasParking == '1' ? 'selected' : '' }}>1</option>
-        <option value="2" {{ $property->hasParking == '2' ? 'selected' : '' }}>2</option>
-      </select>
-    </div>
+      <div class="form-group">
+        <label for="unitType">Unit Type</label>
+        <select class="form-control" name="unitType" id="unitType">
+          <option value="Studio" {{ $property->unitType == 'Studio' ? 'selected' : '' }}>Studio</option>
+          <option value="Loft" {{ $property->unitType == 'Loft' ? 'selected' : '' }}>Loft</option>
+          <option value="Bedroom Unit" {{ $property->unitType == 'Bedroom Unit' ? 'selected' : '' }}>Bedroom Unit</option>
+          <option value="Penthouse Unit" {{ $property->unitType == 'Penthouse Unit' ? 'selected' : '' }}>Penthouse Unit</option>
+          <option value="Bi-Level Unit" {{ $property->unitType == 'Bi-Level Unit' ? 'selected' : '' }}>Bi-Level Unit</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="hasParking">Parking Lot</label>                
+        <select class="form-control" name="hasParking" id="hasParking">
+          <option value="none" {{ $property->hasParking == 'none' ? 'selected' : '' }}>none</option>
+          <option value="1" {{ $property->hasParking == '1' ? 'selected' : '' }}>1</option>
+          <option value="2" {{ $property->hasParking == '2' ? 'selected' : '' }}>2</option>
+        </select>
+      </div>
       <div class="editunitsbtn">
           <input type="hidden" name="id" value="{{ $property->id }}">
           <button type="submit" class="btn btn-primary button1">Update</button>
         </div>
       </div>
-      </form>
+    </form>
   </div>
 </div>         
 

@@ -78,7 +78,7 @@ Route::prefix('user')->middleware('auth')->group(function() {
     Route::controller(ListingController::class)->group(function () {
         // Route::get('/', 'index')->name('admin');
         Route::get('/listing','index')->name('listing');
-        Route::get('/Ownedunits', 'owned')->name('ownedunits');
+        Route::get('/ownedunits', 'owned')->name('ownedunits');
     });
 
     // Route::controller(PropertyController::class)->group(function () {
