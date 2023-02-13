@@ -85,7 +85,7 @@
     </div>
       <div class="editunitsbtn">
           <input type="hidden" name="id" value="{{ $property->id }}">
-          <button type="submit" class="btn btn-primary">Update</button>
+          <button type="submit" class="btn btn-primary button1">Update</button>
         </div>
       </div>
       </form>
