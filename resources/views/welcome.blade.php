@@ -106,7 +106,7 @@
                 </div>
                 <div class="carousel-inner c-item">
                     <div class="carousel-item active" data-bs-interval="3000">
-                        <img src="https://i1.wp.com/manilacondosbysmdc.com/wp-content/uploads/2019/03/field.jpg?fit=825%2C300&ssl=1" class="d-block w-100" alt="...">
+                        <img src="{{URL::asset('images/carousel/carousel1.png')}}" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
                         <img src="https://pinoydeal.ph/oc-content/uploads/937/176006_original.jpg" class="d-block w-100" alt="...">
