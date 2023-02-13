@@ -11,6 +11,7 @@
             <thead>
               <tr>
                 <th>Unit Number</th>
+                <th>Title</th>
                 <th>Unit Type</th>
                 <th>Floor Area</th>
                 <th>Bedroom</th>
@@ -26,6 +27,7 @@
               @if($property->isApproved == 'Approved')
               <tr class="active-row">
                 <td>{{ $property->unitNumber }}</td>
+                <td>{{ $property->title }}</td>
                 <td>{{ $property->unitType }}</td>
                 <td>{{ $property->floorArea}} sq m</td>
                 <td>{{ $property->numBed}}</td>
