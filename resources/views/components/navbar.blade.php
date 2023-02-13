@@ -61,10 +61,10 @@
                     @else
                         <div class="btn-group">
                             <a href="{{ route('login') }}"
-                                class="btn btn-outline-success rounded-0 rounded-start me-0">login</a>
+                                class="btn btn-outline-success rounded-0 rounded-start-1 me-0"><i class="fa-solid fa-right-to-bracket"></i> Login </a>
                             @if (Route::has('register'))
                                 <a href="{{ route('register') }}"
-                                    class="btn btn-success greenBtn rounded-0 rounded-end fw-bold">Register</a>
+                                    class="btn btn-outline-success rounded-0 rounded-end-1 fw-bold">Sign Up</a>
                             @endif
                         </div>
                         @endif
