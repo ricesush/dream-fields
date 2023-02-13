@@ -63,10 +63,10 @@
      </li>
      <li>
        <a href="#">
-         <i class='bx bx-cart-alt' ></i>
-         <span class="links_name">Order</span>
+         <i class='bx bx-message'></i>
+         <span class="links_name">TBD</span>
        </a>
-       <span class="tooltip">Order</span>
+       <span class="tooltip">TBD</span>
      </li>
      
      <li class="profile">
