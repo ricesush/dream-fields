@@ -50,30 +50,7 @@ label {
   }
 }
 
-.pending-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.pending-table th,
-.pending-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-.pending-table th {
-  background-color: #ddd;
-}
-.pending-actions button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-.pending-actions .btn-success {
-  color: green;
-}
-.pending-actions .btn-danger {
-  color: red;
-}
+
 
 .btn1 {
   border-radius: 5px;
@@ -215,6 +192,8 @@ label {
 .styled-table .btn:hover {
   background-color: #0a0809;
 }
+
+
 
 /* Google Font Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');

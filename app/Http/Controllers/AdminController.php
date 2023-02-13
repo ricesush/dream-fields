@@ -37,12 +37,12 @@ class AdminController extends Controller
 
     public function approved()
     {
-        return view('adminPages/condounits')->with('properties', Property::orderBy('created_at', 'desc')->get());
+        return view('adminPages/condounits')->with('properties', Property::where('isApproved', 'Approved')->orderBy('created_at', 'asc')->paginate(10));
     }
 
     public function approved1()
     {
-        return view('adminPages/condounits')->with('properties', Property::orderBy('unitNumber', 'desc')->get());
+        return view('adminPages/condounits')->with('properties', Property::all()->get());
     }
 
     public function backlogs()
@@ -52,7 +52,7 @@ class AdminController extends Controller
 
     public function users()
     {
-        return view('adminPages/users')->with('users', User::all());
+        return view('adminPages/users')->with('users', User::orderBy('id', 'asc')->paginate(10));
     }
 
     public function edit($id)
