@@ -17,16 +17,7 @@
             <div class="pending-listing-type">Listing Type: {{ $property->unitStatus }}</div>
             <div class="pending-price">Price: ₱{{ $property->unitPrice }}</div>
             <div class="pending-actions">
-              <form method="POST" action={{ route('approveunit') }} style="display:inline-block">
-                @csrf
-                  <input type="hidden" value="{{ $property->id }}" name="id">
-                  <button type="submit" class="btn1 btn-success"><i class="fa-solid fa-check"></i></button>
-              </form>
-              <form method="POST" action={{ route('denyunit') }} style="display:inline-block">
-                @csrf
-                  <input type="hidden" value="{{ $property->id }}" name="id">
-                  <button type="submit" class="btn1 btn-danger"><i class="fa-solid fa-x"></i></button>
-              </form>
+                <a class="btn btn-danger" style="display: inline-flex;" href="{{ route('deleteunit', $property->id) }}"><i class="fa-solid fa-trash"></i></a>
             </div>
           </li>
         @endif
