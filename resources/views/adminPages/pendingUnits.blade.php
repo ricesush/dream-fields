@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <div class="tab" style="height: 600px; overflow-y: scroll;">
+    <div class="tab">
             <table class="styled-table">
                 <thead>
                     <tr>
@@ -21,7 +21,7 @@
                 <tbody>
                  @foreach( $properties as $property )                          
                   @if($property->isApproved == 'Pending')
-                    <tr>
+                    <tr class="active-row">
                         <td>{{ $property->unitNumber }}</td>
                         <td>{{ $property->unitType }}</td>
                         <td>{{ $property->user->name }}</td>
@@ -38,8 +38,7 @@
                                 <input type="hidden" value="{{ $property->id }}" name="id">
                                 <button type="submit" class="btn btn-danger btn-sm"><i class="fa-solid fa-x"></i></button>
                             </form>
-                        </td>
-                        
+                        </td>         
                     </tr>
                    @endif
                  @endforeach

@@ -21,7 +21,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-        <div class="logo_name"><a href={{route('welcome')}}>Dream Fields</a></div>
+        <div class="logo_name"><a href={{route('welcome')}}><img src="{{URL::asset('images/DreamFields Logo(full)-01.png')}}" alt="..." width="80%"/></a></div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
     <ul class="nav-list">
@@ -54,7 +54,7 @@
        <span class="tooltip">Pending Units</span>
      </li>
      <li>
-       <a href="{{'backlogs'}}">
+       <a href="{{route('backlogs')}}">
          <i class='bx bx-align-middle' ></i>
          <span class="links_name">BackLogs</span>
        </a>
@@ -74,8 +74,9 @@
         document.getElementById('logout-form').submit();">
         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
           @csrf
-      </form>
+        </form>
          <i class='bx bx-log-out' id="log_out" ></i>
+         <span class="links_name">&nbsp &nbsp &nbsp Logout</span>
       </a>
      </li>
     </ul>
