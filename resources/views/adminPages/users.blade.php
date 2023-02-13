@@ -28,10 +28,10 @@
                 <td>phone here</td>
                 <td>{{$user->role}}</td>
                 <td>
-                  <a href="{{route('edituser', $user->id )}}" class="btn btn-primary btn-sm">
+                  <a href="{{route('edituser', $user->id )}}" class="btn btn-primary">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
-                  <a class="btn btn-sm btn-danger" href="{{ route('deleteuser', $user->id) }}">
+                  <a class="btn btn-danger" href="{{ route('deleteuser', $user->id) }}">
                     <i class="fa-solid fa-trash"></i>
                   </a>
                 </td>

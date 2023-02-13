@@ -34,8 +34,8 @@
                 <td>{{ $property->unitStatus }}</td>
                 <td>₱{{ $property->unitPrice }}</td>
                 <td>
-                    <a class="btn btn-primary" href="{{route('editunit', $property->id )}}"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a class="btn btn-danger" href="{{ route('deleteunit', $property->id) }}"><i class="fa-solid fa-trash"></i></a>
+                    <a class="btn btn-primary" style="display: inline-flex;" href="{{route('editunit', $property->id )}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a class="btn btn-danger" style="display: inline-flex;" href="{{ route('deleteunit', $property->id) }}"><i class="fa-solid fa-trash"></i></a>
 
                     
                     {{-- <a href="{{ route('deleteunit', $property->id) }}" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></a> --}}
