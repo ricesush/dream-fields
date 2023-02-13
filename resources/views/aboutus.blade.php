@@ -104,6 +104,25 @@
                 </ul>
             </div>
         </div>
+        <hr />
 
+        <div class="row text-center">
+            <div class="col-6 col-md-3 mb-2">
+                <h1 class="fw-bold">66,180</h1>
+                <h5> CONDO FOR SALE</h5>
+            </div>
+            <div class="col-6 col-md-3  mb-2">
+                <h1 class="fw-bold">66,180</h1>
+                <h5> CONDO FOR RENT</h5>
+            </div>
+            <div class="col-6 col-md-3  mb-2">
+                <h1 class="fw-bold">66,180</h1>
+                <h5> RECENTLY SOLD</h5>
+            </div>
+            <div class="col-6 col-md-3  mb-2">
+                <h1 class="fw-bold">66,180</h1>
+                <h5> TOTAL LISTED</h5>
+            </div>
+        </div>
     </div>
 @endsection
