@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-fluid wHeight">
     <div class="container">
-        <div class="row text-center d-flex align-items-end justify-content-center contH ">
+        <div class="row text-center d-flex align-items-end justify-content-center contH">
             <div class="container-fluid">
                 <div class="container welcomePag">
                     <div class="row text-center d-flex align-items-end justify-content-center contH ">
