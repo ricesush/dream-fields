@@ -256,31 +256,133 @@ form {
     padding: 20px;
   }
   
+  input[type="text"], input[type="number"], select {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border: 2px solid #555;
+  }
+  
   label {
-    margin-top: 20px;
-    font-weight: bold;
-  }
-  
-  input[type="number"], select {
-    width: 200px;
-    height: 30px;
-    margin-top: 10px;
-    padding: 5px;
     font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
   }
   
-  .inputsubmit {
-    width: 200px;
-    height: 40px;
-    margin-top: 20px;
+  button.inputsubmit {
+    width: 150px;
     background-color: #007bff;
     color: white;
-    font-size: 16px;
+    padding: 14px 20px;
+    margin: 8px 0;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-  }
+}
+
+button.inputsubmit:hover {
+    background-color: #0069d9;
+}
 
   .text-center{
     text-align: center;
   }
+
+  .main-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .card {
+    align-items: center;
+    padding: 28px;
+    margin: 24px;
+    gap: 24px;
+    width: 300px;
+    height: 124px;
+    background: #303030;
+    border-radius: 12px;
+    color:white;
+    box-shadow:#0A0708;
+  }
+  
+  @media (max-width: 600px) {
+    .card {
+      width: calc(100% - 40px);
+    }
+    .cards{
+      flex-direction: column;
+    }
+  }
+  
+  
+  .card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+  }
+  
+  .card-1 {
+    background: #110d0c;
+  }
+  
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .styled-table th {
+    background-color: #0A0708;
+    color: white;
+    padding: 10px;
+  }
+  
+  .styled-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .styled-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .active-row {
+    background-color: #ddd;
+  }
+  
+  .styled-table .btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #0A0708;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  
+  .styled-table .btn:hover {
+    background-color: #0a0809;
+  }
+    
