@@ -28,7 +28,7 @@
                         <td>{{ $property->unitStatus }}</td>
                         <td>₱{{ $property->unitPrice }}</td>
                         <td>
-                            {{-- <form method="POST" action={{ route('approveunit') }} style="display:inline-block">
+                            <form method="POST" action={{ route('approveunit') }} style="display:inline-block">
                             @csrf
                                 <input type="hidden" value="{{ $property->id }}" name="id">
                                 <button type="submit" class="btn btn-success btn-sm"><i class="fa-solid fa-check"></i></button>
@@ -37,7 +37,7 @@
                             @csrf
                                 <input type="hidden" value="{{ $property->id }}" name="id">
                                 <button type="submit" class="btn btn-danger btn-sm"><i class="fa-solid fa-x"></i></button>
-                            </form> --}}
+                            </form>
                         </td>
                         
                     </tr>

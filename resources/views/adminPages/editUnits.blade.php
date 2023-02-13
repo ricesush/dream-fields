@@ -17,7 +17,7 @@
         @endforeach
     </div>        
     @endif
-    <form method="POST" action="{{ route('updateproperty') }}">
+    <form class="form3" method="POST" action="{{ route('updateproperty') }}">
       @csrf
       <div>
         <div>

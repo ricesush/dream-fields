@@ -14,7 +14,7 @@ p {
   margin-bottom: 20px;
 }
 
-form {
+.form3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -55,7 +55,7 @@ label {
 }
 
 input, select{
-  width: 100%;
+  width: 60%;
   padding: 12px 20px;
   margin-bottom: 20px;
   box-sizing: border-box;
