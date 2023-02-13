@@ -80,6 +80,7 @@ Route::prefix('user')->middleware('auth')->group(function() {
         // Route::get('/', 'index')->name('admin');
         Route::get('/listing','index')->name('listing');
         Route::get('/ownedunits', 'owned')->name('ownedunits');
+        Route::get('/dashboard', 'dashboard')->name('userdashboard');
     });
 
     // Route::controller(PropertyController::class)->group(function () {

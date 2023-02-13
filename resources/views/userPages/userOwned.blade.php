@@ -1,4 +1,9 @@
 @extends('layouts.app')
+
+@section('header')
+<h1 class="h2">Owned Units</h1>
+@endsection
+
 @section('content')
 
 <div class="tab">

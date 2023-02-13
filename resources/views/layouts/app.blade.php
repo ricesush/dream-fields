@@ -33,7 +33,7 @@
     </div>
     <ul class="nav-list">
       <li>
-        <a href="{{route('admin')}}">
+        <a href="{{route('userdashboard')}}">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>

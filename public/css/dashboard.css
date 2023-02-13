@@ -50,47 +50,29 @@ label {
   }
 }
 
-.pending-list {
+.pending-table {
   width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  border-collapse: collapse;
 }
-
-.pending-item {
-  background-color: #f2f2f2;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+.pending-table th,
+.pending-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
-
-.pending-unit-number,
-.pending-unit-type,
-.pending-unit-owner,
-.pending-listing-type,
-.pending-price,
-.pending-actions {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
+.pending-table th {
+  background-color: #ddd;
 }
-
-.pending-unit-number,
-.pending-unit-type,
-.pending-unit-owner,
-.pending-listing-type,
-.pending-price {
-  font-size: 18px;
-  font-weight: bold;
-  margin-right: 20px;
+.pending-actions button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
-
-.pending-actions {
-  justify-content: flex-end;
+.pending-actions .btn-success {
+  color: green;
+}
+.pending-actions .btn-danger {
+  color: red;
 }
 
 .btn1 {
@@ -188,41 +170,50 @@ label {
 }
 
 .styled-table {
+  width: 100%;
   border-collapse: collapse;
-  /* margin: 25px 0; */
-  font-size: 0.9em;
-  font-family: sans-serif;
-  min-width: 600px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  margin: auto;
-  width: 70%;
+  font-family: Arial, sans-serif;
   text-align: center;
 }
 
-.styled-table thead tr {
+.styled-table th {
   background-color: #0A0708;
-  color: #ffffff;
-  text-align: center;
+  color: white;
+  padding: 10px;
 }
-.styled-table th,
+
 .styled-table td {
-    padding: 12px 15px;
-}
-.styled-table tbody tr {
-  border-bottom: 1px solid #dddddd;
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
-.styled-table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
+.styled-table tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
-.styled-table tbody tr:last-of-type {
-  border-bottom: 2px solid #0A0708;
+.styled-table tr:hover {
+  background-color: #ddd;
 }
 
-.styled-table tbody tr.active-row {
-  font-weight: bold;
-  color: #0A0708;
+.active-row {
+  background-color: #ddd;
+}
+
+.styled-table .btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #0A0708;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.styled-table .btn:hover {
+  background-color: #0a0809;
 }
 
 /* Google Font Link */
