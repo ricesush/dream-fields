@@ -35,13 +35,14 @@
 
         </div>
         <div class="row g-1 mb-3">
-            <div class="col-12 col-md-6 align-self-center">
+            <div class="col-12 col-md-6 align-self-center  pb-3">
                 <img class="img-fluid mx-auto d-block shadow" style="max-width: 100%;"
                     src="https://media.istockphoto.com/id/1341791674/photo/businessman-working-on-laptop-computer-with-electronics-document-icons-e-document-management.jpg?b=1&s=170667a&w=0&k=20&c=YRnjpFakKMaeSnITCQcmKJ3oCYpjgo5bbJqz4BjkEjo="
                     alt="">
             </div>
-            <div class="col-12 col-md-6 align-self-center ps-3">
+            <div class="col-12 col-md-6 align-self-center ps-3  pb-3">
                 <div>
+                    <img class="mx-auto d-block" src="../images/DreamFields Logo Green-01.png" width="7%" alt="">
                     <h1 class="fw-bold"><span class="border-bottom border-5">Mission</span></h1>
 
                     <p>Our mission at <span class="fw-bold"> Dream Fields </span> is to provide our clients with the highest
@@ -56,7 +57,8 @@
             </div>
         </div>
         <div class="row g-1 swap-column mb-3">
-            <div class="col-12 col-md-6 align-self-center  ps-3">
+            <div class="col-12 col-md-6 align-self-center  ps-3  pb-3">
+                <img class="mx-auto d-block" src="../images/DreamFields Logo Green-01.png" width="7%" alt="">
                 <h1 class="fw-bold"><span class="border-bottom border-5"">Vision</span></h1>
 
                 <p>Our vision at <span class="fw-bold"> Dream Fields </span> is to be the leading real estate company in
@@ -66,35 +68,40 @@
                     partner for all of our clients' real estate needs and to consistently exceed their expectations.
                 </p>
             </div>
-            <div class="col-12 col-md-6 align-self-center">
+            <div class="col-12 col-md-6 align-self-center  pb-3">
                 <img class="img-fluid mx-auto d-block shadow" style="max-width: 100%;"
                     src="https://media.istockphoto.com/id/1360521208/photo/businessman-using-a-computer-for-analysis-seo-search-engine-optimization-marketing-ranking.jpg?b=1&s=170667a&w=0&k=20&c=xyIKuSwGq65eVI8YLRIku2F8w5JkUG11E1AoSAfulDU="
                     alt="">
             </div>
         </div>
         <div class="row g-1 mb-3">
-            <div class="col-12 col-md-6 align-self-center ">
+            <div class="col-12 col-md-6 align-self-center  pb-3">
                 <img class="img-fluid mx-auto d-block shadow" style="max-width: 100%;"
                     src="https://media.istockphoto.com/id/1360521209/photo/businessman-using-a-computer-to-concept-of-fund-financial-investment-management-portfolio.jpg?b=1&s=170667a&w=0&k=20&c=gedPHE3Vq_PbE1gufgy-8NhwP8gpj8YvYnSR7TZRFxo="
                     alt="">
             </div>
-            <div class="col-12 col-md-6 align-self-center  ps-3">
+            <div class="col-12 col-md-6 align-self-center  ps-3  pb-3">
+                <img class="mx-auto d-block" src="../images/DreamFields Logo Green-01.png" width="7%" alt="">
                 <h1 class="fw-bold"><span class="border-bottom border-5"">Values</span></h1>
                 <ul>
                     <li>
-                        <span class="fw-bold"> Customer Focus: </span>   Putting the needs and interests of our clients first and delivering exceptional
-                            service at all times.
+                        <span class="fw-bold"> Customer Focus: </span> Putting the needs and interests of our clients first
+                        and delivering exceptional
+                        service at all times.
                     </li>
                     <li>
-                        <span class="fw-bold">Integrity: </span>   Conducting ourselves with honesty and transparency in all of our dealings.    
+                        <span class="fw-bold">Integrity: </span> Conducting ourselves with honesty and transparency in all
+                        of our dealings.
                     </li>
                     <li>
-                        <span class="fw-bold"> Innovation: </span>  technology and new ideas to improve our services and stay ahead of the
-                            competition.    
+                        <span class="fw-bold"> Innovation: </span> technology and new ideas to improve our services and stay
+                        ahead of the
+                        competition.
                     </li>
                     <li>
-                        <span class="fw-bold"> Professionalism: </span>   Maintaining the highest standards of conduct and expertise in the real estate
-                            industry.  
+                        <span class="fw-bold"> Professionalism: </span> Maintaining the highest standards of conduct and
+                        expertise in the real estate
+                        industry.
                     </li>
                 </ul>
             </div>
