@@ -168,3 +168,9 @@ li .active, .socmedicon:hover {
   color: #182825;
 }
 
+div.sticky-top {
+  position: -webkit-sticky; /* Safari */
+  position: sticky !important;
+  top: 0;
+}
+

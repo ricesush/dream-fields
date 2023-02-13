@@ -4,12 +4,11 @@
 <div class="container-fluid wHeight">
     <div class="container">
         <div class="row text-center d-flex align-items-end justify-content-center contH ">
-
             <div class="container-fluid">
                 <div class="container welcomePag">
                     <div class="row text-center d-flex align-items-end justify-content-center contH ">
                         <section class='col-lg-12 row d-flex align-items-center justify-content-center'>
-                            <p class="col-lg-12 textLight fs fw-bolder ">
+                            <p class="col-lg-12 textLight fs fw-bolder" data-aos="fade-down" data-aos-duration="2000">
                                 Find Your <span class="greenText">Dream Unit</span>
                             </p>
                             <p class='col-lg-12 textLight fs-5 '>
@@ -274,10 +273,9 @@
                 </div>
             </div>
         </sections>
-        
     </div>
 </div>
-</div>
+
 <div class="container py-5">
     <section class=" text-center col-lg-1 col-md-3 mx-auto">
         <img src="{{URL::asset('images/DreamFields Logo White-01.png')}}" class="col-4" alt="..." />
@@ -293,10 +291,19 @@
         <iframe class="bg-white rounded-3" data-aos="fade-left" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02Fa4HnZuE9nuBjiNZN6eHKxY3icVYqdEodaP88J9brYZtTREmMVSp7pCNqqiLK4mrl%26id%3D100089755791674&show_text=true&width=500" width="500" height="543" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
     </section>
     <section class='d-flex justify-content-center'>
-        <div class="col-6 d-flex justify-content-center" data-aos="fade-right"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">✅ Balcony<br>✅ Good price for Studio <a href="https://t.co/6CP76XeOIT">pic.twitter.com/6CP76XeOIT</a></p>&mdash; Dream Fields (@Dre4mFields) <a href="https://twitter.com/Dre4mFields/status/1624767882046611457?ref_src=twsrc%5Etfw">February 12, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-        <div class="col-6 d-flex justify-content-center" data-aos="fade-left"><blockquote class="twitter-tweet" ><p lang="en" dir="ltr">Nice place to stay. Clean and complete with what you need. 🥰🥰🥰 <a href="https://t.co/Kqg7y61nFL">pic.twitter.com/Kqg7y61nFL</a></p>&mdash; Dream Fields (@Dre4mFields) <a href="https://twitter.com/Dre4mFields/status/1623707994092605446?ref_src=twsrc%5Etfw">February 9, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        <div class="col-6 d-flex justify-content-center" data-aos="fade-right">
+            <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr">✅ Balcony<br>✅ Good price for Studio <a href="https://t.co/6CP76XeOIT">pic.twitter.com/6CP76XeOIT</a></p>&mdash; Dream Fields (@Dre4mFields) <a href="https://twitter.com/Dre4mFields/status/1624767882046611457?ref_src=twsrc%5Etfw">February 12, 2023</a>
+            </blockquote>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="col-6 d-flex justify-content-center" data-aos="fade-left">
+            <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr">Nice place to stay. Clean and complete with what you need. 🥰🥰🥰 <a href="https://t.co/Kqg7y61nFL">pic.twitter.com/Kqg7y61nFL</a></p>&mdash; Dream Fields (@Dre4mFields) <a href="https://twitter.com/Dre4mFields/status/1623707994092605446?ref_src=twsrc%5Etfw">February 9, 2023</a>
+            </blockquote>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
     </section>
 </div>
-
 
 @endsection
