@@ -7,6 +7,12 @@
 
 @section('content')
 <div class="tab">
+  <div class="search-form">
+    <form action="{{ route('searchApprovedProperties') }}" method="GET">
+      <input type="text" name="search" placeholder="Search by Unit Number..." value="{{ request('search') }}">
+      <button type="submit">Search</button>
+    </form>
+  </div>
   <table class="styled-table">
       <thead>
         <tr>
@@ -38,14 +44,10 @@
           <td>
               <a class="btn btn-primary" style="display: inline-flex;" href="{{route('editunit', $property->id )}}"><i class="fa-solid fa-pen-to-square"></i></a>
               <a class="btn btn-danger" style="display: inline-flex;" href="{{ route('deleteunit', $property->id) }}"><i class="fa-solid fa-trash"></i></a>
-
-              
-              {{-- <a href="{{ route('deleteunit', $property->id) }}" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></a> --}}
           </td>
         </tr>
         @endif    
       @endforeach
-        
       </tbody>
     </table>
     {{ $properties->links() }}
