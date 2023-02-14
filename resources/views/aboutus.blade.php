@@ -120,7 +120,7 @@
                         @endif
                     @endif
                 @endforeach
-                <h1 class="fw-bold" id="numCount" data-val=" {{ $forsale }} "> {{ $forsale }}</h1>
+                <h1 class="fw-bold" id="numCount" data-val=" 1"> {{ $forsale }}</h1>
                 <h5> CONDO FOR SALE</h5>
             </div>
             <div class="col-6 col-md-3  mb-2">
@@ -136,7 +136,7 @@
                         @endif
                     @endif
                 @endforeach
-                <h1 class="fw-bold" id="numCount" data-val="{{ $forrent }}">
+                <h1 class="fw-bold" id="numCount" data-val="1">
                     {{ $forrent }} </h1>
                 <h5> CONDO FOR RENT</h5>
             </div>
@@ -153,7 +153,7 @@
                         @endif
                     @endif
                 @endforeach
-                <h1 class="fw-bold" id="numCount" data-val="{{ $sold }}">{{ $sold }}</h1>
+                <h1 class="fw-bold" id="numCount" data-val="1">{{ $sold }}</h1>
                 <h5> RECENTLY SOLD</h5>
             </div>
             <div class="col-6 col-md-3  mb-2">
@@ -167,7 +167,7 @@
                         @endphp
                     @endif
                 @endforeach
-                <h1 class="fw-bold" id="numCount" data-val="{{ $total }}">{{ $total }}</h1>
+                <h1 class="fw-bold" id="numCount" data-val="1">{{ $total }}</h1>
                 <h5> TOTAL LISTED</h5>
             </div>
             <script>
@@ -188,6 +188,25 @@
                     }, duration)
                 })
             </script>
+            <hr/>
+        </div>
+        <div class="row mt-5">
+            <div class="col-6 col-md-3">
+                <img class="img-fluid" src="https://media0.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" alt="">
+                <h5>Gabriel Dayot</h5>
+            </div>
+            <div class="col-6 col-md-3">
+                <img class="img-fluid" src="https://media2.giphy.com/media/3og0IJHMqlmPzy7sGs/giphy.gif" alt="">
+                <h5>Raymart Vergara</h5>
+            </div>
+            <div class="col-6 col-md-3">
+                <img class="img-fluid" src="https://media2.giphy.com/media/3ndAvMC5LFPNMCzq7m/giphy.gif" alt="">
+                <h5>Chris jhovin Cabral</h5>
+            </div>
+            <div class="col-6 col-md-3">
+                <img class="img-fluid" src="https://media.tenor.com/cyNmFWbyEBkAAAAM/cat.gif" alt="">
+                <h5>E-j Santosidad</h5>
+            </div>
         </div>
     </div>
 @endsection
