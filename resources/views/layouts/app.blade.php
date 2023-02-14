@@ -52,7 +52,7 @@
      </li>
      <li>
        <a href="{{route('pendingunits')}}">
-         <i class='bx bx-food-menu' ></i>
+         <i class='bx bx-heart' ></i>
          <span class="links_name">Favourites</span>
        </a>
        <span class="tooltip">Favourites</span>

@@ -123,4 +123,30 @@ class PropertyController extends Controller
         return view('buysellrent/rentpage', ['properties' => $properties->withPath('buypage')])
             ->with('i', (request()->input('page', 1) - 1) * 10);
     }
+
+    public function search(){
+        $data = $_GET['search_input'];
+        $search_input = Str::of($data)->explode(' ');
+
+        if( !isset($data[0]) ){   
+            $text = [];
+            return view('search', ['text_input' => $text]);
+        }else{
+            foreach($search_input as $inputs){
+                global $input;
+                $input = $inputs;
+                $text = Property::where(function ($query) {
+                    $query->where('unitNumber', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('unitType', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('unitStatus', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('numBed', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('numBaths', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('numBaths', 'LIKE', '%'.$GLOBALS['input'].'%');
+                })
+                ->where('isApproved', 'Approved')
+                ->get();
+                return view('search', ['text_input' => $text]);
+            }
+        }
+    }
 }
