@@ -125,7 +125,7 @@
             </div>
             <script> 
             let valueDisplays = document.querySelectorAll("#numCount");
-            let interval = 1000;
+            let interval = 5000;
             
             valueDisplays.forEach((valueDisplay)=>{
                 let startValue = 0;
