@@ -126,15 +126,49 @@
                 <h5> CONDO FOR SALE</h5>
             </div>
             <div class="col-6 col-md-3  mb-2">
-                <h1 class="fw-bold" id="numCount" data-val="300">0</h1>
+                @php
+                $forrent = 0;
+            @endphp
+            @foreach ($properties as $property)
+                @if ($property->isApproved == 'Approved')
+                    @if ($property->unitStatus == 'For Rent')
+                        @php
+                            $forrent += 1;
+                        @endphp
+                    @endif
+                @endif
+            @endforeach
+                <h1 class="fw-bold" id="numCount" data-val="{{ $forrent }}">{{ $forrent }}</h1>
                 <h5> CONDO FOR RENT</h5>
             </div>
             <div class="col-6 col-md-3  mb-2">
-                <h1 class="fw-bold" id="numCount" data-val="100">0</h1>
+                @php
+                $sold = 0;
+            @endphp
+            @foreach ($properties as $property)
+                @if ($property->isApproved == 'Approved')
+                    @if ($property->unitStatus == 'Sold')
+                        @php
+                            $sold += 1;
+                        @endphp
+                    @endif
+                @endif
+            @endforeach
+                <h1 class="fw-bold" id="numCount" data-val="{{$sold}}">{{$sold}}</h1>
                 <h5> RECENTLY SOLD</h5>
             </div>
             <div class="col-6 col-md-3  mb-2">
-                <h1 class="fw-bold" id="numCount" data-val="550">0</h1>
+                @php
+                $total = 0;
+            @endphp
+            @foreach ($properties as $property)
+                @if ($property->isApproved == 'Approved')
+                        @php
+                            $total += 1;
+                        @endphp
+                @endif
+            @endforeach
+                <h1 class="fw-bold" id="numCount" data-val="{{$total}}}">{{$total}}}</h1>
                 <h5> TOTAL LISTED</h5>
             </div>
             <script>
