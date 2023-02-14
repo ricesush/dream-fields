@@ -18,6 +18,10 @@ body {
   min-height: 82vh;
 }
 
+.mainHeight-search{
+  min-height: 14vh;
+}
+
 .welcomePage{
   overflow: hidden;
 }
@@ -189,4 +193,12 @@ div.sticky-top {
   color: #D67732;
   border: #D67732;
   border-bottom: #D67732 !important;
+}
+
+.bg-orange{
+  background: #D67732 !important;
+}
+
+.img-h{
+
 }

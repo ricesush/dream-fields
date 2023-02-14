@@ -20,7 +20,7 @@
                     </li>
                 @else
                     <li class="page-item disabled" aria-disabled="true">
-                        <span class="page-link">@lang('pagination.next')</span>
+                        <span class="page-link" style="background:white">@lang('pagination.next')</span>
                     </li>
                 @endif
             </ul>

@@ -1,16 +1,16 @@
 /* Banner section */
 .Bsr-banner-buy{
-  background:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.5)),url(../images/BSRbanner/banner-buy.webp);
+  background:linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 1)),url(../images/BSRbanner/banner-buy.webp);
 }
 .Bsr-banner-sell{
-  background:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.5)),url(../images/BSRbanner/banner-sell.webp);
+  background:linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 1)),url(../images/BSRbanner/banner-sell.webp);
 }
 .Bsr-banner-rent{
-  background:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.5)),url(../images/BSRbanner/banner-rent.webp);
+  background:linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 1)),url(../images/BSRbanner/banner-rent.webp);
 }
 .Bsr-banner-rent , .Bsr-banner-sell, .Bsr-banner-buy{
   background-repeat: no-repeat;
-  height: 35vh;
+  height: 20vh;
   background-size: cover;
   font-size: 5rem;
 }
@@ -162,6 +162,29 @@ align-items: center;
   height: 20vh;
 }
 
+.active > .page-link, .page-link.active {
+  background-color:#D67732;
+  border-color:#D67732;
+  color: white;
+  font-weight: bold;
+}
+.page-link{
+  color: #D67732;
+  background-color: white;
+}
+.page-btn{
+  color: #D67732 !important;
+  background-color: transparent;
+}
+.page-link:hover{
+  color: #ff6a00;
+}
+
+.border-b{
+  border-color: #D67732 !important;
+  border-width: 2px !important;
+}
+
 
 /* about section */
 @media (max-width:770px){
@@ -171,5 +194,121 @@ align-items: center;
   }
 }
 
+.card-client {
+  background: #d67632ba;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid #D67732;
+  box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
 
+.card-client:hover {
+  transform: translateY(-10px);
+}
 
+.user-picture {
+  overflow: hidden;
+  object-fit: cover;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.user-picture svg {
+  width: 2.5rem;
+  fill: currentColor;
+}
+
+.name-client {
+  margin: 0;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.name-client span {
+  display: block;
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.social-media:before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background: #fff;
+}
+
+.social-media a {
+  position: relative;
+  margin-right: 15px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-media a:last-child {
+  margin-right: 0;
+}
+
+.social-media a svg {
+  width: 1.1rem;
+  fill: currentColor;
+}
+
+/*-- Tooltip Social Media --*/
+.tooltip-social {
+  background: #262626;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding: 0.5rem 0.4rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -90%);
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.tooltip-social:after {
+  content: " ";
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  border: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: transparent;
+  transform: translate(-50%, 100%);
+}
+
+.social-media a .tooltip-social:after {
+  border-top-color: #262626;
+}
+
+.social-media a:hover .tooltip-social {
+  opacity: 1;
+  transform: translate(-50%, -130%);
+}
+
+.option-deco option{
+  color: #000;
+  background-color:  white;
+  border: none !important;
+  border-color: none !important;
+}

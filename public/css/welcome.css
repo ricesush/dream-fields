@@ -441,9 +441,6 @@ input::-webkit-input-placeholder {
   border-color: none !important;
 }
 
-.option-deco option:hover{
+.bg-orange{
   color: #D67732 !important;
-  background-color:  red;
-  border: none;
-  border-color: transparent;
 }

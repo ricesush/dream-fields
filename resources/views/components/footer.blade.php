@@ -38,10 +38,10 @@
         <small class="fw-bold fs-6 orangeText">Sources</small>
       </div>
       <ul class="nav flex-column pt-3">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 textLight">Home</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 textLight">Amenities</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 textLight">For Sale</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 textLight">For Rent</a></li>
+        <li class="nav-item mb-2"><a href="{{ route('welcome') }}" class="nav-link p-0 textLight">Home</a></li>
+        <li class="nav-item mb-2"><a href="{{ route('amenities') }}" class="nav-link p-0 textLight">Amenities</a></li>
+        <li class="nav-item mb-2"><a href="{{ route('buypage') }}" class="nav-link p-0 textLight">For Sale</a></li>
+        <li class="nav-item mb-2"><a href="{{ route('rentpage') }}" class="nav-link p-0 textLight">For Rent</a></li>
 
       </ul>
     </div>
@@ -51,11 +51,10 @@
         <small class="fw-bold fs-6 orangeText">Links</small>
       </div>
       <ul class="nav flex-column pt-3">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 textLight">Our Vision</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 textLight">Listings</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 textLight">Privacy</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 textLight">About Us</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 textLight">Contact Us</a></li>
+        <li class="nav-item mb-2"><a href="{{ route('aboutus') }}" class="nav-link p-0 textLight">Our Vision</a></li>
+        <li class="nav-item mb-2"><a href="{{ route('buypage') }}" class="nav-link p-0 textLight">Listings</a></li>
+        <li class="nav-item mb-2"><a href="{{ route('aboutus') }}" class="nav-link p-0 textLight">About Us</a></li>
+        <li class="nav-item mb-2"><a href="{{ route('inquire') }}" class="nav-link p-0 textLight">Contact Us</a></li>
       </ul>
     </div>
 
@@ -71,7 +70,7 @@
   </footer>
   <div class="bgFooter2 text-light container-fluid">
 
-    <div class="container text-center py-1">
+    <div class="container text-center pb-2 pt-1">
       <small class="">DreamFields © 2023</small>
     </div>
   </div>
