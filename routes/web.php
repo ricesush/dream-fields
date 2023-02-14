@@ -29,8 +29,10 @@ Route::get('/', function () {return view('welcome');})->name('welcome');
 Route::get('/amenities', function () {return view('amenities');})->name('amenities');
 Route::get('/inquire', function () {return view('inquire');})->name('inquire');
 Route::get('/aboutus', function () {return view('aboutus');})->name('aboutus');
-Route::get('/buypage', function () {return view('buysellrent/buypage')->with('properties', Property::orderBy('created_at', 'desc')->get());})->name('buypage');
-Route::get('/rentpage', function () {return view('buysellrent/rentpage')->with('properties', Property::orderBy('created_at', 'desc')->get());})->name('rentpage');
+
+Route::get('/buypage', [PropertyController::class, 'buyunit'])->name('buypage');
+Route::get('/rentpage', [PropertyController::class, 'rentunit'])->name('rentpage');
+
 Route::get('/sellpage', function () {return view('buysellrent/sellpage');})->name('sellpage');
 
 

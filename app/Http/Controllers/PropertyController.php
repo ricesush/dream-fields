@@ -102,4 +102,23 @@ class PropertyController extends Controller
     }
 
 
+    public function buyunit()
+    {
+        $properties = Property::orderBy('created_at', 'desc')
+        ->whereIn('isApproved', ['Approved'])
+        ->paginate(10);
+
+        return view('buysellrent/buypage', ['properties' => $properties->withPath('buypage')])
+            ->with('i', (request()->input('page', 1) - 1) * 10);
+    }
+
+    public function rentunit()
+    {
+        $properties = Property::orderBy('created_at', 'desc')
+        ->whereIn('isApproved', ['Approved'])
+        ->paginate(10);
+
+        return view('buysellrent/rentpage', ['properties' => $properties->withPath('buypage')])
+            ->with('i', (request()->input('page', 1) - 1) * 10);
+    }
 }

@@ -8,7 +8,7 @@
 @section('content')
 
   <div class="mb-6 ml-5">
-    <p class="text-lg font-medium">Edit Unit info.</p>
+    <p class="text-lg font-medium">Edit User info.</p>
   </div>
   <div class="mb-6 ml-5">
     <a href="{{ route('admin') }}" class="inline-block px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline">← Go back</a>
