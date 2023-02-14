@@ -108,7 +108,6 @@ class PropertyController extends Controller
         ->whereIn('isApproved', ['Approved'])
         ->whereIn('unitStatus', ['For sale'])
         ->paginate(6);
-
         return view('buysellrent/buypage', ['properties' => $properties->withPath('buypage')])
             ->with('i', (request()->input('page', 1) - 1) * 10);
     }
@@ -124,28 +123,51 @@ class PropertyController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
-    public function search(){
-        $data = $_GET['search_input'];
-        $search_input = Str::of($data)->explode(' ');
+    public function aboutus()
+    {
+        return view('aboutus')->with('properties', Property::orderBy('created_at', 'desc')->get());
+    }
 
-        if( !isset($data[0]) ){   
+    public function search(){
+        $dataSearchBar = $_GET['search_input'];
+        $search_input = Str::of($dataSearchBar)->explode(' ');
+        $dropdownButtonValue = $_GET['propStatus'].' '.$_GET['bathCount'].' '.$_GET['bedCount'];
+        $dropdownButtonValue = Str::of($dropdownButtonValue)->explode(' ');
+
+        if( !isset($dataSearchBar[0]) ){   
             $text = [];
-            return view('search', ['text_input' => $text]);
-        }else{
-            foreach($search_input as $inputs){
+            foreach($dropdownButtonValue as $inputs){
                 global $input;
                 $input = $inputs;
                 $text = Property::where(function ($query) {
-                    $query->where('unitNumber', 'LIKE', '%'.$GLOBALS['input'].'%')
-                    ->orwhere('unitType', 'LIKE', '%'.$GLOBALS['input'].'%')
-                    ->orwhere('unitStatus', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    $query->where('unitStatus', 'LIKE', '%'.$GLOBALS['input'].'%')
                     ->orwhere('numBed', 'LIKE', '%'.$GLOBALS['input'].'%')
-                    ->orwhere('numBaths', 'LIKE', '%'.$GLOBALS['input'].'%')
                     ->orwhere('numBaths', 'LIKE', '%'.$GLOBALS['input'].'%');
                 })
                 ->where('isApproved', 'Approved')
                 ->get();
-                return view('search', ['text_input' => $text]);
+                return view('search', ['text_input' => $text, 'errorMessage' => $dropdownButtonValue]);
+            }
+            return view('search');
+            
+        }else{
+            foreach($search_input as $inputs){
+                global $input;
+                $input = $inputs;
+                
+                $text = Property::where(function ($query) {
+                    $query->where('unitNumber', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('unitPrice', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('unitType', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('unitStatus', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('numBed', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('numBaths', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('floorArea', 'LIKE', '%'.$GLOBALS['input'].'%')
+                    ->orwhere('hasParking', 'LIKE', '%'.$GLOBALS['input'].'%');
+                })
+                ->where('isApproved', 'Approved')
+                ->get();
+                return view('search', ['text_input' => $text, 'errorMessage' => $dataSearchBar]);
             }
         }
     }

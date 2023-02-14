@@ -28,10 +28,11 @@
 </head>
 
 <body>
+    @include('components.preloader')
     <div id="app">
         @include('components.navbar')
 
-        @include('components.preloader')
+        
 
         <main class="mainHeight">
             @yield('content')
