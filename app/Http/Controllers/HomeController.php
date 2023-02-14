@@ -33,8 +33,4 @@ class HomeController extends Controller
        
     }
 
-    public function aboutus()
-    {
-        return view('aboutus')->with('properties', Property::orderBy('created_at', 'desc')->get());
-    }
 }
