@@ -123,6 +123,11 @@ class PropertyController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
+    public function aboutus()
+    {
+        return view('aboutus')->with('properties', Property::orderBy('created_at', 'desc')->get());
+    }
+
     public function search(){
         $dataSearchBar = $_GET['search_input'];
         $search_input = Str::of($dataSearchBar)->explode(' ');
