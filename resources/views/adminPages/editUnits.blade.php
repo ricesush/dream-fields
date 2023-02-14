@@ -69,12 +69,12 @@
   </div>
 
     <div class="form-group w-full md:w-1/3 lg:w-1/4 mt-5">
-      <label for="title" class="block mb-2 font-bold text-gray-700">Title</label>
-      <select class="form-select w-full" name="title" id="title">
-        <option value="1 Bedroom Standard" {{ $property->title == '1 Bedroom Standard' ? 'selected' : '' }}>1 Bedroom Standard</option>
-        <option value="1 Bedroom Deluxe" {{ $property->title == '1 Bedroom Deluxe' ? 'selected' : '' }}>1 Bedroom Deluxe</option>
-        <option value="2 Bedrooms Standard" {{ $property->title == '2 Bedrooms Standard' ? 'selected' : '' }}>2 Bedrooms Standard</option>
-        <option value="2 Bedrooms Deluxe" {{ $property->titles == '2 Bedrooms Deluxe' ? 'selected' : '' }}>2 Bedrooms Deluxe</option>
+      <label for="unitType" class="block mb-2 font-bold text-gray-700">unitType</label>
+      <select class="form-select w-full" name="unitType" id="unitType">
+        <option value="1 Bedroom Standard" {{ $property->unitType == '1 Bedroom Standard' ? 'selected' : '' }}>1 Bedroom Standard</option>
+        <option value="1 Bedroom Deluxe" {{ $property->unitType == '1 Bedroom Deluxe' ? 'selected' : '' }}>1 Bedroom Deluxe</option>
+        <option value="2 Bedrooms Standard" {{ $property->unitType == '2 Bedrooms Standard' ? 'selected' : '' }}>2 Bedrooms Standard</option>
+        <option value="2 Bedrooms Deluxe" {{ $property->unitType == '2 Bedrooms Deluxe' ? 'selected' : '' }}>2 Bedrooms Deluxe</option>
       </select> 
     </div>        
     
@@ -86,17 +86,6 @@
         <option value="Sold" {{ $property->unitStatus == 'Sold' ? 'selected' : '' }}>Sold</option>
         <option value="Rented" {{ $property->unitStatus == 'Rented' ? 'selected' : '' }}>Rented</option>
       </select> 
-    </div>
-    
-    <div class="form-group w-full md:w-1/3 lg:w-1/4 mt-5">
-      <label for="unitType" class="block mb-2 font-bold text-gray-700">Unit Type</label>
-      <select class="form-select w-full" name="unitType" id="unitType">
-        <option value="Studio" {{ $property->unitType == 'Studio' ? 'selected' : '' }}>Studio</option>
-        <option value="Loft" {{ $property->unitType == 'Loft' ? 'selected' : '' }}>Loft</option>
-        <option value="Bedroom Unit" {{ $property->unitType == 'Bedroom Unit' ? 'selected' : '' }}>Bedroom Unit</option>
-        <option value="Penthouse Unit" {{ $property->unitType == 'Penthouse Unit' ? 'selected' : '' }}>Penthouse Unit</option>
-        <option value="Bi-Level Unit" {{ $property->unitType == 'Bi-Level Unit' ? 'selected' : '' }}>Bi-Level Unit</option>
-      </select>
     </div>
   
     <div class="form-group w-full md:w-1/3 lg:w-1/4 mt-5">

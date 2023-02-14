@@ -29,7 +29,7 @@ class HomeController extends Controller
         if(Auth::check() && Auth::user()->role == 'admin'){
              return redirect('/admin');
         }
-        return view('home');
+        return view('home')->with('properties', Property::orderBy('created_at', 'desc')->get());;
        
     }
 

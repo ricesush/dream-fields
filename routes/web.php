@@ -24,11 +24,9 @@ Auth::routes();
 Route::get('/', function () {return view('welcome');})->name('welcome');
 Route::get('/amenities', function () {return view('amenities');})->name('amenities');
 Route::get('/inquire', function () {return view('inquire');})->name('inquire');
-
-
-
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/addtofav', [FavouriteController::class, 'addtofav'])->name('addtofav');
+Route::get('/sellpage', function () {return view('buysellrent/sellpage');})->name('sellpage');
 
 Route::prefix('/')->group(function() {
     Route::controller(PropertyController::class)->group(function () {
@@ -91,7 +89,6 @@ Route::prefix('user')->middleware('auth')->group(function() {
         // Route::get('/', 'index')->name('admin');
         Route::get('/listing','index')->name('listing');
         Route::get('/ownedunits', 'owned')->name('ownedunits');
-        Route::get('/dashboard', 'dashboard')->name('userdashboard');
     });
 
     // Route::controller(PropertyController::class)->group(function () {
