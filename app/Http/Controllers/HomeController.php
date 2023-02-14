@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Property;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -29,5 +31,10 @@ class HomeController extends Controller
         }
         return view('home');
        
+    }
+
+    public function aboutus()
+    {
+        return view('aboutus')->with('properties', Property::orderBy('created_at', 'desc')->get());
     }
 }
