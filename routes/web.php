@@ -8,6 +8,7 @@ use App\Models\Property;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ListingController;
+use App\Models\User;
 
 
 /*
@@ -28,8 +29,8 @@ Auth::routes();
 Route::get('/', function () {return view('welcome');})->name('welcome');
 Route::get('/amenities', function () {return view('amenities');})->name('amenities');
 Route::get('/inquire', function () {return view('inquire');})->name('inquire');
-Route::get('/aboutus', function () {return view('aboutus');})->name('aboutus');
 
+Route::get('/aboutus', [HomeController::class,'aboutus'])->name('aboutus');
 Route::get('/buypage', [PropertyController::class, 'buyunit'])->name('buypage');
 Route::get('/rentpage', [PropertyController::class, 'rentunit'])->name('rentpage');
 
