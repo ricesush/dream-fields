@@ -8,7 +8,7 @@
                 <div class="container welcomePag">
                     <div class="row text-center d-flex align-items-end justify-content-center contH ">
                         <section class='col-lg-12 row d-flex align-items-center justify-content-center'>
-                            <p class="col-lg-12 textLight fs fw-bolder" data-aos="fade-down" data-aos-duration="2000">
+                            <p class="col-lg-12 textLight fs fw-bolder" data-aos="fade-down" data-aos-duration="3000">
                                 Find Your <span class="greenText">Dream Unit</span>
                             </p>
                             <p class='col-lg-12 textLight fs-5 '>
@@ -54,12 +54,12 @@
 
                             <div class="row col-md-12 col-lg-12 d-flex justify-content-center align-items-end m-0">
                                 <div class=" col-lg-4 col-md-12 d-flex me-0">
-                                    <select class="option-deco form-select bg-transparent border-0 border-bottom rounded-0 border-b" name="links" id="unitProperties">
-                                        <option selected hidden value="Listing" class="text-dark bg-primary">Listing</option>
-                                        <option value="for_sale" class="">For Sale</option>
-                                        <option value="for_rent">For Rent</option>
+                                    <select class="option-deco form-select bg-transparent border-0 border-bottom rounded-0 border-b" name="propStatus" id="unitProperties">
+                                        <option selected hidden value="" class="text-dark bg-primary">Listing</option>
+                                        <option value="Sale" class="">For Sale</option>
+                                        <option value="Rent">For Rent</option>
                                     </select>
-                                    <select class="form-select bg-transparent border-0 border-bottom rounded-0 mx-3 border-b" name="baths" id="baths">
+                                    <select class="option-deco form-select bg-transparent border-0 border-bottom rounded-0 mx-3 border-b" name="bathCount" id="baths">
                                         <option selected hidden value="0">Baths</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -67,7 +67,7 @@
                                     </select>
 
 
-                                    <select class="form-select bg-transparent border-0 border-bottom rounded-0 pt-2 border-b" name="baths" id="beds">
+                                    <select class="option-deco form-select bg-transparent border-0 border-bottom rounded-0 pt-2 border-b" name="bedCount" id="beds">
                                         <option Selected hidden value="0">Beds</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -150,7 +150,6 @@
                                 <li>
                                     HLURB TLS No. ENCRFO-09-02-003</li>
                             </ul>
-                            <p class="card-text text-end"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
                 </div>
