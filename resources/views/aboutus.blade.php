@@ -3,7 +3,7 @@
     <div class="container-lg text-light mb-5 pt-5 text-center">
         <img class="img-fluid" src="..\images\DreamFields Logo(full)(green)-01.png" alt="" width="50%">
     </div>
-    <div class="container-lg">
+    <div class="container-lg mb-3">
         <div class="row">
             <div class="col mb-5">
                 <h1 class="fw-bold mb-5 text-center"><span class="border-bottom border-b ">About Us</span></h1>
@@ -72,7 +72,7 @@
                     alt="">
             </div>
         </div>
-        <div class="row g-1 mb-3">
+        <div class="row g-1 mb-5">
             <div class="col-12 col-md-6 align-self-center  pb-3" data-aos="fade-up-right">
                 <img class="img-fluid mx-auto d-block shadow" style="max-width: 100%;"
                     src="https://media.istockphoto.com/id/1360521209/photo/businessman-using-a-computer-to-concept-of-fund-financial-investment-management-portfolio.jpg?b=1&s=170667a&w=0&k=20&c=gedPHE3Vq_PbE1gufgy-8NhwP8gpj8YvYnSR7TZRFxo="
@@ -106,9 +106,8 @@
         </div>
         <hr />
 
-        <div class="row text-center">
-            <div class="col-6 col-md-3 mb-2">
-
+        <div class="row text-center my-3">
+            <div class="col-6 col-md-3" >
                 @php
                     $forsale = 0;
                 @endphp
@@ -122,8 +121,8 @@
                     @endif
                 @endforeach
                 <h1 class="fw-bold" id="numCount" data-val="{{ $forsale }}"> {{ $forsale }}</h1>
-
                 <h5> CONDO FOR SALE</h5>
+                <i class="fa-solid fa-building-shield fa-2x text-center"></i>
             </div>
             <div class="col-6 col-md-3  mb-2">
                 @php
@@ -140,6 +139,7 @@
             @endforeach
                 <h1 class="fw-bold" id="numCount" data-val="{{ $forrent }}">{{ $forrent }}</h1>
                 <h5> CONDO FOR RENT</h5>
+                <i class="fa-solid fa-building-circle-check fa-2x text-center"></i>
             </div>
             <div class="col-6 col-md-3  mb-2">
                 @php
@@ -156,6 +156,7 @@
             @endforeach
                 <h1 class="fw-bold" id="numCount" data-val="{{$sold}}">{{$sold}}</h1>
                 <h5> RECENTLY SOLD</h5>
+                <i class="fa-solid fa-hand-holding-dollar fa-2x text-center"></i>
             </div>
             <div class="col-6 col-md-3  mb-2">
                 @php
@@ -168,8 +169,10 @@
                         @endphp
                 @endif
             @endforeach
-                <h1 class="fw-bold" id="numCount" data-val="{{$total}}}">{{$total}}}</h1>
+                <h1 class="fw-bold" id="numCount" data-val="{{$total}}}">{{$total}}</h1>
                 <h5> TOTAL LISTED</h5>
+                <i class="fa-sharp fa-solid fa-city fa-2x text-center"></i>
+             
             </div>
             <script>
                 let valueDisplays = document.querySelectorAll("#numCount");
@@ -191,10 +194,10 @@
             <hr />
         </div>
         <div class="row g-2 mt-5">
-            <div class="col-12 col-sm-6 col-md-3">
+            <div class="col-12 col-sm-6 col-md-3" data-aos="zoom-out-left">
                 <div class="card-client">
                     <div class="user-picture">
-                        <img class="img-fluid" src="http://1.bp.blogspot.com/_b8CTHEtMZJc/TU19RVlUBZI/AAAAAAAAADo/kaWb3qGY620/s1600/picts_KieraKnightly-kingarthur.jpg"
+                        <img class="img-fluid" src="../images/webdev/imat.png"
                             alt="">
                     </div>
                     <p class="name-client">Raymart Vergara
@@ -237,7 +240,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-3">
+            <div class="col-12 col-sm-6 col-md-3" data-aos="zoom-out-left">
                 <div class="card-client">
                     <div class="user-picture">
                         <img class="img-fluid" src="../images/webdev/cj.png"
@@ -283,11 +286,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-3">
+            <div class="col-12 col-sm-6 col-md-3" data-aos="zoom-out-left">
 
                 <div class="card-client">
                     <div class="user-picture">
-                        <img class="img-fluid" src="http://1.bp.blogspot.com/_b8CTHEtMZJc/TU19RVlUBZI/AAAAAAAAADo/kaWb3qGY620/s1600/picts_KieraKnightly-kingarthur.jpg"
+                        <img class="img-fluid" src="../images/webdev/gab.png"
                             alt="">
                     </div>
                     <p class="name-client">Gabriel Dayot
@@ -330,7 +333,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-3">
+            <div class="col-12 col-sm-6 col-md-3" data-aos="zoom-out-left">
                 <div class="card-client">
                     <div class="user-picture">
                         <img class="img-fluid" src="../images/webdev/ej.png"
