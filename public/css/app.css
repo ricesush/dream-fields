@@ -190,3 +190,7 @@ div.sticky-top {
   border: #D67732;
   border-bottom: #D67732 !important;
 }
+
+.bg-orange{
+  background: #D67732 !important;
+}

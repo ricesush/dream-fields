@@ -447,3 +447,7 @@ input::-webkit-input-placeholder {
   border: none;
   border-color: transparent;
 }
+
+.bg-orange{
+  color: #D67732 !important;
+}
