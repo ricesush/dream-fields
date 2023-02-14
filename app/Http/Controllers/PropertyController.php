@@ -108,7 +108,6 @@ class PropertyController extends Controller
         ->whereIn('isApproved', ['Approved'])
         ->whereIn('unitStatus', ['For sale'])
         ->paginate(6);
-
         return view('buysellrent/buypage', ['properties' => $properties->withPath('buypage')])
             ->with('i', (request()->input('page', 1) - 1) * 10);
     }

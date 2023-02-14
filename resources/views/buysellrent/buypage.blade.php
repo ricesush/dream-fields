@@ -2,44 +2,46 @@
 
 @section('content')
     <div class="Bsr-banner-buy container-fluid position-relative">
-       
-        <div class="container d-grid align-items-end bg-height ">
+        <div class="container d-grid align-items-end">
             <div class="col">
-                <h1 class="text-center fw-bold"><span class=""><span class="text-dark bg-light rounded-start-2 ps-2 shadow">BUY </span><span class=" badge-color text-light rounded-end-2  px-2  shadow"> UNITS</span></span></h1>
+                <h1 class="text-center fw-bold display-4 mt-5"><span class="text-light rounded-end-2">FOR SALE</span></span></h1>
             </div>
-            <form class="bgColor2 py-2 rounded-1 mb-3" method="GET" action="{{ route('search') }}">
+            <form class="bgColor2 py-3 rounded-1 shadow" method="GET" action="{{ route('search') }}">
                 @csrf
-                <div class="row col-md-12 col-lg-12 d-flex justify-content-center m-0">
-                    <div class=" col-lg-4 col-md-12 d-flex me-0">
-                        <select class="form-select bg-transparent border-0 border-bottom rounded-0" name="links"
-                            id="unitProperties" onchange="window.location.href=this.value;">
-                            <option selected hidden value="Listing" class="text-dark">Listing</option>
-                            <option value="{{ route('buypage') }}" selected>For Sale</option>
-                            <option value="{{ route('rentpage') }}">For Rent</option>
-                        </select>
-                        <select class="form-select bg-transparent border-0 border-bottom rounded-0 mx-3" name="baths"
-                            id="baths">
 
+                <div class="row col-md-12 col-lg-12 d-flex justify-content-center align-items-end m-0">
+                    <div class=" col-lg-4 col-md-12 d-flex me-0">
+                        <select class="option-deco form-select bg-transparent border-0 border-bottom rounded-0 border-b"
+                            name="propStatus" id="unitProperties">
+                            <option selected hidden value="" class="text-dark bg-primary">Listing</option>
+                            <option value="Sale" class="">For Sale</option>
+                            <option value="Rent">For Rent</option>
+                        </select>
+                        <select
+                            class="option-deco form-select bg-transparent border-0 border-bottom rounded-0 mx-3 border-b"
+                            name="bathCount" id="baths">
                             <option selected hidden value="0">Baths</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
 
-                        <select class="form-select bg-transparent border-0 border-bottom rounded-0 pt-2" name="baths"
-                            id="beds">
+
+                        <select
+                            class="option-deco form-select bg-transparent border-0 border-bottom rounded-0 pt-2 border-b"
+                            name="bedCount" id="beds">
                             <option Selected hidden value="0">Beds</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
                     </div>
-                    <div class="col-lg-8 d-flex mt-3 text-light">
+                    <div class="col-lg-8 d-flex text-light align-items-end">
                         <input type="text"
-                            class="input text-light form-control bg-transparent border-0 border-bottom rounded-0"
+                            class="bg-primary input text-light form-control bg-transparent border-0 border-bottom rounded-0 border-b"
                             placeholder="Search..." id="input-search" name="search_input" />
-                        <button class="btn bg-transparent border-0 border-bottom rounded-0" type="submit" id="search"><i
-                                class="fa fa-solid fa-magnifying-glass"></i></button>
+                        <button class="btn bg-transparent border-0 border-bottom rounded-0 border-b" type="submit"
+                            id="search"><i class="fa fa-solid fa-magnifying-glass"></i></button>
                     </div>
                 </div>
             </form>
@@ -47,20 +49,7 @@
     </div>
 
 
-    <div class="container">
-
-        <div class="d-flex justify-content-end my-2">
-            <div class="d-flex justify-content-start">
-                <select class="form-select focus-control border border-0" aria-label="Default select example">
-                        <option onchange="window.location.href=this.value;">Default Order</option>
-                        <option value="1">Price(Low to High)</option>
-                        <option value="2">Price(High to Low)</option>
-                        <option value="{{ route('buypage') }}">Date New to Old</option>
-                        <option value="3">Date Old to Knew</option>
-                </select>
-            </div>
-        </div>
-
+    <div class="container mt-5">
         <div class="row row-cols-1 row-cols-md-3 g-3 ">
 
             @foreach ($properties as $property)
