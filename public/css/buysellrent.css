@@ -185,5 +185,8 @@ align-items: center;
   }
 }
 
-
+.border-b{
+  border-color: #D67732 !important;
+  border-width: 2px !important;
+}
 
