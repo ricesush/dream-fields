@@ -30,6 +30,13 @@
     </div>
     <ul class="nav-list">
       <li>
+        <a href="/">
+          <i class='bx bx-home'></i>
+          <span class="links_name">Home</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li>
         <a href="{{route('userdashboard')}}">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
@@ -49,13 +56,6 @@
          <span class="links_name">List your unit</span>
        </a>
        <span class="tooltip">List your unit</span>
-     </li>
-     <li>
-       <a href="{{route('pendingunits')}}">
-         <i class='bx bx-heart' ></i>
-         <span class="links_name">Favourites</span>
-       </a>
-       <span class="tooltip">Favourites</span>
      </li>
      
      <li class="profile">

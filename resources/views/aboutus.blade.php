@@ -143,18 +143,18 @@
             </div>
             <div class="col-6 col-md-3  mb-2">
                 @php
-                $sold = 0;
+                $soldunit = 0;
             @endphp
             @foreach ($properties as $property)
                 @if ($property->isApproved == 'Approved')
                     @if ($property->unitStatus == 'Sold')
                         @php
-                            $sold += 1;
+                            $soldunit += 1;
                         @endphp
                     @endif
                 @endif
             @endforeach
-                <h1 class="fw-bold" id="numCount" data-val="{{$sold}}">{{$sold}}</h1>
+                <h1 class="fw-bold" id="numCount" data-val="{{$soldunit}}">{{$soldunit}}</h1>
                 <h5> RECENTLY SOLD</h5>
                 <i class="fa-solid fa-hand-holding-dollar fa-2x text-center"></i>
             </div>

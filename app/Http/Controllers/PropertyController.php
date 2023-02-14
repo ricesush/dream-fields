@@ -171,4 +171,9 @@ class PropertyController extends Controller
             }
         }
     }
+
+    public function propStatusCounter()
+    {
+        return view('aboutus')->with('properties', Property::orderBy('created_at', 'desc')->get());
+    }
 }

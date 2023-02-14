@@ -21,13 +21,12 @@
       </div>
       
       <div class="mb-4">
-        <label for="unitType" class="block text-gray-700 font-bold mb-2">Unit Type:</label>
+        <label for="unitType" class="block text-gray-700 font-bold mb-2">Unit Type</label>
         <select id="unitType" name="unitType" class="w-full border border-gray-400 p-2">
-          <option value="Studio">Studio</option>
-          <option value="Loft">Loft</option>
-          <option value="Bedroom Unit">Bedroom Unit</option>
-          <option value="Penthouse Unit">Penthouse Unit</option>
-          <option value="Bi-level Unit">Bi-level Unit</option>
+          <option value="1 Bedroom Standard">1 Bedroom Standard</option>
+          <option value="1 Bedroom Deluxe">1 Bedroom Deluxe</option>
+          <option value="2 Bedrooms Standard">2 Bedrooms Standard</option>
+          <option value="2 Bedrooms Deluxe">2 Bedrooms Deluxe</option>
         </select>
       </div>
       
