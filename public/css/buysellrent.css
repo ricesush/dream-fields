@@ -305,3 +305,10 @@ align-items: center;
   opacity: 1;
   transform: translate(-50%, -130%);
 }
+
+.option-deco option{
+  color: #000;
+  background-color:  white;
+  border: none !important;
+  border-color: none !important;
+}
