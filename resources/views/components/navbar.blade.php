@@ -19,12 +19,12 @@
                         <ul class="dropdown-menu list-unstyled mb-0">
                             <li><a class="dropdown-item d-flex align-items-center gap-2 py-2"
                                     href="{{ route('buypage') }}">
-                                    <span class="d-inline-block bg-success rounded-circle p-1"></span>
+                                    <span class="d-inline-block bg-orange rounded-circle p-1"></span>
                                     For Sale
                                 </a></li>
                             <li><a class="dropdown-item d-flex align-items-center gap-2 py-2"
                                     href="{{ route('rentpage') }}">
-                                    <span class="d-inline-block bg-primary rounded-circle p-1"></span>
+                                    <span class="d-inline-block bg-orange rounded-circle p-1"></span>
                                     For Rent</a>
                             </li>
                             <li>
@@ -32,13 +32,13 @@
                                     @if (Route::has('login'))
                                         <a class="dropdown-item d-flex align-items-center gap-2 py-2"
                                             href="{{ route('sellpage') }}">
-                                            <span class="d-inline-block bg-danger rounded-circle p-1"></span>
+                                            <span class="d-inline-block bg-orange rounded-circle p-1"></span>
                                             List Your Unit</a>
                                     @endif
                                 @else
                                     <a class="dropdown-item d-flex align-items-center gap-2 py-2"
                                         href="{{ route('listing') }}">
-                                        <span class="d-inline-block bg-danger rounded-circle p-1"></span>
+                                        <span class="d-inline-block bg-orange rounded-circle p-1"></span>
                                         List Your Unit</a>
                                 @endguest
                             </li>
