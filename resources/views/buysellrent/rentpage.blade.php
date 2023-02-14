@@ -114,4 +114,5 @@
         </div>
         {!! $properties->appends(request()->except('page'))->links('vendor.pagination.bootstrap-5') !!}    
     </div>
+    
 @endsection
