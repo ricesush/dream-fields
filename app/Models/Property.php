@@ -18,6 +18,7 @@ class Property extends Model
         'unitStatus',
         'floorArea',
         'unitPrice',
+        'title',
         'numBed',
         'numBaths',
         'imagePath',

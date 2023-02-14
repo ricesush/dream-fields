@@ -69,6 +69,7 @@ class PropertyController extends Controller
             'floorArea' => 'required|integer',
             'numBed' => 'required|integer|max:3',
             'numBaths' => 'required|integer|max:3',
+            
             'hasParking' => 'required|max:4',
             'unitStatus' => 'required|string',
             'unitPrice' => 'required|integer|max:1000000000',
@@ -100,67 +101,5 @@ class PropertyController extends Controller
         return redirect()->route('home')->with('success', 'Property deleted successfully!');
     }
 
-    public function search(){
-        $data = $_GET['search_input'];
-        $search_input = Str::of($data)->explode(' ');
-
-        if( !isset($data[0]) ){   
-            $text = [];
-            return view('search', ['text_input' => $text]);
-        }else{
-            foreach($search_input as $inputs){
-                global $input;
-                $input = $inputs;
-                $text = Property::where(function ($query) {
-                    $query->where('unitNumber', 'LIKE', '%'.$GLOBALS['input'].'%')
-                    ->orwhere('unitType', 'LIKE', '%'.$GLOBALS['input'].'%')
-                    ->orwhere('unitStatus', 'LIKE', '%'.$GLOBALS['input'].'%')
-                    ->orwhere('numBed', 'LIKE', '%'.$GLOBALS['input'].'%')
-                    ->orwhere('numBaths', 'LIKE', '%'.$GLOBALS['input'].'%')
-                    ->orwhere('numBaths', 'LIKE', '%'.$GLOBALS['input'].'%');
-                })
-                ->where('isApproved', 'Approved')
-                ->get();
-                return view('search', ['text_input' => $text]);
-            }
-        }
-    }
-
-    // public function filter(Request $request)
-    // {
-    //     $inputs = $request->all();
-    //     $properties = Property::query();
-    //     foreach ($inputs as $key => $value) {
-    //         if ($value != "") {
-    //             switch ($key) {
-    //                 case 'unitNumber':
-    //                     $properties->where($key, 'like', '%' . $value . '%');
-    //                     break;
-    //                 case 'unitType':
-    //                     $properties->where($key, 'like', '%' . $value . '%');
-    //                     break;
-    //                 case 'unitStatus':
-    //                     $properties->where($key, 'like', '%' . $value . '%');
-    //                     break;
-    //                 case 'numBed':
-    //                     $properties->where($key, '=', $value);
-    //                     break;
-    //                 case 'numBaths':
-    //                     $properties->where($key, '=', $value);
-    //                     break;
-    //                 case 'hasParking':
-    //                     $properties->where($key, 'like', '%' . $value . '%');
-    //                     break;
-    //                 case 'unitPrice':
-    //                     $properties->where($key, '<=', $value);
-    //                     break;
-    //                 default:
-    //                     break;
-    //             }
-    //         }
-    //     }
-    //     $filteredProperties = $properties->get();
-    //     return view('search', ['text_input' => $filteredProperties]);
-    // }
 
 }
