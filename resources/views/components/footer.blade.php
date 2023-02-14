@@ -71,7 +71,7 @@
   </footer>
   <div class="bgFooter2 text-light container-fluid">
 
-    <div class="container text-center py-1">
+    <div class="container text-center pb-2 pt-1">
       <small class="">DreamFields © 2023</small>
     </div>
   </div>
