@@ -84,7 +84,7 @@
     </ul>
   </div>
   <section class="home-section">
-    <div class="text">@yield('header') <span class="ml-10">Hello! <strong>{{ Auth::user()->name }}</strong></span></div> 
+    <div class="text">@yield('header')</div> 
     <main class="container">
       @yield('content')
     </main>
