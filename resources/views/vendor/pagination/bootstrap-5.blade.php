@@ -39,7 +39,7 @@
                 </p>
             </div>
 
-            <div>
+            <div class="mt-3">
                 <ul class="pagination">
                     {{-- Previous Page Link --}}
                     @if ($paginator->onFirstPage())
