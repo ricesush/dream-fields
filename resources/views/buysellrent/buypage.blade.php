@@ -4,7 +4,8 @@
     <div class="Bsr-banner-buy container-fluid position-relative">
         <div class="container d-grid align-items-end">
             <div class="col">
-                <h1 class="text-center fw-bold display-4 mt-5"><span class="text-light rounded-end-2">FOR SALE</span></span></h1>
+                <h1 class="text-center fw-bold display-4 mt-5"><span class="text-light rounded-end-2">FOR SALE</span></span>
+                </h1>
             </div>
             <form class="bgColor2 py-3 rounded-1 shadow" method="GET" action="{{ route('search') }}">
                 @csrf
@@ -51,15 +52,24 @@
 
     <div class="container mt-5">
         <div class="row row-cols-1 row-cols-md-3 g-3 ">
-
             @foreach ($properties as $property)
                 @if ($property->isApproved == 'Approved' && $property->unitStatus == 'For Sale')
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100 shadow border border-0 bg-card-body cards-bground">
                             <div class="img-wrapper">
-                                <img href="#" class="bsr-pict card-img-top"
-                                    src="https://www.vistaresidences.com.ph/img/containers/main/img/minimalist-condo-in-manila.png/15ed8280fc19482cae110268a2faebf0.png"
-                                    alt="..."></img>
+                                @if ($property->title == '1 Bedroom Standard')
+                                    <img href="#" class="bsr-pict card-img-top" src="../images/room/1-Bedroom.jpg"
+                                        alt="..."></img>
+                                @elseif($property->title == '1 Bedroom Deluxe')
+                                    <img href="#" class="bsr-pict card-img-top" src="../images/room/1-Bedroom2.jpg"
+                                        alt="..."></img>
+                                @elseif($property->title == '2 Bedrooms Standard')
+                                    <img href="#" class="bsr-pict card-img-top" src="../images/room/2-Bedroom.jpg"
+                                        alt="..."></img>
+                                @elseif($property->title == '2 Bedrooms Deluxe')
+                                    <img href="#" class="bsr-pict card-img-top" src="../images/room/2-Bedroom2.jpg"
+                                        alt="..."></img>
+                                @endif
                                 <a href="#" class='fade content stretched-link text-white'>
                                     <img class='logo-overlay'
                                         src='https://i.ibb.co/H75pK9V/Dream-Fields-Logo-White-01.png'></img>
@@ -106,11 +116,9 @@
                             </div>
                         </div>
                     </div>
-                    
                 @endif
-            @endforeach        
+            @endforeach
         </div>
-        {!! $properties->appends(request()->except('page'))->links('vendor.pagination.bootstrap-5') !!}    
+        {!! $properties->appends(request()->except('page'))->links('vendor.pagination.bootstrap-5') !!}
     </div>
-    
 @endsection
