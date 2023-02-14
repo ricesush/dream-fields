@@ -105,72 +105,89 @@
             </div>
         </div>
         <hr />
-      
+
         <div class="row text-center">
-            {{-- <div class="text-muted">For rent: 
-                @php
-                  $forrent = 0;
-                @endphp
-                @foreach($properties as $property)
-                @if($property->isApproved == 'Approved')
-                  @if($property->unitStatus == 'For Rent')
-                    @php
-                      $forrent += 1;
-                    @endphp
-                  @endif
-                @endif  
-                @endforeach
-                {{ $forrent }} 
-              </div> --}}
-         
             <div class="col-6 col-md-3 mb-2">
-                <h1 class="fw-bold"  id="numCount" data-val="22">0</h1>
+                @php
+                    $forsale = 0;
+                @endphp
+                @foreach ($properties as $property)
+                    @if ($property->isApproved == 'Approved')
+                        @if ($property->unitStatus == 'For Sale')
+                            @php
+                                $forsale += 1;
+                            @endphp
+                        @endif
+                    @endif
+                @endforeach
+                <h1 class="fw-bold" id="numCount" data-val=" {{ $forsale }} "> {{ $forsale }}</h1>
                 <h5> CONDO FOR SALE</h5>
             </div>
             <div class="col-6 col-md-3  mb-2">
                 @php
                     $forrent = 0;
-                  @endphp
-                  @foreach($properties as $property)
-                  @if($property->isApproved == 'Approved')
-                    @if($property->unitStatus == 'For Rent')
-                      @php
-                        $forrent += 1;
-                      @endphp
+                @endphp
+                @foreach ($properties as $property)
+                    @if ($property->isApproved == 'Approved')
+                        @if ($property->unitStatus == 'For Rent')
+                            @php
+                                $forrent += 1;
+                            @endphp
+                        @endif
                     @endif
-                  @endif  
-                  @endforeach
-                <h1 class="fw-bold"  id="numCount" data-val="{{ $forrent }}">
-                    
-                  {{ $forrent }} </h1>
+                @endforeach
+                <h1 class="fw-bold" id="numCount" data-val="{{ $forrent }}">
+                    {{ $forrent }} </h1>
                 <h5> CONDO FOR RENT</h5>
             </div>
             <div class="col-6 col-md-3  mb-2">
-                <h1 class="fw-bold" id="numCount" data-val="100">0</h1>
+                @php
+                    $sold = 0;
+                @endphp
+                @foreach ($properties as $property)
+                    @if ($property->isApproved == 'Approved')
+                        @if ($property->unitStatus == 'Sold')
+                            @php
+                                $sold += 1;
+                            @endphp
+                        @endif
+                    @endif
+                @endforeach
+                <h1 class="fw-bold" id="numCount" data-val="{{ $sold }}">{{ $sold }}</h1>
                 <h5> RECENTLY SOLD</h5>
             </div>
             <div class="col-6 col-md-3  mb-2">
-                <h1 class="fw-bold"  id="numCount" data-val="550">0</h1>
+                @php
+                    $total = 0;
+                @endphp
+                @foreach ($properties as $property)
+                    @if ($property->isApproved == 'Approved')
+                        @php
+                            $total += 1;
+                        @endphp
+                    @endif
+                @endforeach
+                <h1 class="fw-bold" id="numCount" data-val="{{ $total }}">{{ $total }}</h1>
                 <h5> TOTAL LISTED</h5>
             </div>
-            <script> 
-            let valueDisplays = document.querySelectorAll("#numCount");
-            let interval = 5000;
-            
-            valueDisplays.forEach((valueDisplay)=>{
-                let startValue = 0;
-                let endValue = parseInt(valueDisplay.getAttribute ("data-val"));
-                let duration = Math.floor(interval/endValue);
-                let counter= setInterval(function(){
-                    startValue += 1;
-                    valueDisplay.textContent =startValue;
-                    if(startValue == endValue){
-                        clearInterval(counter);
-                    }
-            
-                },duration)
-            })
-            </script>      
+            <script>
+                let valueDisplays = document.querySelectorAll("#numCount");
+                let interval = 5000;
+
+                valueDisplays.forEach((valueDisplay) => {
+                    let startValue = 0;
+                    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+                    let duration = Math.floor(interval / endValue);
+                    let counter = setInterval(function() {
+                        startValue += 1;
+                        valueDisplay.textContent = startValue;
+                        if (startValue == endValue) {
+                            clearInterval(counter);
+                        }
+
+                    }, duration)
+                })
+            </script>
         </div>
     </div>
 @endsection
