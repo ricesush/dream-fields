@@ -6,6 +6,13 @@
 @endsection
 
 @section('content')
+<div class="tab">
+  <div class="search-form">
+    <form action="{{ route('searchpending') }}" method="GET">
+      <input type="text" name="search" placeholder="Search by Unit Number..." value="{{ request('search') }}">
+      <button type="submit">Search</button>
+    </form>
+  </div>
 <table class="styled-table">
   <thead>
     <tr>
@@ -47,6 +54,8 @@
     @endforeach
   </tbody>
 </table>
+{{ $properties->links() }}
+</div>
 
 @endsection
 

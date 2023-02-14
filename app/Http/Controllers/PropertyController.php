@@ -69,6 +69,7 @@ class PropertyController extends Controller
             'floorArea' => 'required|integer',
             'numBed' => 'required|integer|max:3',
             'numBaths' => 'required|integer|max:3',
+            
             'hasParking' => 'required|max:4',
             'unitStatus' => 'required|string',
             'unitPrice' => 'required|integer|max:1000000000',
@@ -100,6 +101,29 @@ class PropertyController extends Controller
         return redirect()->route('home')->with('success', 'Property deleted successfully!');
     }
 
+
+    public function buyunit()
+    {
+        $properties = Property::orderBy('created_at', 'desc')
+        ->whereIn('isApproved', ['Approved'])
+        ->whereIn('unitStatus', ['For sale'])
+        ->paginate(6);
+
+        return view('buysellrent/buypage', ['properties' => $properties->withPath('buypage')])
+            ->with('i', (request()->input('page', 1) - 1) * 10);
+    }
+
+    public function rentunit()
+    {
+        $properties = Property::orderBy('created_at', 'desc')
+        ->whereIn('isApproved', ['Approved'])
+        ->whereIn('unitStatus', ['For rent'])
+        ->paginate(6);
+
+        return view('buysellrent/rentpage', ['properties' => $properties->withPath('buypage')])
+            ->with('i', (request()->input('page', 1) - 1) * 10);
+    }
+
     public function search(){
         $data = $_GET['search_input'];
         $search_input = Str::of($data)->explode(' ');
@@ -125,7 +149,4 @@ class PropertyController extends Controller
             }
         }
     }
-
-   
-
 }
