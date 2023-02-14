@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Property;
 use App\Models\User;
+use auth;
 
 class ListingController extends Controller
 {
@@ -27,10 +28,12 @@ class ListingController extends Controller
                 ->where(function($query) use ($searchTerm) {
                     $query->where('unitNumber', 'like', '%' . $searchTerm . '%');
                 })
+                ->where('user_id', $request->user()->id)
                 ->orderBy('created_at', 'asc')
                 ->paginate(10);
         } else {
             $properties = Property::where('isApproved', 'Approved')
+                ->where('user_id', $request->user()->id)
                 ->orderBy('created_at', 'asc')
                 ->paginate(10);
         }
