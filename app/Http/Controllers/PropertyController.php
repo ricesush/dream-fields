@@ -126,6 +126,41 @@ class PropertyController extends Controller
         }
     }
 
-   
+    // public function filter(Request $request)
+    // {
+    //     $inputs = $request->all();
+    //     $properties = Property::query();
+    //     foreach ($inputs as $key => $value) {
+    //         if ($value != "") {
+    //             switch ($key) {
+    //                 case 'unitNumber':
+    //                     $properties->where($key, 'like', '%' . $value . '%');
+    //                     break;
+    //                 case 'unitType':
+    //                     $properties->where($key, 'like', '%' . $value . '%');
+    //                     break;
+    //                 case 'unitStatus':
+    //                     $properties->where($key, 'like', '%' . $value . '%');
+    //                     break;
+    //                 case 'numBed':
+    //                     $properties->where($key, '=', $value);
+    //                     break;
+    //                 case 'numBaths':
+    //                     $properties->where($key, '=', $value);
+    //                     break;
+    //                 case 'hasParking':
+    //                     $properties->where($key, 'like', '%' . $value . '%');
+    //                     break;
+    //                 case 'unitPrice':
+    //                     $properties->where($key, '<=', $value);
+    //                     break;
+    //                 default:
+    //                     break;
+    //             }
+    //         }
+    //     }
+    //     $filteredProperties = $properties->get();
+    //     return view('search', ['text_input' => $filteredProperties]);
+    // }
 
 }

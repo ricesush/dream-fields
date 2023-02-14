@@ -8,6 +8,12 @@
 @section('content')
 
     <div class="tab">
+      <div class="search-form">
+      <form action="{{ route('usersearch') }}" method="get">
+        <input type="text" name="search" placeholder="Search by name..." value="{{ request('search') }}">
+        <button type="submit">Search</button>
+      </form>
+      </div>
         <table class="styled-table">
             <thead>
               <tr>
