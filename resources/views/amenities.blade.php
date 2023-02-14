@@ -18,11 +18,10 @@
                     src="https://hizonscatering.com/wp-content/uploads/2019/10/Events-Space-2" alt="">
             </div>
             <div class="col-12 col-md-6 align-self-center ps-3  pb-3" data-aos="fade-up-left">
-                <div>
                     <img class="mx-auto d-block" src="../images/DreamFields Logo Green-01.png" width="7%"
                         alt="">
-                    <h1 class="fw-bold mb-3"><span class="border-bottom border-5">Event Area</span></h1>
-                    <ul>
+                    <h1 class="fw-bold mb-3 text-center"><span class="border-bottom border-5">Event Area</span></h1>
+                    <ul class="text-center">
                         <li>
                             Enclosed Clubhouse and Poolside Area for Events and Functions.
                         </li>
@@ -30,14 +29,13 @@
                             Entertainment / Conference Rooms.
                         </li>
                     </ul>
-                </div>
             </div>
         </div>
         <div class="row g-1 swap-column mb-3">
             <div class="col-12 col-md-6 align-self-center  ps-3  pb-3" data-aos="fade-up-right">
                 <img class="mx-auto d-block" src="../images/DreamFields Logo Green-01.png" width="7%" alt="">
-                <h1 class="fw-bold mb-3"><span class="border-bottom border-5"">Kids Area</span></h1>
-                <ul>
+                <h1 class="fw-bold mb-3 text-center"><span class="border-bottom border-5"">Kids Area</span></h1>
+                <ul class="text-center">
                     <li>Children's Area. </li>
                     <li>Three (3) Kiddie Pools.</li>
                     <li> Open Playfield.</li>
@@ -57,19 +55,19 @@
             </div>
             <div class="col-12 col-md-6 align-self-center  ps-3  pb-3" data-aos="fade-up-left">
                 <img class="mx-auto d-block" src="../images/DreamFields Logo Green-01.png" width="7%" alt="">
-                <h1 class="fw-bold mb-3"><span class="border-bottom border-5"">Family Area</span></h1>
-                <ul>
-                    <li> Themed Gardens.</li>
-                    <li>Picnic Area.</li>
+                <h1 class="fw-bold mb-3 text-center"><span class="border-bottom border-5"">Family Area</span></h1>
+                <ul class="text-center">
                     <li>Recreation Hall with Wi-Fi Access.</li>
+                    <li>Themed Gardens.</li>
+                    <li>Picnic Area. </li>
                 </ul>
             </div>
         </div>
         <div class="row g-1 swap-column mb-3">
             <div class="col-12 col-md-6 align-self-center  ps-3  pb-3" data-aos="fade-up-right">
                 <img class="mx-auto d-block" src="../images/DreamFields Logo Green-01.png" width="7%" alt="">
-                <h1 class="fw-bold mb-3"><span class="border-bottom border-5"">Adults Area</span></h1>
-                <ul>
+                <h1 class="fw-bold mb-3 text-center"><span class="border-bottom border-5"">Adults Area</span></h1>
+                <ul class="text-center">
                     <li>Three (3) 25-meter Lap Swimming Pools</li>
                     <li>Meditation Area</li>
                     <li>Smoking Area</li>
@@ -89,8 +87,8 @@
             </div>
             <div class="col-12 col-md-6 align-self-center  ps-3  pb-3" data-aos="fade-up-left">
                 <img class="mx-auto d-block" src="../images/DreamFields Logo Green-01.png" width="7%" alt="">
-                <h1 class="fw-bold mb-3"><span class="border-bottom border-5"">Sports & Recreation Area</span></h1>
-                <ul>
+                <h1 class="fw-bold mb-3 text-center"><span class="border-bottom border-5"">Sports & Recreation Area</span></h1>
+                <ul class="text-center">
                     <li>Basketball / Volleyball Court</li>
                     <li>Badminton Courts</li>
                     <li>Jogging Trail</li>

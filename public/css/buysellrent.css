@@ -162,6 +162,20 @@ align-items: center;
   height: 20vh;
 }
 
+.active > .page-link, .page-link.active {
+  background-color:#D67732;
+  border-color:#D67732;
+  color: white;
+  font-weight: bold;
+}
+.page-link{
+  color: #D67732;
+  background-color: transparent;
+}
+.page-link:hover{
+  color: #ff6a00;
+}
+
 
 /* about section */
 @media (max-width:770px){
