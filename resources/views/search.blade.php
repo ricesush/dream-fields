@@ -45,20 +45,6 @@
 
 <div class="container mainHeight-search">
 
-    <div class="d-flex justify-content-end my-2">
-        <div class="d-flex justify-content-start">
-            <select class="form-select focus-control" aria-label="Default select example">
-                <option selected>Default Order</option>
-                <option value="1">Price(Low to High)</option>
-                <option value="2">Price(High to Low)</option>
-                <option value="3">Date New to Old</option>
-                <option value="4">Date Old to Knew</option>
-            </select>
-        </div>
-    </div>
-
-
-
     @if ($errorMessage[0] === '')
     <div class="d-flex justify-content-center text-center">
         <div class="alert alert-warning col-lg-6 " role="alert">
