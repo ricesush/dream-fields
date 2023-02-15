@@ -76,7 +76,7 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
     });
 
 // pending routes
-// Route::get('/inquire', function () {return view('inquire');})->name('inquire');
+Route::get('/inquire', function () {return view('inquire');})->name('inquire');
 
 
 
