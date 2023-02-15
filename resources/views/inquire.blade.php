@@ -16,9 +16,9 @@
         <div class=" container border border-1 border-light bg-light rounded-2 shadow">
             <div class=" mt-5 d-flex">
             
-                <input type="text" class="bg-primary input textcolorblack form-control bg-transparent border-0 border-bottom rounded-0 border-b" id="exampleFormControlInput1" placeholder="Name*" name="name">
-                <input type="text" class="bg-primary input textcolorblack form-control bg-transparent border-0 border-bottom rounded-0 border-b mx-4" placeholder="Contact Number*" aria-label="Contact Number" name="contact_number">
-                <input type="text" class="bg-primary input textcolorblack form-control bg-transparent border-0 border-bottom rounded-0 border-b" placeholder="Email Adress*" aria-label="Email Adress" name="e_add">
+                <input type="text" class="bg-primary input textcolorblack form-control bg-transparent border-0 border-bottom rounded-0 border-b" id="exampleFormControlInput1 name" placeholder="Name*" name="name">
+                <input type="text" class="bg-primary input textcolorblack form-control bg-transparent border-0 border-bottom rounded-0 border-b mx-4" placeholder="Contact Number*" id="contactNum" aria-label="Contact Number" name="contactNum">
+                <input type="text" class="bg-primary input textcolorblack form-control bg-transparent border-0 border-bottom rounded-0 border-b" placeholder="Email Adress*" id="contactNum" aria-label="Email Adress" name="email">
             </div>
 
             <div class="col-lg-12 mt-4">
@@ -34,7 +34,7 @@
                     <div class=" mt-4">
                         <div class="form-floating">
 
-                            <textarea class="bg-primary input textcolorblack form-control bg-transparent border-0 border-bottom rounded-0 border-b" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="message"></textarea>
+                            <textarea class="bg-primary input textcolorblack form-control bg-transparent border-0 border-bottom rounded-0 border-b" placeholder="Leave a comment here" id="floatingTextarea2 message" style="height: 100px" name="message"></textarea>
                             <label for="floatingTextarea2">Message</label>
                         </div>
                     </div>
