@@ -45,7 +45,11 @@
                     </li>
                     <li class="nav-item {{ request()->is('amenities') ? 'active' : ''}}">
                         <a class="nav-link textLight" href="{{ route('amenities') }}">Amenities</a>
-                    </li>                
+                    </li>
+                    <li class="nav-item {{ request()->is('inquire') ? 'active' : ''}}">
+                        <a class="nav-link textLight" href="{{ route('inquire') }}">Inquire</a>
+                    </li>
+                    
                     <li class="nav-item ms-2 {{ request()->is('aboutus') ? 'active' : ''}}">
                         <a class="nav-link textLight" href="{{ route('aboutus') }}">About Us</a>
                     </li>
