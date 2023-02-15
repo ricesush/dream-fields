@@ -69,7 +69,7 @@
   </div>
 
     <div class="form-group w-full md:w-1/3 lg:w-1/4 mt-5">
-      <label for="title" class="block mb-2 font-bold text-gray-700">Title</label>
+      <label for="title" class="block mb-2 font-bold text-gray-700">Unit Type</label>
       <select class="form-select w-full" name="title" id="title">
         <option value="1 Bedroom Standard" {{ $property->title == '1 Bedroom Standard' ? 'selected' : '' }}>1 Bedroom Standard</option>
         <option value="1 Bedroom Deluxe" {{ $property->title == '1 Bedroom Deluxe' ? 'selected' : '' }}>1 Bedroom Deluxe</option>
@@ -87,17 +87,6 @@
         <option value="Rented" {{ $property->unitStatus == 'Rented' ? 'selected' : '' }}>Rented</option>
       </select> 
     </div>
-    
-    <div class="form-group w-full md:w-1/3 lg:w-1/4 mt-5">
-      <label for="unitType" class="block mb-2 font-bold text-gray-700">Unit Type</label>
-      <select class="form-select w-full" name="unitType" id="unitType">
-        <option value="Studio" {{ $property->unitType == 'Studio' ? 'selected' : '' }}>Studio</option>
-        <option value="Loft" {{ $property->unitType == 'Loft' ? 'selected' : '' }}>Loft</option>
-        <option value="Bedroom Unit" {{ $property->unitType == 'Bedroom Unit' ? 'selected' : '' }}>Bedroom Unit</option>
-        <option value="Penthouse Unit" {{ $property->unitType == 'Penthouse Unit' ? 'selected' : '' }}>Penthouse Unit</option>
-        <option value="Bi-Level Unit" {{ $property->unitType == 'Bi-Level Unit' ? 'selected' : '' }}>Bi-Level Unit</option>
-      </select>
-    </div>
   
     <div class="form-group w-full md:w-1/3 lg:w-1/4 mt-5">
       <label for="hasParking" class="block mb-2 font-bold text-gray-700">Parking Lot</label>                
@@ -107,6 +96,7 @@
           <option value="2" {{ $property->hasParking == '2' ? 'selected' : '' }}>2</option>
         </select>
       </div>
+      <input type="hidden" name="unitType" value="{{ $property->unitType }}">
       <input type="hidden" name="id" value="{{ $property->id }}">
     <button type="submit" class="ml-auto mr-10 mt-10  bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600">Submit</button>
   </div>
