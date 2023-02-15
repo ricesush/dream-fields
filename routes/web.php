@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ListingController;
+use App\Http\Controllers\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,6 @@ Auth::routes();
 Route::get('/', function () {return view('welcome');})->name('welcome');
 Route::get('/amenities', function () {return view('amenities');})->name('amenities');
 Route::get('/sellpage', function () {return view('buysellrent/sellpage');})->name('sellpage');
-
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/addtofav', [FavouriteController::class, 'addtofav'])->name('addtofav');
 
@@ -78,6 +78,8 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
 
 // pending routes
 Route::get('/inquire', function () {return view('inquire');})->name('inquire');
+Route::post('/createinquire' ,[MessageController::class, 'create'])->name('createinquire');
+
 
 
 

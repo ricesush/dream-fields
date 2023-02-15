@@ -10,8 +10,9 @@
             </div>
         </div>
 
-        <form>
+        <form method="POST" action="{{route('createinquire')}}">
         @csrf
+
         <div class=" container border border-1 border-light bg-light rounded-2 shadow">
             <div class=" mt-5 d-flex">
             
@@ -24,12 +25,15 @@
                 <div class="">
                     <div class=" mt-4">
                         <input type="text" class="bg-primary input textcolorblack form-control bg-transparent border-0 border-bottom rounded-0 border-b" id="exampleFormControlInput1" placeholder="Subject*" name="subject" >
+
+      
                     </div>
                 </div>
 
                 <div class="">
                     <div class=" mt-4">
                         <div class="form-floating">
+
                             <textarea class="bg-primary input textcolorblack form-control bg-transparent border-0 border-bottom rounded-0 border-b" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="message"></textarea>
                             <label for="floatingTextarea2">Message</label>
                         </div>
