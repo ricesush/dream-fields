@@ -7,9 +7,14 @@
 
 @section('content')
 
-    <div class="container">
-      <div class="tabcard">
-        <table class="table table-hover text-center table-sm">
+    <div class="tab">
+      <div class="search-form">
+      <form action="{{ route('usersearch') }}" method="get">
+        <input type="text" name="search" placeholder="Search by name..." value="{{ request('search') }}">
+        <button type="submit">Search</button>
+      </form>
+      </div>
+        <table class="styled-table">
             <thead>
               <tr>
                 <th>ID</th>
@@ -22,23 +27,26 @@
             </thead>
             <tbody>   
             @foreach($users as $user)                      
-              <tr>
+              <tr class="active-row">
                 <td>{{$user->id}}</td>
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
                 <td>phone here</td>
                 <td>{{$user->role}}</td>
                 <td>
-                  <a href="{{route('edituser', $user->id )}}" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
-                  <a href="{{ route('deleteuser', $user->id) }}" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></a>
+                  <a href="{{route('edituser', $user->id )}}" class="btn btn-primary">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
+                  <a class="btn btn-danger" href="{{ route('deleteuser', $user->id) }}">
+                    <i class="fa-solid fa-trash"></i>
+                  </a>
                 </td>
               </tr>
-              @endforeach
-
-              
+              @endforeach 
             </tbody>
           </table>
-        </div>
+
+          {{ $users->links() }}
       </div>            
 
 @endsection

@@ -26,22 +26,93 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin')->with('users', User::all())->with('totalunits', Property::count());
+        return view('admin')->with('properties', Property::orderBy('created_at', 'desc')->get())
+        ->with('users', User::all());
     }
     
-    public function pending()
+    public function pending(Request $request)
     {
-        return view('adminPages/pendingunits')->with('properties', Property::orderBy('created_at', 'desc')->get());
+
+        $searchTerm = $request->input('search');
+
+        if ($searchTerm) {
+            $properties = Property::where('isApproved', 'Pending')
+                ->where(function($query) use ($searchTerm) {
+                    $query->where('unitNumber', 'like', '%' . $searchTerm . '%');
+                })
+                ->orderBy('created_at', 'desc')
+                ->paginate(8);
+        } else {
+            $properties = Property::where('isApproved', 'Pending')
+                ->orderBy('created_at', 'desc')
+                ->paginate(8);
+        }
+        
+        return view('adminPages/pendingunits')->with('properties', $properties);
     }
 
-    public function approved()
+
+
+    public function approved(Request $request)
     {
-        return view('adminPages/condounits')->with('properties', Property::orderBy('created_at', 'desc')->get());
+        $searchTerm = $request->input('search');
+
+        if ($searchTerm) {
+            $properties = Property::where('isApproved', 'Approved')
+                ->where(function($query) use ($searchTerm) {
+                    $query->where('unitNumber', 'like', '%' . $searchTerm . '%');
+                })
+                ->orderBy('created_at', 'asc')
+                ->paginate(10);
+        } else {
+            $properties = Property::where('isApproved', 'Approved')
+                ->orderBy('created_at', 'asc')
+                ->paginate(10);
+        }
+
+        return view('adminPages/condounits')->with('properties', $properties);
     }
 
-    public function users()
+
+    public function approved1()
     {
-        return view('adminPages/users')->with('users', User::all());
+        return view('adminPages/condounits')->with('properties', Property::all()->get());
+    }
+
+    public function backlogs(Request $request)
+    {
+        $searchTerm = $request->input('search');
+
+        if ($searchTerm) {
+            $properties = Property::where('isApproved', 'Denied')
+                ->where(function($query) use ($searchTerm) {
+                    $query->where('unitNumber', 'like', '%' . $searchTerm . '%');
+                })
+                ->orderBy('created_at', 'desc')
+                ->paginate(12);
+        } else {
+            $properties = Property::where('isApproved', 'Denied')
+                ->orderBy('created_at', 'desc')
+                ->paginate(12);
+        }
+
+        return view('adminPages/backlogs')->with('properties', $properties);
+    }
+
+
+    public function users(Request $request)
+    {
+        $searchTerm = $request->input('search');
+
+        if ($searchTerm) {
+            $users = User::where('name', 'like', '%' . $searchTerm . '%')
+                ->orderBy('id', 'asc')
+                ->paginate(10);
+        } else {
+            $users = User::orderBy('id', 'asc')->paginate(10);
+        }
+
+        return view('adminPages/users')->with('users', $users);
     }
 
     public function edit($id)
@@ -68,6 +139,13 @@ class AdminController extends Controller
 
     public function update(Request $request)
     {
+
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|min:8'
+        ]);
+
         $user = User::find($request->id);
 
         $user->name = $request->name;

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Property;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -27,7 +29,7 @@ class HomeController extends Controller
         if(Auth::check() && Auth::user()->role == 'admin'){
              return redirect('/admin');
         }
-        return view('home');
-       
+        return view('userPages/userdashboard')->with('properties', Property::orderBy('created_at', 'desc')->get())
+        ->with('users', User::all());;
     }
 }
