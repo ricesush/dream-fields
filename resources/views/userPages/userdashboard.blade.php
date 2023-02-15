@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-
+<h3 class="ml-10">Hello! <strong>{{ Auth::user()->name }}</strong></h3>
 <div class="main-container">
     <div class="cards" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); grid-gap: 20px;">
 

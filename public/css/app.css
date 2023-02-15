@@ -18,6 +18,10 @@ body {
   min-height: 82vh;
 }
 
+.mainHeight-search{
+  min-height: 14vh;
+}
+
 .welcomePage{
   overflow: hidden;
 }
@@ -132,8 +136,6 @@ li .active, .socmedicon:hover {
   color: #D67732  !important;
   border: none !important;
 }
-
-
 
 /* footer */
 

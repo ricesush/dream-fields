@@ -28,6 +28,13 @@
     </div>
     <ul class="nav-list">
       <li>
+        <a href="/">
+          <i class='bx bx-home'></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
         <a href="{{route('admin')}}">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
@@ -61,13 +68,6 @@
          <span class="links_name">BackLogs</span>
        </a>
        <span class="tooltip">BackLogs</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-message'></i>
-         <span class="links_name">TBD</span>
-       </a>
-       <span class="tooltip">TBD</span>
      </li>
      
      <li class="profile">

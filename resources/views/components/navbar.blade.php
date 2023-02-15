@@ -5,9 +5,8 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
             <ul class="navbar-nav mx-auto">
-
                     <li class="nav-item {{ request()->is('/') ? 'active' : ''}}">
                         <a class="nav-link textLight" aria-current="page" href="{{ route('welcome') }}">Home</a>
                     </li>
@@ -47,9 +46,9 @@
                     <li class="nav-item {{ request()->is('amenities') ? 'active' : ''}}">
                         <a class="nav-link textLight" href="{{ route('amenities') }}">Amenities</a>
                     </li>
-                    <li class="nav-item mx-lg-4 {{ request()->is('inquire') ? 'active' : ''}}">
+                    <!-- <li class="nav-item mx-lg-4 {{ request()->is('inquire') ? 'active' : ''}}">
                         <a class="nav-link textLight" href="{{ route('inquire') }}">Inquire</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item {{ request()->is('aboutus') ? 'active' : ''}}">
                         <a class="nav-link textLight" href="{{ route('aboutus') }}">About Us</a>
                     </li>

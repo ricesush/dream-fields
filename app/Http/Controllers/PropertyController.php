@@ -15,7 +15,7 @@ class PropertyController extends Controller
 
         $request->validate([
             'unitNumber' => 'required|unique:properties|max:1000',
-            'unitType' => 'required',
+            'title' => 'required',
             'unitStatus' => 'required',
             'unitPrice' => 'required|integer',
             'user_id' => 'required|exists:users,id',
@@ -24,7 +24,7 @@ class PropertyController extends Controller
 
         $property = new Property;
         $property->unitNumber = $request->unitNumber;
-        $property->unitType = $request->unitType;
+        $property->title = $request->title;
         $property->unitStatus = $request->unitStatus;
         $property->unitPrice = $request->unitPrice;
         $property->user_id = $request->user_id;
@@ -108,7 +108,6 @@ class PropertyController extends Controller
         ->whereIn('isApproved', ['Approved'])
         ->whereIn('unitStatus', ['For sale'])
         ->paginate(6);
-
         return view('buysellrent/buypage', ['properties' => $properties->withPath('buypage')])
             ->with('i', (request()->input('page', 1) - 1) * 10);
     }
@@ -122,6 +121,11 @@ class PropertyController extends Controller
 
         return view('buysellrent/rentpage', ['properties' => $properties->withPath('buypage')])
             ->with('i', (request()->input('page', 1) - 1) * 10);
+    }
+
+    public function aboutus()
+    {
+        return view('aboutus')->with('properties', Property::orderBy('created_at', 'desc')->get());
     }
 
     public function search(){
