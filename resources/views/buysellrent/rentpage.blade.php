@@ -7,7 +7,7 @@
                 <h1 class="text-center fw-bold display-4 mt-5"><span class="text-light rounded-end-2">FOR RENT</span></span>
                 </h1>
             </div>
-            <form class="bgColor2 py-3 rounded-1 shadow" method="GET" action="{{ route('search') }}">
+            <form class="bgColor2 py-3 rounded-1 shadow mb-5" method="GET" action="{{ route('search') }}">
                 @csrf
 
                 <div class="row col-md-12 col-lg-12 d-flex justify-content-center align-items-end m-0">
