@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
-            $table->enum('unitType', ['1 Bedroom Standard','1 Bedroom Deluxe','2 Bedrooms Standard','2 Bedrooms Deluxe']);
+            $table->enum('title', ['1 Bedroom Standard','1 Bedroom Deluxe','2 Bedrooms Standard','2 Bedrooms Deluxe']);
             $table->integer('unitNumber');
+            $table->enum('unitType', ['Studio','Loft', 'Bedroom Unit', 'Penthouse Unit', 'Bi-Level Unit']);
             $table->enum('unitStatus', ['Sold','Rented', 'For Sale', 'For Rent']);
             $table->float('floorArea')->nullable();
             $table->double('unitPrice');

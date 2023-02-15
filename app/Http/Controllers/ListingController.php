@@ -41,13 +41,11 @@ class ListingController extends Controller
         return view('userPages/userOwned')->with('properties', $properties);
     }
 
-
     public function dashboard()
     {
         return view('userPages/userdashboard')->with('properties', Property::orderBy('created_at', 'desc')->get())
         ->with('users', User::all());
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -114,5 +112,4 @@ class ListingController extends Controller
     {
         //
     }
-
 }
