@@ -96,43 +96,6 @@
                 </div>
             </div>
         </div>
-        <hr />
-
-        <div class="row text-center">
-            <div class="col-6 col-md-3 mb-2">
-                <h1 class="fw-bold" id="numCount" data-val="250">0</h1>
-                <h5> CONDO FOR SALE</h5>
-            </div>
-            <div class="col-6 col-md-3  mb-2">
-                <h1 class="fw-bold" id="numCount" data-val="300">0</h1>
-                <h5> CONDO FOR RENT</h5>
-            </div>
-            <div class="col-6 col-md-3  mb-2">
-                <h1 class="fw-bold" id="numCount" data-val="100">0</h1>
-                <h5> RECENTLY SOLD</h5>
-            </div>
-            <div class="col-6 col-md-3  mb-2">
-                <h1 class="fw-bold" id="numCount" data-val="550">0</h1>
-                <h5> TOTAL LISTED</h5>
-            </div>
-            <script>
-                let valueDisplays = document.querySelectorAll("#numCount");
-                let interval = 1000;
-
-                valueDisplays.forEach((valueDisplay) => {
-                    let startValue = 0;
-                    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-                    let duration = Math.floor(interval / endValue);
-                    let counter = setInterval(function() {
-                        startValue += 1;
-                        valueDisplay.textContent = startValue;
-                        if (startValue == endValue) {
-                            clearInterval(counter);
-                        }
-
-                    }, duration)
-                })
-            </script>
         </div>
     </div>
 @endsection
