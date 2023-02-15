@@ -24,7 +24,6 @@ Auth::routes();
 Route::get('/', function () {return view('welcome');})->name('welcome');
 Route::get('/amenities', function () {return view('amenities');})->name('amenities');
 Route::get('/sellpage', function () {return view('buysellrent/sellpage');})->name('sellpage');
-
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/addtofav', [FavouriteController::class, 'addtofav'])->name('addtofav');
 
