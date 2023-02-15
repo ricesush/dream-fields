@@ -54,7 +54,7 @@
         <li class="nav-item mb-2"><a href="{{ route('aboutus') }}" class="nav-link p-0 textLight">Our Vision</a></li>
         <li class="nav-item mb-2"><a href="{{ route('buypage') }}" class="nav-link p-0 textLight">Listings</a></li>
         <li class="nav-item mb-2"><a href="{{ route('aboutus') }}" class="nav-link p-0 textLight">About Us</a></li>
-        <li class="nav-item mb-2"><a href="{{ route('inquire') }}" class="nav-link p-0 textLight">Contact Us</a></li>
+        <li class="nav-item mb-2"><a href="{{ route('aboutus') }}" class="nav-link p-0 textLight">Contact Us</a></li>
       </ul>
     </div>
 
