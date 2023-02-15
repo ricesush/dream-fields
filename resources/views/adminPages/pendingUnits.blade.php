@@ -37,14 +37,14 @@
             <form method="POST" action={{ route('approveunit') }} style="display:inline-block">
               @csrf
                 <input type="hidden" value="{{ $property->id }}" name="id">
-                <button type="submit" class="btn btn-success">
+                <button type="submit" class="btn btn-success" style="background-color: #28a745;">
                   <i class="fas fa-check"></i>
                 </button>
             </form>
             <form method="POST" action={{ route('denyunit') }} style="display:inline-block">
               @csrf
                 <input type="hidden" value="{{ $property->id }}" name="id">
-                <button type="submit" class="btn btn-danger">
+                <button type="submit" class="btn btn-danger" style="background-color: #dc3545;">
                   <i class="fas fa-times"></i>
                 </button>
             </form>
