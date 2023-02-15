@@ -29,7 +29,7 @@
       @if($property->isApproved == 'Pending')
         <tr class="active-row">
           <td>{{ $property->unitNumber }}</td>
-          <td>{{ $property->unitType }}</td>
+          <td>{{ $property->title }}</td>
           <td>{{ $property->user->name }}</td>
           <td>{{ $property->unitStatus }}</td>
           <td>₱{{ $property->unitPrice }}</td>

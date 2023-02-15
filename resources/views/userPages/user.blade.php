@@ -6,7 +6,16 @@
   <h5 class='text-base text-gray-600'>Help us, help you! Kindly fill the form and get started.</h5>
 </div>
 
+
+@if($errors->any())
+<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mt-5" role="alert">
+  @foreach($errors->all() as $error)
+    <span class="block">{{$error}}</span><br>
+  @endforeach
+</div>        
+@endif
 <div class="flex items-center justify-center mt-20">
+  
   <div class="w-1/3">
     <form method="POST" action="{{route('createproperty')}}" class="bg-white p-4 rounded-lg shadow-md">
       @csrf
@@ -21,13 +30,12 @@
       </div>
       
       <div class="mb-4">
-        <label for="unitType" class="block text-gray-700 font-bold mb-2">Unit Type:</label>
-        <select id="unitType" name="unitType" class="w-full border border-gray-400 p-2">
-          <option value="Studio">Studio</option>
-          <option value="Loft">Loft</option>
-          <option value="Bedroom Unit">Bedroom Unit</option>
-          <option value="Penthouse Unit">Penthouse Unit</option>
-          <option value="Bi-level Unit">Bi-level Unit</option>
+        <label for="title" class="block text-gray-700 font-bold mb-2">Unit Type:</label>
+        <select id="title" name="title" class="w-full border border-gray-400 p-2">
+          <option value="1 Bedroom Standard">1 Bedroom Standard</option>
+          <option value="1 Bedroom Deluxe">1 Bedroom Deluxe</option>
+          <option value="2 Bedrooms Standard" >2 Bedrooms Standard</option>
+          <option value="2 Bedrooms Deluxe" >2 Bedrooms Deluxe</option>
         </select>
       </div>
       
