@@ -9,6 +9,13 @@
 <div class="main-container">
     <div class="cards" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); grid-gap: 20px;">
 
+      <div class="card card-1">
+        <h4 class="mb-3">Users Count:</h4>
+        <div class="text-muted">
+          <strong>{{ count($users) }}</strong>
+        </div>
+      </div>
+
       <div class="card card-1">       
         <h4 class="mb-3">Units Listed</h4>
         <div class="text-muted">For sale: 
