@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
+<h3 class="ml-10">Hello! <strong>{{ Auth::user()->name }}</strong></h3>
 <div class="text-center">
   <h1 class='text-3xl font-bold text-gray-800 mb-2'>Would you like to list a property <br />in our website?</h1>
   <h5 class='text-base text-gray-600'>Help us, help you! Kindly fill the form and get started.</h5>
