@@ -20,7 +20,6 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Phone</th>
                 <th>Role</th>
                 <th>Action</th>
               </tr>
@@ -31,7 +30,6 @@
                 <td>{{$user->id}}</td>
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
-                <td>phone here</td>
                 <td>{{$user->role}}</td>
                 <td>
                   <a href="{{route('edituser', $user->id )}}" class="btn btn-primary">
