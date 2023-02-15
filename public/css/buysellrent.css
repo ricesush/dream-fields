@@ -195,13 +195,13 @@ align-items: center;
 }
 
 .card-client {
-  background: #d67632ba;
+  background: #313030;
   width: 100%;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 20px;
   padding-right: 20px;
-  border: 2px solid #D67732;
+  border: 2px solid #212529;
   box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
   border-radius: 5px;
   text-align: center;
