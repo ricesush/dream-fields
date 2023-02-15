@@ -10,32 +10,32 @@
             </div>
         </div>
 
-        <form>
+        <form method="POST" action="{{route('createinquire')}}">
         @csrf
         <div class="row">
             <div class="col-5 mt-5">
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name*" name="name">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name*" name="name" id="name">
             </div>
 
             <div class="row mt-4">
                 <div class="col-3">
-                    <input type="text" class="form-control" placeholder="Contact Number*" aria-label="Contact Number" name="contact_number">
+                    <input type="text" class="form-control" placeholder="Contact Number*" aria-label="Contact Number" name="contactNum" id="contactNum">
                 </div>
                 <div class="col-4">
-                    <input type="text" class="form-control" placeholder="Email Adress*" aria-label="Email Adress" name="e_add">
+                    <input type="text" class="form-control" placeholder="Email Adress*" aria-label="Email Adress" name="email" id="email">
                 </div>
 
 
                 <div class="row">
                     <div class="col-14 mt-4">
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Subject*" name="subject" >
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Subject*" name="subject" id="subject">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col mt-4">
                         <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="message"></textarea>
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2 message" style="height: 100px" name="message"></textarea>
                             <label for="floatingTextarea2">Message</label>
                         </div>
                     </div>

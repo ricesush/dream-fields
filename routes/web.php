@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ListingController;
+use App\Http\Controllers\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,6 +78,8 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
 
 // pending routes
 Route::get('/inquire', function () {return view('inquire');})->name('inquire');
+Route::post('/createinquire' ,[MessageController::class, 'create'])->name('createinquire');
+
 
 
 
