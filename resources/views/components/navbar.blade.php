@@ -47,7 +47,7 @@
                         <a class="nav-link textLight" href="{{ route('amenities') }}">Amenities</a>
                     </li>
                     <li class="nav-item {{ request()->is('inquire') ? 'active' : ''}}">
-                        <a class="nav-link textLight" href="{{ route('amenities') }}">Inquire</a>
+                        <a class="nav-link textLight" href="{{ route('inquire') }}">Inquire</a>
                     </li>
                     
                     <li class="nav-item ms-2 {{ request()->is('aboutus') ? 'active' : ''}}">
