@@ -5,7 +5,7 @@
         <div class="row py-4">
             <div class="col pt-5">
             <img class="mx-auto d-block mb-2" src="../images/DreamFields Logo Green-01.png" width="4%" alt="">
-                <p class="text-center fs-2 my-4 mb-0"> A convenient way to inquire our property.</p>
+                <p class="text-center fs-2 my-4 mb-0"><b> A convenient way to inquire our property. </b></p>
                 
             </div>
         </div>
