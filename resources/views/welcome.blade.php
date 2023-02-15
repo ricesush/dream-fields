@@ -162,7 +162,7 @@
                         <h5 class="card-title text-green d-lg-flex align-items-end col-lg-8 text-center py-3"><span class="col-2"><img src="{{URL::asset('images/DreamFields Logo Green-01.png')}}" alt="..." style="max-width: 35px;" /></span> Features and Amenities</h5>
                         <p>Taste life’s simple pleasures with quality living at Chateau Elysée. Your charmed lifestyle unfolds in a secure community that allows you to play, bond, mingle, share and belong.</p>
                         <div class='row col-lg-6 d-flex homeBtn2 position-absolute top-100 start-50 translate-middle text-center'>
-                            <a href="{{ route('buypage') }}" class='col-lg-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center shadow'>
+                            <a href="{{ route('amenities') }}" class='col-lg-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center shadow'>
                                 <span></span>
                                 <p data-start="good luck!" data-text="Go >>" data-title="Learn More"></p>
                             </a>
@@ -181,7 +181,7 @@
                                 Two (2) Passenger Elevators</li>
                         </ul>
                         <div class='row col-lg-6 d-flex homeBtn2 position-absolute top-100 start-50 translate-middle text-center'>
-                            <a href="{{ route('buypage') }}" class='col-lg-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center shadow'>
+                            <a href="{{ route('amenities') }}" class='col-lg-3 border border-1 rounded-1 fw-bold welcomeBtn d-flex align-items-center justify-content-center shadow'>
                                 <span></span>
                                 <p data-start="good luck!" data-text="Go >>" data-title="Learn More"></p>
                             </a>

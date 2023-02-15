@@ -2,15 +2,15 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col pt-5">
+        <div class="row">
+            <div class="col pt-5">
             <img class="mx-auto d-block mb-2" src="../images/DreamFields Logo Green-01.png" width="4%" alt="">
-            <p class="text-center fs-2 mt-4 mb-0"> A convenient way to inquire our property.</p>
-
+                <p class="text-center fs-2 mt-4 mb-0"> A convenient way to inquire our property.</p>
+                
+            </div>
         </div>
-    </div>
 
-    <form>
+        <form>
         @csrf
         <div class="row">
             <div class="col-5 mt-5">
@@ -28,7 +28,7 @@
 
                 <div class="row">
                     <div class="col-14 mt-4">
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Subject*" name="subject">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Subject*" name="subject" >
                     </div>
                 </div>
 
@@ -43,7 +43,7 @@
 
                 <div class="row">
                     <div class="col mt-4 ml-4">
-                        <button type="submit" class="btn btn-warning"><b>Submit</b></button>
+                    <button type="submit" class="btn btn-warning"><b>Submit</b></button>
                     </div>
                 </div>
 

@@ -1,8 +1,14 @@
 @extends('layouts.buysellrent')
+
 @section('content')
 <div class="Bsr-banner-buy container-fluid position-relative ">
-    <div class="container d-grid align-items-end bg-height ">
-        <form class="bgColor2 py-3 rounded-1 shadow" method="GET" action="{{ route('search') }}">
+    <div class="container d-grid align-items-end">
+    <div class="col">
+            <h1 class="text-center fw-bold display-4 mt-5"><span class="text-light rounded-end-2">Search</span></span>
+            </h1>
+        </div>
+        
+        <form class="bgColor2 py-3 rounded-1 shadow " method="GET" action="{{ route('search') }}">
             @csrf
 
             <div class="row col-md-12 col-lg-12 d-flex justify-content-center align-items-end m-0">
@@ -54,18 +60,18 @@
 
 
     @if ($errorMessage[0] === '')
-        <div class="d-flex justify-content-center text-center">
-            <div class="alert alert-warning col-lg-6 " role="alert">
-                Kindly enter a keyword or use the dropdown buttons to search for a unit!
-            </div>
+    <div class="d-flex justify-content-center text-center">
+        <div class="alert alert-warning col-lg-6 " role="alert">
+            Kindly enter a keyword or use the dropdown buttons to search for a unit!
         </div>
+    </div>
 
     @elseif (isset($errorMessage[0]) && !isset($text_input[0]))
-        <div class="d-flex justify-content-center text-center">
-            <div class="alert alert-warning col-6 " role="alert">
-                Sorry, we didn't find any match.
-            </div>
+    <div class="d-flex justify-content-center text-center">
+        <div class="alert alert-warning col-6 " role="alert">
+            Sorry, we didn't find any match.
         </div>
+    </div>
     @else
 
     <div class="row row-cols-1 row-cols-md-3 g-3">
