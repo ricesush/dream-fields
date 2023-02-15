@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-lg-8 d-flex text-light align-items-end">
                         <input type="text"
-                            class="bg-primary input text-light form-control bg-transparent border-0 border-bottom rounded-0 border-b"
+                            class="bg-primary input text-dark form-control bg-transparent border-0 border-bottom rounded-0 border-b"
                             placeholder="Search..." id="input-search" name="search_input" />
                         <button class="btn bg-transparent border-0 border-bottom rounded-0 border-b" type="submit"
                             id="search"><i class="fa fa-solid fa-magnifying-glass"></i></button>

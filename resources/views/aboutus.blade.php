@@ -22,7 +22,8 @@
                 <p>
                     If you're looking for a team of dedicated and knowledgeable real estate professionals, look no further
                     than
-                    <span class="fw-bold">Dream <span class="orangeText">Fields</span></span> . Contact us today to learn more about how we can help you
+                    <span class="fw-bold">Dream <span class="orangeText">Fields</span></span> . Contact us today to learn
+                    more about how we can help you
                     with all of
                     your real estate needs.
                 </p>
@@ -42,7 +43,8 @@
                     <h1 class="fw-bold mb-3 text-center py-2"><span class="border-bottom border-b">Mission</span></h1>
 
                     <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                        Our mission at <span class="fw-bold"> Dream <span class="orangeText">Fields</span> </span> is to provide our clients with the
+                        Our mission at <span class="fw-bold"> Dream <span class="orangeText">Fields</span> </span> is to
+                        provide our clients with the
                         highest
                         level of service and expertise in the
                         real estate industry. We are committed to helping our clients achieve their real estate goals by
@@ -60,7 +62,8 @@
                 <h1 class="fw-bold mb-3 text-center py-2"><span class="border-bottom border-b">Vision</span></h1>
 
                 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    Our vision at <span class="fw-bold"> Dream <span class="orangeText">Fields</span> </span> is to be the leading real estate company in
+                    Our vision at <span class="fw-bold"> Dream <span class="orangeText">Fields</span> </span> is to be the
+                    leading real estate company in
                     <span class="fw-bold"> Philippines</span> and beyond, known for providing exceptional service and
                     delivering outstanding results for our clients. We strive to be a
                     trusted partner for all of our clients' real estate needs and to consistently exceed their expectations.
@@ -105,9 +108,8 @@
             </div>
         </div>
         <hr />
-
         <div class="row text-center my-3">
-            <div class="col-6 col-md-3" >
+            <div class="col-6 col-md-3">
                 @php
                     $forsale = 0;
                 @endphp
@@ -125,52 +127,52 @@
                 <i class="fa-solid fa-building-shield fa-2x text-center"></i>
             </div>
             <div class="col-6 col-md-3  mb-2">
-            @php
-                $forrent = 0;
-            @endphp
-            @foreach ($properties as $property)
-                @if ($property->isApproved == 'Approved')
-                    @if ($property->unitStatus == 'For Rent')
-                        @php
-                            $forrent += 1;
-                        @endphp
+                @php
+                    $forrent = 0;
+                @endphp
+                @foreach ($properties as $property)
+                    @if ($property->isApproved == 'Approved')
+                        @if ($property->unitStatus == 'For Rent')
+                            @php
+                                $forrent += 1;
+                            @endphp
+                        @endif
                     @endif
-                @endif
-            @endforeach
+                @endforeach
                 <h1 class="fw-bold" id="numCount" data-val="{{ $forrent }}">{{ $forrent }}</h1>
                 <h5> CONDO FOR RENT</h5>
                 <i class="fa-solid fa-building-circle-check fa-2x text-center"></i>
             </div>
             <div class="col-6 col-md-3  mb-2">
-            @php
-                $total = 0;
-            @endphp
-            @foreach ($properties as $property)
-                @if ($property->unitStatus == 'Sold')
+                @php
+                    $total = 0;
+                @endphp
+                @foreach ($properties as $property)
+                    @if ($property->unitStatus == 'Sold')
                         @php
                             $total += 1;
                         @endphp
-                @endif
-            @endforeach
+                    @endif
+                @endforeach
                 <h1 class="fw-bold" id="numCount" data-val="{{ $total }}">{{ $total }}</h1>
                 <h5> RECENTLY SOLD</h5>
                 <i class="fa-solid fa-hand-holding-dollar fa-2x text-center"></i>
             </div>
             <div class="col-6 col-md-3  mb-2">
-            @php
-                $total = 0;
-            @endphp
-            @foreach ($properties as $property)
-                @if ($property->isApproved == 'Approved')
+                @php
+                    $total = 0;
+                @endphp
+                @foreach ($properties as $property)
+                    @if ($property->isApproved == 'Approved')
                         @php
                             $total += 1;
                         @endphp
-                @endif
-            @endforeach
-                <h1 class="fw-bold" id="numCount" data-val="{{$total}}}">{{$total}}</h1>
+                    @endif
+                @endforeach
+                <h1 class="fw-bold" id="numCount" data-val="{{ $total }}}">{{ $total }}</h1>
                 <h5> TOTAL LISTED</h5>
                 <i class="fa-sharp fa-solid fa-city fa-2x text-center"></i>
-             
+
             </div>
             <script>
                 let valueDisplays = document.querySelectorAll("#numCount");
@@ -189,17 +191,17 @@
                     }, duration)
                 })
             </script>
-            <hr />
         </div>
-        <div class="row g-2 mt-5">
+        <hr />
+        <div class="row g-2 mt-3">
+            <h1 class="text-center mb-4 fw-bold display-4"> <span class="border-bottom border-b">OUR TEAM</span></h1>
             <div class="col-12 col-sm-6 col-md-3" data-aos="zoom-out-left">
-                <div class="card-client">
+                <div class="card-client shadow">
                     <div class="user-picture">
-                        <img class="img-fluid" src="../images/webdev/imat.png"
-                            alt="">
+                        <img class="img-fluid" src="../images/webdev/imat.png" alt="">
                     </div>
                     <p class="name-client">Raymart Vergara
-                        <span>Web Dev
+                        <span>Frontend Developer
                         </span>
                     </p>
                     <div class="social-media">
@@ -239,13 +241,12 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3" data-aos="zoom-out-left">
-                <div class="card-client">
+                <div class="card-client shadow">
                     <div class="user-picture">
-                        <img class="img-fluid" src="../images/webdev/cj.png"
-                            alt="">
+                        <img class="img-fluid" src="../images/webdev/cj.png" alt="">
                     </div>
                     <p class="name-client">Chris Jhovin Cabral
-                        <span>Web Dev
+                        <span>Frontend Developer
                         </span>
                     </p>
                     <div class="social-media">
@@ -286,13 +287,12 @@
             </div>
             <div class="col-12 col-sm-6 col-md-3" data-aos="zoom-out-left">
 
-                <div class="card-client">
+                <div class="card-client shadow">
                     <div class="user-picture">
-                        <img class="img-fluid" src="../images/webdev/gab.png"
-                            alt="">
+                        <img class="img-fluid" src="../images/webdev/gab.png" alt="">
                     </div>
                     <p class="name-client">Gabriel Dayot
-                        <span>Web Dev
+                        <span>Backend Developer
                         </span>
                     </p>
                     <div class="social-media">
@@ -332,13 +332,12 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3" data-aos="zoom-out-left">
-                <div class="card-client">
+                <div class="card-client shadow">
                     <div class="user-picture">
-                        <img class="img-fluid" src="../images/webdev/ej.png"
-                            alt="">
+                        <img class="img-fluid" src="../images/webdev/ej.png" alt="">
                     </div>
                     <p class="name-client">E-j Santosidad
-                        <span>Web Dev
+                        <span>Fullstack Developer
                         </span>
                     </p>
                     <div class="social-media">
