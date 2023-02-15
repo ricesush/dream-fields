@@ -17,7 +17,6 @@
       <thead>
         <tr>
           <th><a href="{{route('condounits1')}}">Unit Number</a></th>
-          <th>Title</th>
           <th>Unit Type</th>
           <th>Floor Area</th>
           <th>Bedroom</th>
@@ -34,7 +33,6 @@
         <tr class="active-row">
           <td>{{ $property->unitNumber }}</td>
           <td>{{ $property->title }}</td>
-          <td>{{ $property->unitType }}</td>
           <td>{{ $property->floorArea}} sq m</td>
           <td>{{ $property->numBed}}</td>
           <td>{{ $property->numBaths}}</td>
