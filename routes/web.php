@@ -23,7 +23,6 @@ Auth::routes();
 //guest
 Route::get('/', function () {return view('welcome');})->name('welcome');
 Route::get('/amenities', function () {return view('amenities');})->name('amenities');
-Route::get('/inquire', function () {return view('inquire');})->name('inquire');
 Route::get('/sellpage', function () {return view('buysellrent/sellpage');})->name('sellpage');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -77,7 +76,8 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function() {
         });
     });
 
-
+// pending routes
+// Route::get('/inquire', function () {return view('inquire');})->name('inquire');
 
 
 

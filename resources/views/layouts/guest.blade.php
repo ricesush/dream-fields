@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href='css/preloader.css'>
     <link rel="stylesheet" type="text/css" href='css/app.css'>
     <link rel="stylesheet" type="text/css" href='css/welcome.css'>
-    <link rel="stylesheet" type="text/css" href='css/inquire.css'>
     <link rel="stylesheet" type="text/css" href='css/loginreg.css'>
     <link rel="stylesheet" type="text/css" href='css/buysellrent.css'>
 
